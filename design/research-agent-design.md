@@ -210,19 +210,35 @@ Phase 7    建立基准测试套件
 
 ---
 
-## 7. 文件索引
+## 7. 路径约定
 
-| 文件 | 用途 |
-|------|------|
-| `D:\Playground\research-knowledge\INDEX.md` | 全局研究线总览 |
-| `D:\Playground\research-knowledge\lines\<line>\STATE.md` | 研究线认知状态 |
-| `D:\Playground\research-knowledge\lines\<line>\hypotheses.md` | 假说跟踪 |
-| `D:\Playground\research-knowledge\lines\<line>\open-questions.md` | 开放问题 |
-| `D:\Playground\research-knowledge\lines\<line>\papers\<slug>.md` | 论文结构化 insight |
-| `D:\Playground\research-knowledge\cross-cutting\connections.md` | 跨线关联 |
-| `D:\Playground\research-knowledge\methodology\experimental\tool-registry.md` | 实验工具注册表 |
-| `D:\Playground\skills\research\paper-to-insight\SKILL.md` | 论文→insight skill |
-| `D:\Playground\skills\research\state-overview\SKILL.md` | 状态加载 skill |
-| `D:\Playground\CLAUDE.md` | agent 启动入口（§0 为知识层加载指令） |
-| `D:\Playground\docs\research-agent-design.md` | 本设计文档 |
-| `C:\Users\TaiS\.claude\plans\lazy-gathering-puffin.md` | 实施计划（含 ChemGraph 分析） |
+本设计**不写死任何绝对路径**。所有路径相对于项目根目录。
+
+### 部署结构
+
+```
+<project-root>/
+├── knowledge/             ← 研究知识层（agent 的脑）
+│   ├── INDEX.md
+│   ├── lines/             ← 研究线
+│   ├── cross-cutting/     ← 跨线关联
+│   └── methodology/       ← 方法积累
+├── skills/                ← 能力技能
+├── design/                ← 设计文档
+└── README.md
+```
+
+### 接入 agent 的方式
+
+不要求 knowledge/ 和 skills/ 必须在特定位置。agent 配置文件中声明两个路径变量：
+
+```
+knowledge_root: <path-to-knowledge-directory>
+skills_root: <path-to-skills-directory>
+```
+
+agent 启动时读这两个变量，而不是读硬编码路径。Claude Code 场景下，在 `CLAUDE.md` 中用相对于 workspace 的路径引用 knowledge/。
+
+### 模板
+
+每个目录下的 `_template/` 包含该类型文件的最小模板。新建研究线或 skill 时复制模板即可。
