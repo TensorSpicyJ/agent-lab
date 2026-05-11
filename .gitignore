@@ -1,0 +1,23 @@
+# Local research content — use templates to generate your own
+knowledge/lines/*/
+!knowledge/lines/_template/
+
+# Local methodology additions
+methodology/experimental/*.md
+!methodology/experimental/_template*
+methodology/theoretical/*.md
+!methodology/theoretical/_template*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary
+*.tmp
+*.bak
