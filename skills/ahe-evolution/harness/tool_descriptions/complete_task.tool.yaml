@@ -1,0 +1,12 @@
+name: complete_task
+description: >
+  Signal that the task is complete. Call this ONLY when you have finished
+  all requested work. Include a summary of what was done and where outputs
+  were written. This is a stop tool — the harness will terminate after this.
+parameters:
+  type: object
+  properties:
+    summary:
+      type: string
+      description: What was accomplished, what files were created/modified, any issues encountered
+  required: [summary]

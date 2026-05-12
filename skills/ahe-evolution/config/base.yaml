@@ -1,0 +1,65 @@
+# AHE Evolution — Shared Default Config
+# Experiment overlays inherit via _base and override specific fields.
+
+# ---- Quality Target ----
+_target_quality: 0.85           # Stop when aggregate quality reaches this
+max_iterations: 20
+
+# ---- LLM Configuration ----
+llm:
+  api_key: "${DEEPSEEK_API_KEY}"
+  base_url: "https://api.deepseek.com"
+  model: "deepseek-chat"
+
+# ---- Evaluation ----
+evaluation:
+  k: 2                           # Rollouts per task
+  max_turns: 15                  # Max agent turns per task
+  timeout_per_task_seconds: 300  # Max wall-clock time per task
+  sandbox_type: "git_worktree"   # git_worktree | local_dir
+
+# ---- Harness Source ----
+source_config_dir: "harness"
+agent_config_filename: "agent.yaml"
+
+# ---- Tasks ----
+tasks_config: "tasks/tasks.yaml"
+
+# ---- Evolvable Components ----
+# Start locked. Unlock one at a time after verifying pipeline stability.
+evolvable_components:
+  systemprompt_md: false         # System prompt template
+  agent_yaml: false              # Agent config (tool/middleware/skill registration)
+  tool_descriptions: false       # LLM-facing tool YAML schemas
+  tools: false                   # Python tool implementations
+  middleware: false              # Hook pipeline (physics thinking, gates)
+  skills: false                  # Skill packages
+  long_term_memory: false        # LongTermMEMORY.md
+
+# ---- Trace Analysis ----
+trace_analyzer:
+  enabled: true
+  max_tasks: 30                  # Max tasks to analyze per iteration
+  timeout_per_task_seconds: 600  # Max time per task analysis
+
+# ---- Evolution ----
+evolve:
+  llm_config:
+    api_key: "${DEEPSEEK_API_KEY}"
+    base_url: "https://api.deepseek.com"
+    model: "deepseek-chat"
+  max_changes_per_iteration: 5
+
+# ---- Experiment Output ----
+output_dir: "${AGENT_WORKSPACE}/ahe-experiments"
+# If AGENT_WORKSPACE not set, falls back to ../../agent-workspace/ahe-experiments
+
+# ---- Physics Middleware (always active in harness) ----
+physics_middleware:
+  physics_thinking:
+    enabled: true
+    skip_on_turn: 0              # 0 = inject on every turn; N = stop after turn N
+  dimensional_check:
+    enabled: true
+  limit_check:
+    enabled: true

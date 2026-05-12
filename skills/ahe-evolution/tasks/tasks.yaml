@@ -1,0 +1,97 @@
+# Research Task Definitions
+#
+# Each task defines:
+#   - skill: which research skill the agent should use
+#   - input: task parameters passed to the agent
+#   - scoring.dimensions: mechanized quality checks with weights
+
+tasks:
+  - id: "paper-insight-basic"
+    name: "Extract structured insight from a research paper"
+    skill: "paper-to-insight"
+    description: >
+      Read a given paper (PDF or abstract) and produce a structured insight
+      file in the knowledge layer. The agent must source-ground all claims
+      and fill all required template sections.
+    input:
+      paper_path: "test_data/papers/example_paper.pdf"
+      target_line: "topological-order"
+    expected_outputs:
+      - path_pattern: "knowledge/lines/topological-order/papers/*.md"
+        must_exist: true
+      - updated_hypotheses: true
+    scoring:
+      dimensions:
+        - name: "source_grounding"
+          weight: 0.35
+          description: "Fraction of paper claims that chain back to a specific source (DOI, eq number, figure)"
+          checker: "source_grounding_check"
+        - name: "template_completeness"
+          weight: 0.30
+          description: "All required frontmatter fields and template sections filled"
+          checker: "template_completeness_check"
+        - name: "cross_reference_accuracy"
+          weight: 0.20
+          description: "Paper correctly linked to existing hypotheses in hypotheses.md"
+          checker: "cross_reference_check"
+        - name: "knowledge_update_quality"
+          weight: 0.15
+          description: "STATE.md, hypotheses.md, and open-questions.md correctly updated"
+          checker: "knowledge_update_check"
+
+  - id: "state-overview-accuracy"
+    name: "Present accurate research state overview"
+    skill: "state-overview"
+    description: >
+      Load a research line and present a structured one-screen overview.
+      All stated facts must be traceable to sources. No fabricated claims.
+    input:
+      target_line: "topological-order"
+      knowledge_root: "knowledge"
+    expected_outputs:
+      - state_summary_exists: true
+      - covers_active_hypotheses: true
+      - covers_priority_questions: true
+    scoring:
+      dimensions:
+        - name: "fact_accuracy"
+          weight: 0.45
+          description: "All stated facts match ground truth (no hallucinations)"
+          checker: "fact_accuracy_check"
+        - name: "completeness"
+          weight: 0.30
+          description: "All active hypotheses and top-priority open questions covered"
+          checker: "completeness_check"
+        - name: "source_traceability"
+          weight: 0.25
+          description: "Every stated fact has a traceable source path"
+          checker: "source_traceability_check"
+
+  - id: "derivation-gap-detection"
+    name: "Detect gaps in a mathematical derivation"
+    skill: "derivation-tracker"
+    description: >
+      Load a derivation and identify all open gaps (unproven lemmas,
+      unjustified approximations, hidden assumptions). The agent must
+      distinguish between proven, used-as-axiom, and unproven lemmas.
+    input:
+      target_line: "topological-order"
+      derivation_file: "knowledge/lines/topological-order/derivations/toric_code_gsd.md"
+    expected_outputs:
+      - derivation_record_exists: true
+      - gap_type_classification: true
+      - lemma_dependency_tracker: true
+    scoring:
+      dimensions:
+        - name: "lemma_tracking"
+          weight: 0.30
+          description: "All lemma dependencies identified with correct status"
+          checker: "lemma_dependency_check"
+        - name: "gap_detection"
+          weight: 0.40
+          description: "All open gaps correctly identified and categorized"
+          checker: "gap_detection_check"
+        - name: "source_grounding"
+          weight: 0.30
+          description: "Each derivation step cited to a specific source (equation, theorem, paper)"
+          checker: "source_grounding_check"

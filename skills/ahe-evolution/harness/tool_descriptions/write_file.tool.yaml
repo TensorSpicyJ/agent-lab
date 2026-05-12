@@ -1,0 +1,15 @@
+name: write_file
+description: >
+  Create or overwrite a file. Parent directories are created automatically.
+  After writing, ALWAYS verify by reading the file back with read_file.
+  Path is relative to the sandbox working directory.
+parameters:
+  type: object
+  properties:
+    path:
+      type: string
+      description: File path relative to sandbox root
+    content:
+      type: string
+      description: Full file content to write
+  required: [path, content]

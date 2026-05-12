@@ -1,0 +1,12 @@
+name: read_file
+description: >
+  Read the full content of a file. Use this to inspect files before editing,
+  verify changes after writing, or understand existing content. Path is relative
+  to the sandbox working directory.
+parameters:
+  type: object
+  properties:
+    path:
+      type: string
+      description: File path relative to sandbox root
+  required: [path]

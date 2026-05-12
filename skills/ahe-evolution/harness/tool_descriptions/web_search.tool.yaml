@@ -1,0 +1,12 @@
+name: web_search
+description: >
+  Search the web for information. Use when you need external knowledge
+  not available in local files. Results include titles, links, and snippets.
+  Requires SERPER_API_KEY in environment.
+parameters:
+  type: object
+  properties:
+    query:
+      type: string
+      description: Search query string
+  required: [query]

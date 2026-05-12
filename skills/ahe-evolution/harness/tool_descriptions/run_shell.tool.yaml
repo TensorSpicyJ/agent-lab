@@ -1,0 +1,17 @@
+name: run_shell
+description: >
+  Execute a shell command. Use for git operations, running Python scripts,
+  building/checking proofs, searching with grep, and other command-line tasks.
+  Dangerous commands (disk wipe, system shutdown) are blocked by the harness.
+  Long-running commands will be terminated at timeout (default 30s).
+parameters:
+  type: object
+  properties:
+    command:
+      type: string
+      description: Shell command to execute
+    timeout:
+      type: integer
+      description: Timeout in seconds (default 30)
+      default: 30
+  required: [command]

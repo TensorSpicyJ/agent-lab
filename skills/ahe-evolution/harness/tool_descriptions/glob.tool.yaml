@@ -1,0 +1,16 @@
+name: glob
+description: >
+  Find files by glob pattern. Returns matching file paths sorted by
+  modification time (newest first). Use to discover files, list directory
+  contents, or find files by extension.
+parameters:
+  type: object
+  properties:
+    pattern:
+      type: string
+      description: Glob pattern (e.g. '**/*.md', '*.py', 'knowledge/lines/*/STATE.md')
+    path:
+      type: string
+      description: Directory to search in (relative to sandbox root, default '.')
+      default: "."
+  required: [pattern]
