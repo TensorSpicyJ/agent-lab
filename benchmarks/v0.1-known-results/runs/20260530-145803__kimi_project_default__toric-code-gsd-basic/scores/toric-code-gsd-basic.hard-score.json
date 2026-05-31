@@ -1,0 +1,93 @@
+﻿{
+  "task_id": "toric-code-gsd-basic",
+  "hard_score": 1.0,
+  "passed": 17,
+  "total": 17,
+  "checks": [
+    {
+      "name": "task_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "final_gsd",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "encoded_qubits",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "surface",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "assumptions_keywords",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "qubits_on_edges",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "star_global_redundancy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "plaquette_global_redundancy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "independent_stabilizers",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "euler_characteristic",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "logical_qubits_formula",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "sphere_gsd",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "genus_formula",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "logical_loop_algebra",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no_novelty_claim",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ideal_commuting_projector_exact",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "perturbative_splitting_exponential",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

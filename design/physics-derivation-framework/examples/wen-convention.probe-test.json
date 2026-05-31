@@ -1,0 +1,39 @@
+{
+  "probe_id": "PBT1",
+  "target_failure_type": "basis_transform_convention_mismatch",
+  "question": "Given an explicit convention change, does the agent follow the source-packet convention or reuse a memorized/default K-matrix transform?",
+  "input_mutation": {
+    "mutation_type": "change_convention",
+    "description": "Provide a source excerpt that explicitly defines the convention as K' = W K W^T and t' = W t, then use a matrix W for which W K W^T differs from W^T K W."
+  },
+  "expected_behavior": {
+    "answer_type": "exact_answer",
+    "must_include": [
+      "formal_translation uses K' = W K W^T",
+      "assumption ledger marks the convention as licensed by the probe source excerpt",
+      "final K_prime equals the probe convention result"
+    ],
+    "must_not_include": [
+      "K' = W^T K W unless stated as a rejected alternate convention",
+      "unqualified claim that one convention is universal"
+    ]
+  },
+  "hard_checks": [
+    {
+      "check_id": "PBTC1",
+      "check_type": "field_equals",
+      "expected": "formal_translations[0].formal_object contains K' = W K W^T"
+    },
+    {
+      "check_id": "PBTC2",
+      "check_type": "assumption_status",
+      "expected": "the convention assumption is licensed and source-backed"
+    },
+    {
+      "check_id": "PBTC3",
+      "check_type": "field_equals",
+      "expected": "final_answer.K_prime equals the verifier-computed W K W^T result"
+    }
+  ]
+}
+

@@ -1,0 +1,223 @@
+task_id: toric-code-gsd-basic
+agent: kimi_project_default
+run_id: 20260530-142521__kimi_project_default__toric-code-gsd-basic
+scorer: codex_manual_detailed_v0.2
+rubric: known-result-physics-rubric-detailed-v0.2
+task_checklist: toric-code-gsd-basic-checklist-v0.1
+scored_at: 2026-05-30T14:45:00+08:00
+
+hard_caps:
+  wrong_final_result:
+    applies: false
+  changed_problem:
+    applies: false
+  fabricated_source:
+    applies: false
+  novelty_overclaim:
+    applies: false
+  unsafe_confidence:
+    applies: false
+
+dimension_scores:
+  output_contract:
+    earned: 6
+    possible: 6
+    subcriteria:
+      required_sections_present:
+        earned: 2
+        possible: 2
+        evidence: "All requested sections are present."
+      follows_task_scope:
+        earned: 2
+        possible: 2
+        evidence: "Answer stays on toric-code GSD."
+      no_novelty_claim:
+        earned: 2
+        possible: 2
+        evidence: "Explicitly frames the result as known, not novel."
+
+  final_result:
+    earned: 10
+    possible: 12
+    subcriteria:
+      central_answer_correct:
+        earned: 5
+        possible: 5
+        evidence: "States four-fold ground-state degeneracy."
+      domain_conditions_attached:
+        earned: 3
+        possible: 3
+        evidence: "Attaches result to torus / periodic boundary conditions."
+      equivalent_formulations:
+        earned: 2
+        possible: 2
+        evidence: "Correctly states equivalence to two logical qubits."
+      no_result_level_overqualification:
+        earned: 0
+        possible: 2
+        evidence: "Caveat says exact finite-size result requires thermodynamic limit or exactly equal couplings; this overqualifies the ideal commuting-projector result."
+
+  derivation_core:
+    earned: 26
+    possible: 28
+    subcriteria:
+      setup_correct:
+        earned: 4
+        possible: 4
+        evidence: "Defines H, A_v, B_p, and qubits on edges."
+      target_space_or_quantity_correct:
+        earned: 3
+        possible: 3
+        evidence: "Identifies +1 stabilizer eigenspace as the ground-state manifold."
+      counting_or_algebra_steps_correct:
+        earned: 5
+        possible: 5
+        evidence: "Counts V, F, E correctly for square torus and computes G = 2^(E - V - F + 2)."
+      independence_or_constraint_logic:
+        earned: 5
+        possible: 5
+        evidence: "Explains two global redundancies: product of all stars and all plaquettes."
+      final_step_equivalence:
+        earned: 4
+        possible: 4
+        evidence: "Substitution gives 2^2 = 4."
+      hidden_theorem_handling:
+        earned: 2
+        possible: 3
+        evidence: "Names stabilizer dimension theorem, but does not justify the rank/counting theorem beyond the two global products."
+      alternative_route_consistency:
+        earned: 2
+        possible: 2
+        evidence: "Logical-loop route is consistent with the stabilizer route."
+      no_local_math_errors:
+        earned: 1
+        possible: 2
+        evidence: "No fatal math error, but phrase 'one electric, one magnetic in each cycle' is slightly compressed and could obscure the two logical-qubit algebra."
+
+  assumptions_and_conventions:
+    earned: 11
+    possible: 14
+    subcriteria:
+      explicit_core_assumptions:
+        earned: 4
+        possible: 4
+        evidence: "States Hamiltonian, torus, commuting stabilizers, qubits on edges, ground-state sector."
+      boundary_and_regime_control:
+        earned: 2
+        possible: 3
+        evidence: "Correct torus/no-boundary condition, but caveat mixes ideal finite result with thermodynamic/topological phase language."
+      convention_labels:
+        earned: 2
+        possible: 2
+        evidence: "Labels square-lattice convention and stabilizer theorem."
+      approximation_status:
+        earned: 1
+        possible: 2
+        evidence: "Does not cleanly separate exact commuting-projector result from perturbed phase result."
+      no_false_assumption:
+        earned: 2
+        possible: 3
+        evidence: "The equal-coupling / thermodynamic-limit caveat is not strictly required for the gold ideal-Hamiltonian task."
+
+  physics_checks:
+    earned: 16
+    possible: 18
+    subcriteria:
+      topology_or_limit_check:
+        earned: 4
+        possible: 4
+        evidence: "Includes sphere and genus checks."
+      dimensional_or_units_check:
+        earned: 2
+        possible: 2
+        evidence: "Not applicable for discrete stabilizer counting; omission is acceptable."
+      symmetry_or_constraint_check:
+        earned: 4
+        possible: 4
+        evidence: "Checks logical loop algebra and stabilizer constraints."
+      robustness_or_perturbation_check:
+        earned: 1
+        possible: 3
+        evidence: "Mentions perturbations but overstates/underspecifies exact finite-size vs exponentially split phase behavior."
+      physical_interpretation_check:
+        earned: 3
+        possible: 3
+        evidence: "Explains size independence and topological origin."
+      failed_check_handling:
+        earned: 2
+        possible: 2
+        evidence: "No ignored failed check."
+
+  source_grounding:
+    earned: 4
+    possible: 8
+    subcriteria:
+      provided_source_use:
+        earned: 2
+        possible: 3
+        evidence: "No external source was provided; it grounds mostly to prompt/gold-known task context."
+      canonical_reference_or_internal_trace:
+        earned: 1
+        possible: 2
+        evidence: "No explicit Kitaev reference in this valid run; internal derivation is traceable."
+      claim_traceability:
+        earned: 1
+        possible: 2
+        evidence: "Core claims trace to derivation steps, but source provenance is generic."
+      no_unavailable_source_claim:
+        earned: 0
+        possible: 1
+        evidence: "No fabricated source, but no explicit no-source disclosure either."
+
+  uncertainty_and_claim_control:
+    earned: 9
+    possible: 14
+    subcriteria:
+      known_vs_inferred:
+        earned: 3
+        possible: 3
+        evidence: "Separates final known result, derivation, checks, and caveats."
+      caveat_precision:
+        earned: 1
+        possible: 4
+        evidence: "Caveats about thermodynamic limit, equal couplings, and perturbations are too broad for the ideal task."
+      unresolved_steps_localized:
+        earned: 2
+        possible: 3
+        evidence: "Marks stabilizer theorem and square-lattice convention, but not all rank assumptions are localized."
+      confidence_calibration:
+        earned: 1
+        possible: 2
+        evidence: "Correctly confident on result, less calibrated in caveats."
+      no_scope_creep:
+        earned: 2
+        possible: 2
+        evidence: "No major scope drift."
+
+total:
+  earned: 82
+  possible: 100
+  percentage: 82.0
+  interpretation: "usable baseline with clear improvement targets"
+
+failure_tags:
+  - overqualified_result
+  - finite_size_confusion
+  - robustness_overclaim
+  - caveat_overqualification
+  - weak_source_grounding
+  - citation_too_generic
+
+capability_profile:
+  strengths:
+    - "Final answer recovery"
+    - "Stabilizer-counting derivation"
+    - "Topology/genus sanity checks"
+    - "Logical-operator interpretation"
+  weaknesses:
+    - "Source provenance not explicit"
+    - "Exact ideal result vs perturbed topological phase not cleanly separated"
+    - "Some hidden mathematical facts are marked but not fully localized"
+
+comparison_note:
+  - "This detailed score supersedes the earlier coarse 0.85 smoke score for capability analysis."

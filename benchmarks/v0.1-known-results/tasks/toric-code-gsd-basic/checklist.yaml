@@ -1,0 +1,51 @@
+task_id: toric-code-gsd-basic
+checklist_id: toric-code-gsd-basic-checklist-v0.1
+
+accepted_solution_routes:
+  - stabilizer_counting
+  - logical_operator_homology
+
+must_have:
+  final_result:
+    - "GSD = 4 on a torus."
+    - "Equivalent statement: two logical qubits."
+  assumptions:
+    - "Closed torus topology / periodic boundary conditions."
+    - "Standard toric code with qubits on edges."
+    - "Commuting star and plaquette stabilizers."
+    - "Ground states are simultaneous +1 eigenspaces of stabilizers."
+    - "No boundary or perturbation that changes the ideal commuting-projector problem."
+  stabilizer_counting_route:
+    - "Defines or correctly uses star operators A_v and plaquette operators B_p."
+    - "Counts physical qubits as edges E."
+    - "Recognizes product of all stars is identity."
+    - "Recognizes product of all plaquettes is identity."
+    - "Uses independent stabilizer count V + F - 2."
+    - "Uses torus Euler characteristic V - E + F = 0."
+    - "Computes encoded qubits E - (V + F - 2) = 2."
+    - "Concludes ground-space dimension 2^2 = 4."
+  logical_operator_route:
+    - "Identifies two independent non-contractible cycles."
+    - "Identifies Wilson/string loop operators commuting with H."
+    - "Explains they are not products of local stabilizers."
+    - "Explains the logical algebra corresponds to two logical qubits."
+
+physics_checks:
+  high_value:
+    - "Sphere/genus-zero check gives GSD = 1."
+    - "Genus formula GSD = 4^g gives 4 for g = 1."
+    - "Local operators cannot distinguish topological sectors in the ideal/topological regime."
+    - "Perturbations split finite-size degeneracy only exponentially when remaining in the phase."
+    - "Logical loop anticommutation is consistent with two encoded qubits."
+  not_applicable:
+    - "Dimensional analysis is not meaningful for this discrete stabilizer-counting task unless energy scales are discussed."
+
+common_errors:
+  - tag: finite_size_confusion
+    description: "Says the ideal finite torus result requires the thermodynamic limit."
+  - tag: local_vs_global_confusion
+    description: "Says local perturbations cannot lift finite-size degeneracy at all, instead of exponentially weak splitting in the phase."
+  - tag: missing_rank_argument
+    description: "States V + F - 2 independent stabilizers without explaining the two global redundancies."
+  - tag: source_not_available
+    description: "Claims source grounding from papers or equations not provided in the task."

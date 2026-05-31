@@ -1,0 +1,28 @@
+{
+  "task_id": "wen-kmatrix-basis-invariance",
+  "run_id": "20260531-140054__kimi_file_isolated_network_not_enforced__wen-kmatrix-basis-invariance",
+  "attribution_mode": "deterministic_single_cause",
+  "failed_checks": [
+    {
+      "check_id": "required_rules_present",
+      "check_type": "output_contract",
+      "failed_field": "steps[*].rule",
+      "observed": "rules=['matrix_basis_transform', 'matrix_basis_transform', 'numeric_instance_check', 'numeric_instance_check', 'scalar_equality']",
+      "expected": "required rules include inverse_of_transformed_K and substitution"
+    }
+  ],
+  "candidate_causes": [
+    {
+      "cause_id": "C1",
+      "layer": "derivation_trace",
+      "failure_type": "missing_required_structured_derivation_rules",
+      "blamed_nodes": [
+        "steps"
+      ],
+      "evidence": "The prose derivation contains the inverse and substitution argument, but the machine-graded JSON trace records only numeric checks and scalar equality.",
+      "strictness": "strictly_localized"
+    }
+  ],
+  "probe_tests": []
+}
+

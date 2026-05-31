@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-lab.local/schemas/assumption-ledger.schema.json",
+  "title": "Physics Assumption Ledger",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "kind",
+      "claim",
+      "status",
+      "support",
+      "scope"
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[A-Z][A-Za-z0-9_-]*$"
+      },
+      "kind": {
+        "type": "string",
+        "enum": [
+          "regime",
+          "approximation",
+          "modeling_choice",
+          "boundary_condition",
+          "convention",
+          "empirical_input",
+          "effective_theory",
+          "neglected_term",
+          "regularization",
+          "limit_order"
+        ]
+      },
+      "claim": {
+        "type": "string",
+        "minLength": 1
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "licensed",
+          "conditional",
+          "rejected",
+          "unresolved"
+        ]
+      },
+      "support": {
+        "type": "object",
+        "required": [
+          "source_type",
+          "source_ref"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "source_type": {
+            "type": "string",
+            "enum": [
+              "prompt",
+              "source_excerpt",
+              "given_definition",
+              "standard_theorem",
+              "user_instruction",
+              "agent_inference",
+              "benchmark_hidden_rule"
+            ]
+          },
+          "source_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "quote_or_summary": {
+            "type": "string"
+          }
+        }
+      },
+      "scope": {
+        "type": "object",
+        "required": [
+          "applies_to"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "applies_to": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          },
+          "valid_when": {
+            "type": "string"
+          },
+          "invalid_when": {
+            "type": "string"
+          }
+        }
+      },
+      "small_or_large_parameter": {
+        "type": "string"
+      },
+      "error_order": {
+        "type": "string"
+      },
+      "checks": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "check_type",
+            "status"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "check_type": {
+              "type": "string",
+              "enum": [
+                "dimension",
+                "symmetry",
+                "conservation_law",
+                "gauge_convention",
+                "known_limit",
+                "special_case",
+                "source_consistency",
+                "error_bound"
+              ]
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "pass",
+                "fail",
+                "not_applicable",
+                "not_checked"
+              ]
+            },
+            "detail": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-lab.local/schemas/probe-test.schema.json",
+  "title": "Physics Benchmark Probe Test",
+  "type": "object",
+  "required": [
+    "probe_id",
+    "target_failure_type",
+    "question",
+    "input_mutation",
+    "expected_behavior",
+    "hard_checks"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "probe_id": {
+      "type": "string",
+      "pattern": "^PBT[0-9A-Za-z_-]+$"
+    },
+    "target_failure_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "question": {
+      "type": "string",
+      "minLength": 1
+    },
+    "input_mutation": {
+      "type": "object",
+      "required": [
+        "mutation_type",
+        "description"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "mutation_type": {
+          "type": "string",
+          "enum": [
+            "change_convention",
+            "remove_regime",
+            "add_regime",
+            "change_boundary_condition",
+            "change_topology",
+            "change_known_limit",
+            "change_source_excerpt",
+            "minimal_counterexample",
+            "controlled_variant"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "expected_behavior": {
+      "type": "object",
+      "required": [
+        "answer_type",
+        "must_include",
+        "must_not_include"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "exact_answer",
+            "conditional_answer",
+            "refusal_to_derive",
+            "diagnostic_classification"
+          ]
+        },
+        "must_include": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "must_not_include": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "hard_checks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "check_id",
+          "check_type",
+          "expected"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "check_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "check_type": {
+            "type": "string",
+            "enum": [
+              "field_equals",
+              "field_absent",
+              "schema_valid",
+              "formula_equivalent",
+              "known_limit",
+              "assumption_status",
+              "dependency_graph",
+              "source_span"
+            ]
+          },
+          "expected": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}
+

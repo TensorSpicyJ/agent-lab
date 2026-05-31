@@ -1,0 +1,58 @@
+{
+  "type": "object",
+  "required": [
+    "task_id",
+    "det_K",
+    "filling_fraction",
+    "torus_gsd",
+    "genus_gsd",
+    "quasiparticles",
+    "no_novelty_claim",
+    "source_excerpt_used"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "const": "wen-kmatrix-laughlin-hidden-m"
+    },
+    "det_K": {
+      "type": "integer"
+    },
+    "filling_fraction": {
+      "type": "string"
+    },
+    "torus_gsd": {
+      "type": "integer"
+    },
+    "genus_gsd": {
+      "type": "integer"
+    },
+    "quasiparticles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["l", "charge", "exchange_statistics_theta_over_pi"],
+        "properties": {
+          "l": {
+            "type": "array",
+            "items": {"type": "integer"}
+          },
+          "charge": {
+            "type": "string"
+          },
+          "exchange_statistics_theta_over_pi": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "no_novelty_claim": {
+      "type": "boolean",
+      "const": true
+    },
+    "source_excerpt_used": {
+      "type": "string",
+      "const": "wen-kmatrix-formulas-minimal"
+    }
+  }
+}

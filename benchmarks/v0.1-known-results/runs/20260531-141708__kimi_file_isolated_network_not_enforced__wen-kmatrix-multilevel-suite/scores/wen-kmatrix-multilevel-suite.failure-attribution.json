@@ -1,0 +1,28 @@
+{
+  "task_id": "wen-kmatrix-multilevel-suite",
+  "run_id": "20260531-141708__kimi_file_isolated_network_not_enforced__wen-kmatrix-multilevel-suite",
+  "attribution_mode": "deterministic_single_cause",
+  "failed_checks": [
+    {
+      "check_id": "level_3.required_edges_present",
+      "check_type": "dependency_graph",
+      "failed_field": "level_3.edges",
+      "observed": "missing edge ['source_anyon_vectors', 'translation_quotient_lattice']",
+      "expected": "bridge graph should show that integer quasiparticle-vector labels feed directly into the quotient-lattice translation"
+    }
+  ],
+  "candidate_causes": [
+    {
+      "cause_id": "C1",
+      "layer": "derivation_trace",
+      "failure_type": "incomplete_bridge_dependency_graph",
+      "blamed_nodes": [
+        "level_3.edges"
+      ],
+      "evidence": "The answer includes all required nodes and final claim, but routes source_anyon_vectors through source_local_particle_equivalence instead of connecting it directly to translation_quotient_lattice.",
+      "strictness": "strictly_localized"
+    }
+  ],
+  "probe_tests": []
+}
+

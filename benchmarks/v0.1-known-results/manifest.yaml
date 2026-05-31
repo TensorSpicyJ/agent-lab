@@ -1,0 +1,169 @@
+benchmark_id: known-result-physics-v0.1
+created: 2026-05-30
+purpose: "Baseline Kimi Code before modifying its agent behavior."
+status: draft
+
+agents:
+  kimi_vanilla:
+    description: "Kimi Code with project skills isolated as much as the CLI permits."
+    required_metadata:
+      - kimi_version
+      - kimi_executable
+      - command
+      - cwd
+      - model_alias
+      - skills_dir
+      - network_allowed
+  kimi_project_default:
+    description: "Kimi Code in this repository with normal project/user discovery."
+    required_metadata:
+      - kimi_version
+      - kimi_executable
+      - command
+      - cwd
+      - model_alias
+      - discovered_skills_note
+      - network_allowed
+
+scoring:
+  primary_score: hard_score
+  primary_score_rule: "deterministic verifier wins over human rubric"
+  validity_policy: ANTI-LEAKAGE-POLICY.md
+  rubric: rubrics/known-result-rubric-detailed-v0.2.yaml
+  derivation_framework: ../../design/physics-derivation-framework/README.md
+  derivation_record_schema: ../../design/physics-derivation-framework/schemas/derivation-record.schema.json
+  assumption_ledger_schema: ../../design/physics-derivation-framework/schemas/assumption-ledger.schema.json
+  failure_attribution_schema: ../../design/physics-derivation-framework/schemas/failure-attribution.schema.json
+  reasoning_assisted_attribution_schema: ../../design/physics-derivation-framework/schemas/reasoning-assisted-attribution.schema.json
+  probe_test_schema: ../../design/physics-derivation-framework/schemas/probe-test.schema.json
+  aggregate_formula: "hard_score from task verifier; diagnostic profile from detailed rubric"
+  primary_output: "machine-verifiable hard score plus secondary failure profile"
+
+tasks:
+  - id: wen-kmatrix-multilevel-suite
+    revision: 0
+    lane: bridge_derivation
+    status: ready
+    prompt: tasks/wen-kmatrix-multilevel-suite/prompt.md
+    source_packet: tasks/wen-kmatrix-multilevel-suite/source_packet/wen_kmatrix_multilevel_excerpt.md
+    hidden_params: tasks/wen-kmatrix-multilevel-suite/private/params.hidden.json
+    verifier: tasks/wen-kmatrix-multilevel-suite/verify.py
+    expected_checks:
+      - formula_application
+      - quotient_lattice_derivation
+      - bridge_dependency_graph
+      - section_level_bulk_edge_connection
+      - claim_control
+
+  - id: band-effective-mass-assumption-gate
+    revision: 0
+    lane: derivation
+    status: ready
+    prompt: tasks/band-effective-mass-assumption-gate/prompt.short.md
+    full_record_prompt: tasks/band-effective-mass-assumption-gate/prompt.md
+    source_packet: tasks/band-effective-mass-assumption-gate/source_packet/tight_binding_excerpt.md
+    hidden_params: tasks/band-effective-mass-assumption-gate/private/params.hidden.json
+    verifier: tasks/band-effective-mass-assumption-gate/verify_short.py
+    full_record_verifier: tasks/band-effective-mass-assumption-gate/verify.py
+    output_contract: ../../design/physics-derivation-framework/schemas/answer-card.schema.json
+    framework_contract: ../../design/physics-derivation-framework/schemas/derivation-record.schema.json
+    expected_checks:
+      - unsupported_global_approximation_rejected
+      - conditional_low_k_branch
+      - assumption_ledger
+      - derivation_trace_dependencies
+      - no_unconditional_effective_mass_claim
+
+  - id: wen-kmatrix-basis-invariance
+    revision: 0
+    lane: derivation
+    status: ready
+    prompt: tasks/wen-kmatrix-basis-invariance/prompt.md
+    source_packet: tasks/wen-kmatrix-basis-invariance/source_packet/basis_transform_excerpt.md
+    hidden_params: tasks/wen-kmatrix-basis-invariance/private/params.hidden.json
+    verifier: tasks/wen-kmatrix-basis-invariance/verify.py
+    expected_checks:
+      - transformed_K
+      - transformed_t
+      - filling_fraction_invariance
+      - derivation_steps
+      - allowed_rules
+      - dependency_graph
+
+  - id: wen-kmatrix-laughlin-hidden-m
+    revision: 0
+    lane: derivation
+    status: ready
+    prompt: tasks/wen-kmatrix-laughlin-hidden-m/prompt.md
+    source_packet: tasks/wen-kmatrix-laughlin-hidden-m/source_packet/wen_kmatrix_excerpt.md
+    hidden_params: tasks/wen-kmatrix-laughlin-hidden-m/private/params.hidden.json
+    answer_schema: tasks/wen-kmatrix-laughlin-hidden-m/answer_schema.json
+    verifier: tasks/wen-kmatrix-laughlin-hidden-m/verify.py
+    expected_checks:
+      - det_K
+      - filling_fraction
+      - torus_gsd
+      - genus_gsd
+      - quasiparticle_charge
+      - exchange_statistics
+      - no_novelty_claim
+
+  - id: toric-code-gsd-basic
+    revision: 0
+    lane: derivation
+    status: ready
+    prompt: tasks/toric-code-gsd-basic/prompt.md
+    gold: tasks/toric-code-gsd-basic/gold.md
+    checklist: tasks/toric-code-gsd-basic/checklist.yaml
+    answer_schema: tasks/toric-code-gsd-basic/answer_schema.json
+    verifier: tasks/toric-code-gsd-basic/verify.py
+    expected_checks:
+      - final_result
+      - derivation_validity
+      - assumptions_preserved
+      - physics_checks
+      - uncertainty_control
+
+  - id: hartree-fock-paper-derivation
+    revision: 0
+    lane: paper_derivation
+    status: planned
+    prompt: tasks/hartree-fock-paper-derivation/prompt.md
+    gold: tasks/hartree-fock-paper-derivation/gold.md
+    expected_checks:
+      - final_result
+      - derivation_validity
+      - assumptions_preserved
+      - source_grounding
+      - uncertainty_control
+
+  - id: known-lsco-claim-extraction
+    revision: 0
+    lane: paper_grounding
+    status: planned
+    prompt: tasks/known-lsco-claim-extraction/prompt.md
+    gold: tasks/known-lsco-claim-extraction/gold.md
+    expected_checks:
+      - final_result
+      - assumptions_preserved
+      - source_grounding
+      - uncertainty_control
+
+  - id: numeric-known-limit-check
+    revision: 0
+    lane: numeric
+    status: planned
+    prompt: tasks/numeric-known-limit-check/prompt.md
+    gold: tasks/numeric-known-limit-check/gold.md
+    expected_checks:
+      - final_result
+      - physics_checks
+      - uncertainty_control
+
+baseline_exit_criteria:
+  minimum_tasks_to_freeze: 3
+  preferred_tasks_to_freeze: 5
+  minimum_rollouts_per_agent: 2
+  required_agents:
+    - kimi_vanilla
+    - kimi_project_default

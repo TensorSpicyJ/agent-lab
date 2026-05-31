@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-lab.local/schemas/reasoning-assisted-attribution.schema.json",
+  "title": "Reasoning Assisted Attribution",
+  "type": "object",
+  "required": [
+    "task_id",
+    "run_id",
+    "hard_failure_ref",
+    "reasoning_source",
+    "reasoning_evidence",
+    "diagnostic_hypothesis",
+    "score_policy",
+    "recommended_probe"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "hard_failure_ref": {
+      "type": "object",
+      "required": [
+        "failed_check",
+        "failed_field",
+        "failure_type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "failed_check": {
+          "type": "string",
+          "minLength": 1
+        },
+        "failed_field": {
+          "type": "string",
+          "minLength": 1
+        },
+        "failure_type": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "reasoning_source": {
+      "type": "object",
+      "required": [
+        "path",
+        "type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "stderr_reasoning",
+            "api_reasoning_content",
+            "scratchpad",
+            "unavailable"
+          ]
+        }
+      }
+    },
+    "reasoning_evidence": {
+      "type": "object",
+      "required": [
+        "status",
+        "evidence_summary",
+        "matched_concepts"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "concept_absent",
+            "concept_present_but_not_in_final",
+            "concept_present_but_serialized_wrong",
+            "reasoning_matches_final_error",
+            "reasoning_unavailable",
+            "ambiguous"
+          ]
+        },
+        "evidence_summary": {
+          "type": "string"
+        },
+        "matched_concepts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "diagnostic_hypothesis": {
+      "type": "object",
+      "required": [
+        "type",
+        "confidence",
+        "not_hard_score"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "output_contract_error",
+            "conceptual_error",
+            "source_extraction_error",
+            "bridge_serialization_error",
+            "reasoning_to_final_omission",
+            "assumption_gate_error",
+            "calculation_error",
+            "unknown"
+          ]
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "not_hard_score": {
+          "type": "boolean"
+        }
+      }
+    },
+    "score_policy": {
+      "type": "string",
+      "enum": [
+        "diagnostic_only_not_used_for_hard_score"
+      ]
+    },
+    "recommended_probe": {
+      "type": "string"
+    }
+  }
+}

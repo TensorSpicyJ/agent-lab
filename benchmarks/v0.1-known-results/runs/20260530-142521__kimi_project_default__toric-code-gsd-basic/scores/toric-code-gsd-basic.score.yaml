@@ -1,0 +1,37 @@
+task_id: toric-code-gsd-basic
+agent: kimi_project_default
+run_id: 20260530-142521__kimi_project_default__toric-code-gsd-basic
+scorer: codex_manual_v0
+rubric: known-result-physics-rubric-v0.1
+scored_at: 2026-05-30T14:35:00+08:00
+
+scores:
+  final_result:
+    score: 1.0
+    rationale: "Correctly states four-fold ground-state degeneracy on a torus."
+  derivation_validity:
+    score: 1.0
+    rationale: "Stabilizer-counting route is valid: qubits on edges, two redundant global stabilizer products, GSD = 2^(E - V - F + 2) = 4."
+  assumptions_preserved:
+    score: 0.5
+    rationale: "Main assumptions are present, but the caveat about exact finite-size degeneracy depending on equal couplings / thermodynamic limit is slightly overqualified for the ideal commuting-projector toric code."
+  physics_checks:
+    score: 1.0
+    rationale: "Includes size independence, genus/sphere consistency, and logical-operator algebra checks."
+  source_grounding:
+    score: 0.5
+    rationale: "The task did not provide external sources, and the answer does not cite a source path or paper. It does identify the known Kitaev result implicitly."
+  uncertainty_control:
+    score: 0.5
+    rationale: "Flags conventions and unstated theorem, but some perturbation/finite-size caveats are stated too broadly."
+
+aggregate_score: 0.85
+passed: true
+
+failure_tags:
+  - caveat_overqualification
+  - weak_source_grounding
+
+notes:
+  - "This is a valid project-default Kimi Code baseline run with cwd fixed to D:/Playground/agent-lab."
+  - "Use this as the first reference point for modified Kimi agent behavior, but add more tasks before drawing capability-wide conclusions."

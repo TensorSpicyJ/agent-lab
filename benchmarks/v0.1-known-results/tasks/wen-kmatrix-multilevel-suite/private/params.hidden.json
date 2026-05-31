@@ -1,0 +1,53 @@
+{
+  "task_id": "wen-kmatrix-multilevel-suite",
+  "K": [[2, 1], [1, 2]],
+  "t": [1, 1],
+  "genus": 2,
+  "l_vectors": {
+    "l1": [1, 0],
+    "l2": [1, -1]
+  },
+  "expected": {
+    "det_K": 3,
+    "filling_fraction": "2/3",
+    "torus_gsd": 3,
+    "genus_gsd": 9,
+    "snf_invariant_factors": [1, 3],
+    "quotient_group": "Z_3",
+    "representatives": [[0, 0], [1, 0], [2, 0]],
+    "charges": {
+      "l1": "1/3",
+      "l2": "0"
+    },
+    "statistics_theta_over_pi": {
+      "l1": "2/3",
+      "l2": "2"
+    },
+    "edge": {
+      "num_edge_fields": 2,
+      "num_right_movers": 2,
+      "num_left_movers": 0,
+      "net_chirality": 2
+    }
+  },
+  "required_bridge_nodes": [
+    "source_anyon_vectors",
+    "source_local_particle_equivalence",
+    "translation_quotient_lattice",
+    "math_finite_index_or_snf",
+    "physical_bridge_torus_gsd_counts_sectors"
+  ],
+  "required_bridge_edges": [
+    ["source_anyon_vectors", "translation_quotient_lattice"],
+    ["source_local_particle_equivalence", "translation_quotient_lattice"],
+    ["translation_quotient_lattice", "math_finite_index_or_snf"],
+    ["math_finite_index_or_snf", "physical_bridge_torus_gsd_counts_sectors"]
+  ],
+  "required_section_links": [
+    ["bulk_K_data", "anyon_quotient"],
+    ["anyon_quotient", "torus_gsd"],
+    ["bulk_K_data", "edge_signature"],
+    ["edge_signature", "edge_mode_count"]
+  ]
+}
+

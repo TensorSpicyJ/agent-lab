@@ -1,0 +1,146 @@
+{
+  "task_id": "band-effective-mass-assumption-gate",
+  "claim": "No global effective mass can be determined; only a conditional local effective mass near k0=0 is possible given |ka| << 1.",
+  "physical_premises": [
+    {
+      "id": "P1",
+      "statement": "The dispersion is E(k)=E0-2*t*cos(k*a) with t>0.",
+      "source_ref": "prompt"
+    },
+    {
+      "id": "P2",
+      "statement": "Effective mass is a local approximation near a specified extremum k0.",
+      "source_ref": "tight-binding-effective-mass-minimal"
+    },
+    {
+      "id": "P3",
+      "statement": "The task does not specify a low-energy regime, expansion point, or global |k*a| << 1.",
+      "source_ref": "prompt"
+    }
+  ],
+  "formal_translations": [
+    {
+      "id": "T1",
+      "physical_object": "one-dimensional tight-binding band",
+      "formal_object": "E(k)=E0-2*t*cos(k*a)",
+      "status": "given",
+      "conventions": [
+        "t>0",
+        "a is lattice spacing"
+      ],
+      "depends_on": [
+        "P1"
+      ]
+    },
+    {
+      "id": "T2",
+      "physical_object": "local effective mass",
+      "formal_object": "m*=hbar^2/E''(k0)",
+      "status": "given",
+      "conventions": [
+        "local expansion near specified k0"
+      ],
+      "depends_on": [
+        "P2"
+      ]
+    }
+  ],
+  "assumption_ledger": [
+    {
+      "id": "A1",
+      "kind": "approximation",
+      "claim": "global parabolic approximation",
+      "status": "rejected",
+      "support": {
+        "source_type": "source_excerpt",
+        "source_ref": "tight-binding-effective-mass-minimal",
+        "quote_or_summary": "Task source packet defines effective mass as a local expansion and rejects global small-ka use."
+      },
+      "scope": {
+        "applies_to": [
+          "S1"
+        ],
+        "valid_when": "never globally",
+        "invalid_when": "prompt gives no global |ka| << 1"
+      },
+      "checks": [
+        {
+          "check_type": "source_consistency",
+          "status": "not_checked",
+          "detail": "Expanded from compact answer card; hard verifier checks the compact fields separately."
+        }
+      ]
+    },
+    {
+      "id": "A2",
+      "kind": "regime",
+      "claim": "low-k branch around k0=0",
+      "status": "conditional",
+      "support": {
+        "source_type": "source_excerpt",
+        "source_ref": "tight-binding-effective-mass-minimal",
+        "quote_or_summary": "Task source packet defines effective mass as a local expansion and rejects global small-ka use."
+      },
+      "scope": {
+        "applies_to": [
+          "S2"
+        ],
+        "valid_when": "|ka| << 1 near k0=0",
+        "invalid_when": "away from k0=0"
+      },
+      "checks": [
+        {
+          "check_type": "source_consistency",
+          "status": "not_checked",
+          "detail": "Expanded from compact answer card; hard verifier checks the compact fields separately."
+        }
+      ]
+    }
+  ],
+  "derivation_trace": [
+    {
+      "id": "S1",
+      "statement": "no global effective mass is determined",
+      "rule": "refusal_without_regime",
+      "depends_on": [
+        "A1"
+      ]
+    },
+    {
+      "id": "S2",
+      "statement": "if |ka| << 1 near k0=0, expand locally",
+      "rule": "conditional_branch",
+      "depends_on": [
+        "A2"
+      ]
+    },
+    {
+      "id": "S3",
+      "statement": "m* = hbar^2/(2*t*a^2)",
+      "rule": "curvature_effective_mass",
+      "depends_on": [
+        "S2"
+      ]
+    }
+  ],
+  "verification_checks": [
+    {
+      "id": "V1",
+      "check_type": "assumption_gate",
+      "status": "not_checked",
+      "detail": "Expanded record generated from answer card. Run verify_short.py for hard checks."
+    }
+  ],
+  "final_answer": {
+    "global_effective_mass_determined": false,
+    "global_parabolic_approximation_status": "rejected",
+    "unconditional_effective_mass": null,
+    "low_k_branch_status": "conditional",
+    "low_k_condition": "|ka| << 1 near k0=0",
+    "conditional_expansion_point": "k0=0",
+    "conditional_quadratic_energy": "E0 - 2*t + t*a^2*k^2",
+    "conditional_effective_mass": "hbar^2/(2*t*a^2)",
+    "conditional_error_order": "O((k*a)^4)",
+    "requires_more_information": true
+  }
+}

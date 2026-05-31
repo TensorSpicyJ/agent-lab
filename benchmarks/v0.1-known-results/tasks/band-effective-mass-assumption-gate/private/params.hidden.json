@@ -1,0 +1,32 @@
+{
+  "task_id": "band-effective-mass-assumption-gate",
+  "dispersion": "E(k) = E0 - 2 t cos(k a)",
+  "given_regime": "none",
+  "source_excerpt_id": "tight-binding-effective-mass-minimal",
+  "required_assumptions": {
+    "global_parabolic_approximation_status": "rejected",
+    "low_k_branch_status": "conditional"
+  },
+  "expected_conditional_result": {
+    "expansion_point": "k0=0",
+    "quadratic_energy": "E0 - 2*t + t*a^2*k^2",
+    "effective_mass": "hbar^2/(2*t*a^2)",
+    "error_order": "O((k*a)^4)"
+  },
+  "allowed_rules": [
+    "source_extraction",
+    "formal_translation",
+    "assumption_gate",
+    "taylor_expansion",
+    "curvature_effective_mass",
+    "conditional_branch",
+    "refusal_without_regime",
+    "known_limit_check"
+  ],
+  "required_rules": [
+    "assumption_gate",
+    "conditional_branch",
+    "refusal_without_regime"
+  ]
+}
+

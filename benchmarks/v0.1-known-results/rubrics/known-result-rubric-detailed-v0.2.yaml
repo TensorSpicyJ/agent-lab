@@ -1,0 +1,195 @@
+rubric_id: known-result-physics-rubric-detailed-v0.2
+score_scale: "0-100"
+grading_unit: "task output"
+
+principles:
+  - "Score capability profile, not only aggregate accuracy."
+  - "Separate final-answer correctness from derivation quality and physics discipline."
+  - "Prefer task-specific checklists for domain facts; use this rubric for cross-task structure."
+  - "Record failure tags even when the aggregate score is high."
+
+hard_caps:
+  wrong_final_result:
+    condition: "The central known result is wrong or absent."
+    max_score: 49
+  changed_problem:
+    condition: "The answer solves a materially different problem than the prompt."
+    max_score: 59
+  fabricated_source:
+    condition: "The answer cites a non-existent or unavailable source as evidence."
+    max_score: 69
+  novelty_overclaim:
+    condition: "The answer presents a known result as a new discovery by the agent."
+    max_score: 69
+  unsafe_confidence:
+    condition: "The answer hides uncertainty on a claim that affects the final result."
+    max_score: 79
+
+dimensions:
+  output_contract:
+    points: 6
+    subcriteria:
+      required_sections_present:
+        points: 2
+        anchor_full: "All requested output sections are present and easy to parse."
+      follows_task_scope:
+        points: 2
+        anchor_full: "Answer addresses the requested known-result task without drifting into unrelated exposition."
+      no_novelty_claim:
+        points: 2
+        anchor_full: "Does not imply the known result is novel or discovered by the agent."
+
+  final_result:
+    points: 12
+    subcriteria:
+      central_answer_correct:
+        points: 5
+        anchor_full: "Final symbolic/numeric/conceptual result exactly matches the gold result."
+      domain_conditions_attached:
+        points: 3
+        anchor_full: "Final answer states the topology, regime, model, or parameter condition under which it holds."
+      equivalent_formulations:
+        points: 2
+        anchor_full: "Uses equivalent forms correctly, such as degeneracy, logical qubits, or formula variants."
+      no_result_level_overqualification:
+        points: 2
+        anchor_full: "Does not weaken or overstate the final result beyond the gold assumptions."
+
+  derivation_core:
+    points: 28
+    subcriteria:
+      setup_correct:
+        points: 4
+        anchor_full: "Defines the relevant objects, operators, variables, or starting equations correctly."
+      target_space_or_quantity_correct:
+        points: 3
+        anchor_full: "Identifies the exact space, observable, or quantity being computed."
+      counting_or_algebra_steps_correct:
+        points: 5
+        anchor_full: "Core counting, algebra, or symbolic transformations are correct."
+      independence_or_constraint_logic:
+        points: 5
+        anchor_full: "Correctly handles independent constraints, redundancies, boundary conditions, or rank arguments."
+      final_step_equivalence:
+        points: 4
+        anchor_full: "The derivation connects the intermediate result to the final answer without a gap."
+      hidden_theorem_handling:
+        points: 3
+        anchor_full: "Nontrivial theorems or facts are named, justified, or explicitly marked as assumed."
+      alternative_route_consistency:
+        points: 2
+        anchor_full: "Any alternative explanation is consistent with the main derivation."
+      no_local_math_errors:
+        points: 2
+        anchor_full: "No local algebraic, sign, factor, rank, or convention error."
+
+  assumptions_and_conventions:
+    points: 14
+    subcriteria:
+      explicit_core_assumptions:
+        points: 4
+        anchor_full: "States all assumptions required for the gold result."
+      boundary_and_regime_control:
+        points: 3
+        anchor_full: "Correctly handles topology, boundary, perturbative regime, finite-size regime, or thermodynamic limit."
+      convention_labels:
+        points: 2
+        anchor_full: "Marks notation, basis, sign, gauge, or labeling conventions when they matter."
+      approximation_status:
+        points: 2
+        anchor_full: "Separates exact statements from approximations or phase-level statements."
+      no_false_assumption:
+        points: 3
+        anchor_full: "Does not introduce an assumption that changes or weakens the gold result."
+
+  physics_checks:
+    points: 18
+    subcriteria:
+      topology_or_limit_check:
+        points: 4
+        anchor_full: "Checks a known topology, limit, or special case where the answer is predictable."
+      dimensional_or_units_check:
+        points: 2
+        anchor_full: "Checks dimensions/units when applicable, or marks not applicable."
+      symmetry_or_constraint_check:
+        points: 4
+        anchor_full: "Checks symmetry, conservation, gauge, Hermiticity, commutation, or constraint consistency."
+      robustness_or_perturbation_check:
+        points: 3
+        anchor_full: "Accurately distinguishes exact result, robustness, and perturbative corrections."
+      physical_interpretation_check:
+        points: 3
+        anchor_full: "Explains why the result is physically sensible, not just algebraically obtained."
+      failed_check_handling:
+        points: 2
+        anchor_full: "No failed or missing sanity check is silently treated as passed."
+
+  source_grounding:
+    points: 8
+    subcriteria:
+      provided_source_use:
+        points: 3
+        anchor_full: "Uses provided source text, equations, figures, data, or sample identifiers when present."
+      canonical_reference_or_internal_trace:
+        points: 2
+        anchor_full: "For no-source tasks, identifies canonical provenance or traceable internal equations/steps."
+      claim_traceability:
+        points: 2
+        anchor_full: "Important claims can be traced to prompt data, gold facts, cited references, or derivation steps."
+      no_unavailable_source_claim:
+        points: 1
+        anchor_full: "Does not pretend to have consulted unavailable sources."
+
+  uncertainty_and_claim_control:
+    points: 14
+    subcriteria:
+      known_vs_inferred:
+        points: 3
+        anchor_full: "Separates given known result, derived implication, and optional interpretation."
+      caveat_precision:
+        points: 4
+        anchor_full: "Caveats are technically precise and do not weaken exact statements incorrectly."
+      unresolved_steps_localized:
+        points: 3
+        anchor_full: "Unstated theorems, conventions, or gaps are localized to the specific step they affect."
+      confidence_calibration:
+        points: 2
+        anchor_full: "Confidence matches evidence quality; no unsupported certainty."
+      no_scope_creep:
+        points: 2
+        anchor_full: "Does not make broad claims beyond the task without flagging them as context."
+
+failure_tag_taxonomy:
+  result:
+    - wrong_final_answer
+    - missing_condition
+    - convention_mismatch
+    - overqualified_result
+  derivation:
+    - algebra_error
+    - missing_rank_argument
+    - hidden_assumption
+    - invalid_equivalence
+    - unsupported_alternative_route
+  physics:
+    - missing_limit_check
+    - missing_symmetry_check
+    - robustness_overclaim
+    - finite_size_confusion
+    - local_vs_global_confusion
+  evidence:
+    - weak_source_grounding
+    - fabricated_source
+    - source_not_available
+    - citation_too_generic
+  discipline:
+    - novelty_overclaim
+    - uncertainty_not_localized
+    - caveat_overqualification
+    - prompt_scope_drift
+
+reporting_requirements:
+  - "Always report total score and per-dimension score."
+  - "Always report subcriterion scores for benchmark-development runs."
+  - "Always attach failure tags."
+  - "For agent comparison, compare dimension profiles before aggregate scores."

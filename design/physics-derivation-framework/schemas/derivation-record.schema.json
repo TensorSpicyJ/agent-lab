@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-lab.local/schemas/derivation-record.schema.json",
+  "title": "Physics Derivation Record",
+  "type": "object",
+  "required": [
+    "task_id",
+    "claim",
+    "physical_premises",
+    "formal_translations",
+    "assumption_ledger",
+    "derivation_trace",
+    "verification_checks",
+    "final_answer"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claim": {
+      "type": "string",
+      "minLength": 1
+    },
+    "physical_premises": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "statement",
+          "source_ref"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^P[0-9A-Za-z_-]+$"
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_ref": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "formal_translations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "physical_object",
+          "formal_object",
+          "status",
+          "depends_on"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^T[0-9A-Za-z_-]+$"
+          },
+          "physical_object": {
+            "type": "string",
+            "minLength": 1
+          },
+          "formal_object": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "given",
+              "licensed",
+              "conditional",
+              "rejected",
+              "unresolved"
+            ]
+          },
+          "conventions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "depends_on": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "invalid_when": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "assumption_ledger": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "derivation_trace": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "statement",
+          "rule",
+          "depends_on"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^S[0-9A-Za-z_-]+$"
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rule": {
+            "type": "string",
+            "minLength": 1
+          },
+          "depends_on": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "machine_expression": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "verification_checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "check_type",
+          "status"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^V[0-9A-Za-z_-]+$"
+          },
+          "check_type": {
+            "type": "string",
+            "enum": [
+              "schema",
+              "algebra",
+              "cas_equivalence",
+              "numeric",
+              "dimension",
+              "symmetry",
+              "known_limit",
+              "source_grounding",
+              "assumption_gate",
+              "proof_assistant"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "fail",
+              "not_applicable",
+              "not_checked"
+            ]
+          },
+          "detail": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "final_answer": {
+      "type": "object"
+    }
+  }
+}
+

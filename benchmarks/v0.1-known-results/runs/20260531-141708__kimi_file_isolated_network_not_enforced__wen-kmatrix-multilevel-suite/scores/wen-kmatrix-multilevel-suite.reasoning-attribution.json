@@ -1,0 +1,31 @@
+{
+  "task_id": "wen-kmatrix-multilevel-suite",
+  "run_id": "20260531-141708__kimi_file_isolated_network_not_enforced__wen-kmatrix-multilevel-suite",
+  "hard_failure_ref": {
+    "failed_check": "level_3.required_edges_present",
+    "failed_field": "level_3.edges",
+    "failure_type": "incomplete_bridge_dependency_graph"
+  },
+  "reasoning_source": {
+    "path": "D:\\Playground\\agent-lab\\benchmarks\\v0.1-known-results\\runs\\20260531-141708__kimi_file_isolated_network_not_enforced__wen-kmatrix-multilevel-suite\\logs\\wen-kmatrix-multilevel-suite.stderr.txt",
+    "type": "stderr_reasoning"
+  },
+  "reasoning_evidence": {
+    "status": "concept_present_but_not_in_final",
+    "evidence_summary": "Reasoning explicitly considers the missing direct edge, but the final JSON omits it. This points to a transfer failure from reasoning to final structured graph, not lack of the physical concept.",
+    "matched_concepts": [
+      "source_anyon_vectors",
+      "source_local_particle_equivalence",
+      "translation_quotient_lattice",
+      "linear_chain_edge",
+      "direct_missing_edge"
+    ]
+  },
+  "diagnostic_hypothesis": {
+    "type": "reasoning_to_final_omission",
+    "confidence": "high",
+    "not_hard_score": true
+  },
+  "score_policy": "diagnostic_only_not_used_for_hard_score",
+  "recommended_probe": "Require translation_quotient_lattice to have explicit incoming edges from both source_anyon_vectors and source_local_particle_equivalence; then test whether the agent still serializes them as a chain."
+}

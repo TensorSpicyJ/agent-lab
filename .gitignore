@@ -21,3 +21,10 @@ Thumbs.db
 # Temporary
 *.tmp
 *.bak
+
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# Benchmark run logs can contain verbose local session traces.
+benchmarks/**/runs/**/logs/

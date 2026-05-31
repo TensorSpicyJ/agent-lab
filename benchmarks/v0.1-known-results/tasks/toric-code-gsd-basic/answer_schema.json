@@ -1,0 +1,85 @@
+{
+  "type": "object",
+  "required": [
+    "task_id",
+    "final_gsd",
+    "encoded_qubits",
+    "surface",
+    "assumptions",
+    "stabilizer_counting",
+    "checks",
+    "caveats"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "const": "toric-code-gsd-basic"
+    },
+    "final_gsd": {
+      "type": "integer",
+      "const": 4
+    },
+    "encoded_qubits": {
+      "type": "integer",
+      "const": 2
+    },
+    "surface": {
+      "type": "string",
+      "enum": ["torus", "T2", "genus_1"]
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 4
+    },
+    "stabilizer_counting": {
+      "type": "object",
+      "required": [
+        "qubits_on_edges",
+        "star_global_redundancy",
+        "plaquette_global_redundancy",
+        "independent_stabilizers",
+        "euler_characteristic",
+        "logical_qubits_formula"
+      ],
+      "properties": {
+        "qubits_on_edges": {"type": "boolean", "const": true},
+        "star_global_redundancy": {"type": "boolean", "const": true},
+        "plaquette_global_redundancy": {"type": "boolean", "const": true},
+        "independent_stabilizers": {
+          "type": "string",
+          "enum": ["V+F-2", "V + F - 2", "Nv+Np-2", "N_v+N_p-2"]
+        },
+        "euler_characteristic": {
+          "type": "string",
+          "enum": ["V-E+F=0", "V - E + F = 0", "Nv-Ne+Np=0", "N_v - N_e + N_p = 0"]
+        },
+        "logical_qubits_formula": {
+          "type": "string",
+          "enum": ["E-(V+F-2)=2", "E - (V + F - 2) = 2", "Ne-(Nv+Np-2)=2", "N_e - (N_v + N_p - 2) = 2"]
+        }
+      }
+    },
+    "checks": {
+      "type": "object",
+      "required": ["sphere_gsd", "genus_formula", "logical_loop_algebra"],
+      "properties": {
+        "sphere_gsd": {"type": "integer", "const": 1},
+        "genus_formula": {
+          "type": "string",
+          "enum": ["4^g", "4**g", "2^(2g)", "2^{2g}"]
+        },
+        "logical_loop_algebra": {"type": "boolean", "const": true}
+      }
+    },
+    "caveats": {
+      "type": "object",
+      "required": ["no_novelty_claim", "ideal_commuting_projector_exact", "perturbative_splitting_exponential"],
+      "properties": {
+        "no_novelty_claim": {"type": "boolean", "const": true},
+        "ideal_commuting_projector_exact": {"type": "boolean", "const": true},
+        "perturbative_splitting_exponential": {"type": "boolean", "const": true}
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "task_id": "band-effective-mass-assumption-gate",
+  "run_id": "20260530-171034__kimi_project_default__band-effective-mass-assumption-gate",
+  "agent": "kimi_project_default_prompt_only_temp_cwd",
+  "cwd": "C:\\Users\\TaiS\\AppData\\Local\\Temp\\agent-lab-kimi-20260530-171034",
+  "command": "kimi -p <prompt text> --output-format text",
+  "prompt": "D:\\Playground\\agent-lab\\benchmarks\\v0.1-known-results\\tasks\\band-effective-mass-assumption-gate\\prompt.md",
+  "network_allowed": false,
+  "note": "Ran from temp cwd with prompt copied as prompt.md only; private files and verifier were not placed in cwd.",
+  "kimi_executable": "C:\\Users\\TaiS\\.kimi-code\\bin\\kimi.EXE",
+  "kimi_version": "0.5.0"
+}

@@ -1,0 +1,44 @@
+﻿run_id: "20260530-142247__kimi_vanilla__toric-code-gsd-basic"
+date: "2026-05-30T14:22:47.2796613+08:00"
+agent: "kimi_vanilla"
+
+environment:
+  cwd: "D:/Playground"
+  kimi_version: "0.5.0"
+  kimi_executable: "C:/Users/TaiS/.kimi-code/bin/kimi.exe"
+  command: "kimi --skills-dir <run>/empty-skills -p <prompt:toric-code-gsd-basic> --output-format text"
+  model_alias: ""
+  skills_dir: "D:/Playground/agent-lab/benchmarks/v0.1-known-results/runs/20260530-142247__kimi_vanilla__toric-code-gsd-basic/empty-skills"
+  discovered_skills_note: "explicit empty --skills-dir requested"
+  network_allowed: false
+  web_access_used: null
+
+benchmark:
+  benchmark_id: known-result-physics-v0.1
+  manifest_revision: draft
+  rubric_revision: known-result-physics-rubric-v0.1
+  task_ids:
+    - "toric-code-gsd-basic"
+  rollouts_per_task: 1
+
+artifacts:
+  outputs_dir: "outputs/"
+  scores_dir: "scores/"
+  logs_dir: "logs/"
+  prompt_file: "D:/Playground/agent-lab/benchmarks/v0.1-known-results/tasks/toric-code-gsd-basic/prompt.md"
+  prompt_checksums:
+    toric-code-gsd-basic: "C0D36BE8F35F8BEFF51443AAAB719B1EC480C2834D2BC4D1F18041860B9E4EE8"
+  output_checksums:
+    toric-code-gsd-basic: "38A0E7CA1F540095032D6DC52F538953A9AE0D5A1B2A3B581122D073201B64AD"
+
+execution:
+  exit_code: 0
+  started_at: "2026-05-30T14:22:47.2796613+08:00"
+  finished_at: "2026-05-30T14:24:36.0719723+08:00"
+  runtime_seconds: 108.792
+
+notes:
+  manual_interventions: []
+  known_deviations: []
+  scorer_notes:
+    - "Raw Kimi stdout copied to outputs/toric-code-gsd-basic.md"

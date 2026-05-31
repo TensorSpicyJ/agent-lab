@@ -1,0 +1,33 @@
+run_id: ""
+date: ""
+agent: "kimi_vanilla | kimi_project_default | modified_kimi"
+
+environment:
+  cwd: "D:/Playground/agent-lab"
+  kimi_version: ""
+  kimi_executable: ""
+  command: ""
+  model_alias: ""
+  skills_dir: ""
+  discovered_skills_note: ""
+  network_allowed: null
+  web_access_used: null
+
+benchmark:
+  benchmark_id: known-result-physics-v0.1
+  manifest_revision: ""
+  rubric_revision: known-result-physics-rubric-v0.1
+  task_ids: []
+  rollouts_per_task: null
+
+artifacts:
+  outputs_dir: "outputs/"
+  scores_dir: "scores/"
+  logs_dir: "logs/"
+  prompt_checksums: {}
+  output_checksums: {}
+
+notes:
+  manual_interventions: []
+  known_deviations: []
+  scorer_notes: []

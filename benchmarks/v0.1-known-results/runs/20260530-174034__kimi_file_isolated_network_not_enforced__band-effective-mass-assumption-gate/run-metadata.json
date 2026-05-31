@@ -1,0 +1,17 @@
+{
+  "task_id": "band-effective-mass-assumption-gate",
+  "run_id": "20260530-174034__kimi_file_isolated_network_not_enforced__band-effective-mass-assumption-gate",
+  "agent": "kimi_file_isolated_network_not_enforced",
+  "cwd": "C:\\Users\\TaiS\\AppData\\Local\\Temp\\agent-lab-kimi-isolated-20260530-174034",
+  "cwd_listing": [
+    "prompt.md"
+  ],
+  "command": "kimi -p <short prompt text> --output-format text",
+  "prompt": "D:\\Playground\\agent-lab\\benchmarks\\v0.1-known-results\\tasks\\band-effective-mass-assumption-gate\\prompt.short.md",
+  "network_allowed": false,
+  "network_enforced": false,
+  "network_block_attempt": "New-NetFirewallRule failed with Access is denied; no hard network proof available from this process.",
+  "local_leakage_boundary": "Temp cwd contains only prompt.md. Private files, verifier, runs, and sample answers are not mounted in cwd.",
+  "kimi_executable": "C:\\Users\\TaiS\\.kimi-code\\bin\\kimi.EXE",
+  "kimi_version": "0.5.0"
+}

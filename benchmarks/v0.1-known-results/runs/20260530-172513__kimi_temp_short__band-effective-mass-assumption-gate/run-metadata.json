@@ -1,0 +1,11 @@
+{
+  "task_id": "band-effective-mass-assumption-gate",
+  "run_id": "20260530-172513__kimi_temp_short__band-effective-mass-assumption-gate",
+  "agent": "kimi_temp_short_prompt_text",
+  "cwd": "C:\\Users\\TaiS\\AppData\\Local\\Temp\\agent-lab-kimi-short-20260530-172513",
+  "command": "kimi -p <short prompt text> --output-format text",
+  "prompt": "D:\\Playground\\agent-lab\\benchmarks\\v0.1-known-results\\tasks\\band-effective-mass-assumption-gate\\prompt.short.md",
+  "network_allowed": false,
+  "leakage_note": "Prompt text only; temp cwd contains no private files.",
+  "kimi_version": "0.5.0"
+}

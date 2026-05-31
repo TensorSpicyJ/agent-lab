@@ -1,0 +1,13 @@
+﻿{
+    "leakage_note":  "Temp cwd contains only prompt.md; private files, verifier, and sample answers are not mounted in cwd.",
+    "kimi_executable":  "C:\\Users\\TaiS\\.kimi-code\\bin\\kimi.exe",
+    "cwd":  "C:\\Users\\TaiS\\AppData\\Local\\Temp\\agent-lab-kimi-clean-20260530-171343",
+    "run_id":  "20260530-171343__kimi_temp_prompt_only__band-effective-mass-assumption-gate",
+    "command":  "kimi -p \"Read prompt.md...\" --output-format text",
+    "agent":  "kimi_temp_prompt_only",
+    "network_allowed":  false,
+    "prompt_source":  "D:\\Playground\\agent-lab\\benchmarks\\v0.1-known-results\\tasks\\band-effective-mass-assumption-gate\\prompt.md",
+    "task_id":  "band-effective-mass-assumption-gate",
+    "kimi_version":  "0.5.0",
+    "prompt_in_temp":  "prompt.md"
+}

@@ -1,0 +1,50 @@
+{
+  "task_id": "wen-kmatrix-basis-invariance",
+  "run_id": "example-run-with-wrong-convention",
+  "attribution_mode": "deterministic_multi_candidate",
+  "failed_checks": [
+    {
+      "check_id": "V2",
+      "check_type": "algebra",
+      "failed_field": "K_prime",
+      "observed": "K_prime = W K W^T",
+      "expected": "K_prime = W^T K W"
+    }
+  ],
+  "candidate_causes": [
+    {
+      "cause_id": "C1",
+      "layer": "formal_translation",
+      "failure_type": "basis_transform_convention_mismatch",
+      "blamed_nodes": [
+        "T1"
+      ],
+      "evidence": "The formal translation used the opposite matrix ordering from the source packet.",
+      "strictness": "strictly_localized"
+    },
+    {
+      "cause_id": "C2",
+      "layer": "source_grounding",
+      "failure_type": "source_excerpt_not_followed",
+      "blamed_nodes": [
+        "P1",
+        "T1"
+      ],
+      "evidence": "The output may indicate that the source convention was not read or not obeyed, but this is not uniquely determined by one task.",
+      "strictness": "candidate_only"
+    }
+  ],
+  "probe_tests": [
+    {
+      "probe_id": "PBT1",
+      "purpose": "Distinguish a stable convention error from a one-off algebra slip.",
+      "discriminates_between": [
+        "C1",
+        "C2"
+      ],
+      "test_spec_ref": "examples/wen-convention.probe-test.json",
+      "expected_disambiguation": "If the agent follows an explicitly changed convention in the probe, source grounding is likely intact; if it reuses the old convention, source-grounding or instruction-following failed."
+    }
+  ]
+}
+

@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-lab.local/schemas/answer-card.schema.json",
+  "title": "Physics Benchmark Answer Card",
+  "type": "object",
+  "required": [
+    "task_id",
+    "claim",
+    "assumption_ledger",
+    "steps",
+    "final_answer"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claim": {
+      "type": "string",
+      "minLength": 1
+    },
+    "assumption_ledger": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "claim",
+          "status",
+          "valid_when",
+          "invalid_when"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^A[0-9A-Za-z_-]+$"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "regime",
+              "approximation",
+              "modeling_choice",
+              "boundary_condition",
+              "convention",
+              "empirical_input",
+              "effective_theory",
+              "neglected_term",
+              "regularization",
+              "limit_order"
+            ]
+          },
+          "claim": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "licensed",
+              "conditional",
+              "rejected",
+              "unresolved"
+            ]
+          },
+          "valid_when": {
+            "type": "string"
+          },
+          "invalid_when": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "rule",
+          "depends_on",
+          "statement"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^S[0-9A-Za-z_-]+$"
+          },
+          "rule": {
+            "type": "string",
+            "minLength": 1
+          },
+          "depends_on": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "final_answer": {
+      "type": "object"
+    }
+  }
+}
+

@@ -1,0 +1,52 @@
+rubric_id: known-result-physics-rubric-v0.1
+score_values: [0, 0.5, 1]
+
+dimensions:
+  final_result:
+    weight: 0.30
+    score_1: "Final symbolic/numeric/conceptual answer matches the trusted gold result within the task tolerance."
+    score_0_5: "Main result is directionally correct but has a missing factor, convention mismatch, incomplete condition, or unverified equivalence."
+    score_0: "Final answer is wrong, absent, or incompatible with the gold result."
+
+  derivation_validity:
+    weight: 0.20
+    score_1: "Reasoning chain is locally valid and no essential derivation step is missing."
+    score_0_5: "Derivation reaches the right result but hides one nontrivial step or uses a weak justification."
+    score_0: "Derivation contains a substantive mathematical or logical error."
+
+  assumptions_preserved:
+    weight: 0.15
+    score_1: "All relevant assumptions, approximations, boundary conditions, and conventions are stated and preserved."
+    score_0_5: "Most assumptions are present, but one important condition is implicit or underspecified."
+    score_0: "The answer changes, omits, or contradicts a key assumption."
+
+  physics_checks:
+    weight: 0.15
+    score_1: "Appropriate physics sanity checks are performed and passed: dimensions, limits, symmetry, Hermiticity, gauge constraints, or conservation laws."
+    score_0_5: "At least one relevant check is attempted, but coverage is incomplete or too informal."
+    score_0: "No meaningful physics check is performed, or a failed check is ignored."
+
+  source_grounding:
+    weight: 0.10
+    score_1: "Claims are tied to provided sources, equations, figures, sample IDs, or task data."
+    score_0_5: "Some source grounding is present but important claims lack traceability."
+    score_0: "Claims are mostly ungrounded or cite sources not available in the task."
+
+  uncertainty_control:
+    weight: 0.10
+    score_1: "The answer distinguishes known facts, inferred steps, and unresolved uncertainty without overclaiming."
+    score_0_5: "Some caveats are present, but uncertainty is not consistently localized."
+    score_0: "The answer states unsupported conclusions confidently or fails to flag missing evidence."
+
+aggregate:
+  formula: "0.30*final_result + 0.20*derivation_validity + 0.15*assumptions_preserved + 0.15*physics_checks + 0.10*source_grounding + 0.10*uncertainty_control"
+  interpretation:
+    excellent: ">= 0.85"
+    usable: ">= 0.70 and < 0.85"
+    diagnostic_only: ">= 0.50 and < 0.70"
+    failed: "< 0.50"
+
+review_policy:
+  mechanical_first: true
+  human_spot_check_required: true
+  llm_judge_allowed: "Only as a secondary reviewer; never as the sole source for baseline freeze."
