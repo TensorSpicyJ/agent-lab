@@ -1,0 +1,26 @@
+benchmark_id: existing-physlib-formal-lane-v0.1
+task_id: idealgas-adiabatic-product-proof
+status: task_defined_environment_blocked
+source_family:
+  - PhysLib
+  - LeanPhysBench_style
+source_module: Thermodynamics/IdealGas/Basic.lean
+target_declaration: adiabatic_relation_UaUbVaVb
+physics_domain: thermodynamics
+physics_subdomain: ideal_gas
+secondary_domain: adiabatic_relations
+task_type: lean_proof_completion
+answer_format: lean_proof_body
+grading_mode: machine_checked_formal_verification
+verifier_style: inject_proof_body_then_run_lake_env_lean
+educational_level: undergraduate_advanced
+frontier_relevance: low
+reasoning_profile:
+  - invoke_existing_theorem
+  - explicit_named_argument_application
+  - thermodynamic_identity_reuse
+answer_object: proof_term_or_tactic_script
+figure_required: false
+multiple_choice: false
+uses_hidden_parameters: false
+expected_output_semantics: proof_of_adiabatic_product_relation

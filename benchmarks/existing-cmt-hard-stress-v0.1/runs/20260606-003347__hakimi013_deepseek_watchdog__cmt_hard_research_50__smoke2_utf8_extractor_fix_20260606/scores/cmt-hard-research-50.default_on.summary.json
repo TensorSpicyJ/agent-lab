@@ -1,0 +1,52 @@
+{
+  "benchmark_id": "existing-cmt-hard-stress-v0.1",
+  "task_id": "cmt-hard-research-50",
+  "run_id": "20260606-003347__hakimi013_deepseek_watchdog__cmt_hard_research_50__smoke2_utf8_extractor_fix_20260606",
+  "mode": "default_on",
+  "model_alias": "deepseek/deepseek-v4-pro",
+  "problem_numbers": [
+    1,
+    2
+  ],
+  "passed": 0,
+  "total": 2,
+  "hard_score": 0.0,
+  "output": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260606-003347__hakimi013_deepseek_watchdog__cmt_hard_research_50__smoke2_utf8_extractor_fix_20260606\\outputs\\cmt-hard-research-50.default_on.json",
+  "full_score": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260606-003347__hakimi013_deepseek_watchdog__cmt_hard_research_50__smoke2_utf8_extractor_fix_20260606\\scores\\cmt-hard-research-50.default_on.full-score.json",
+  "item_runs": [
+    {
+      "mode": "default_on",
+      "field": "cmt_index_00_answer",
+      "problem_number": 1,
+      "status": "completed",
+      "exit_code": 0,
+      "runtime_seconds": 155.229,
+      "stdout_bytes": 52,
+      "stderr_bytes": 23517,
+      "captured_json": true,
+      "prompt": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260606-003347__hakimi013_deepseek_watchdog__cmt_hard_research_50__smoke2_utf8_extractor_fix_20260606\\logs\\default_on.item-01-cmt_index_00_answer.prompt.md",
+      "stdout": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260606-003347__hakimi013_deepseek_watchdog__cmt_hard_research_50__smoke2_utf8_extractor_fix_20260606\\logs\\default_on.item-01-cmt_index_00_answer.stdout.txt",
+      "stderr": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260606-003347__hakimi013_deepseek_watchdog__cmt_hard_research_50__smoke2_utf8_extractor_fix_20260606\\logs\\default_on.item-01-cmt_index_00_answer.stderr.txt"
+    },
+    {
+      "mode": "default_on",
+      "field": "cmt_index_01_answer",
+      "problem_number": 2,
+      "status": "completed",
+      "exit_code": 0,
+      "runtime_seconds": 25.056,
+      "stdout_bytes": 248,
+      "stderr_bytes": 4014,
+      "captured_json": true,
+      "prompt": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260606-003347__hakimi013_deepseek_watchdog__cmt_hard_research_50__smoke2_utf8_extractor_fix_20260606\\logs\\default_on.item-02-cmt_index_01_answer.prompt.md",
+      "stdout": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260606-003347__hakimi013_deepseek_watchdog__cmt_hard_research_50__smoke2_utf8_extractor_fix_20260606\\logs\\default_on.item-02-cmt_index_01_answer.stdout.txt",
+      "stderr": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260606-003347__hakimi013_deepseek_watchdog__cmt_hard_research_50__smoke2_utf8_extractor_fix_20260606\\logs\\default_on.item-02-cmt_index_01_answer.stderr.txt"
+    }
+  ],
+  "experimental_flag_log_lines": [
+    "2026-06-05T16:33:48.834Z INFO  experimental flags enabled  flags=\"[\\\"physics-memory\\\",\\\"research-ledger\\\",\\\"research-action\\\",\\\"domain-profile\\\",\\\"workflow-recipe\\\",\\\"research-harness\\\",\\\"goal-command\\\"]\"",
+    "2026-06-05T16:33:53.079Z INFO  experimental flags enabled  flags=\"[\\\"physics-memory\\\",\\\"research-ledger\\\",\\\"research-action\\\",\\\"domain-profile\\\",\\\"workflow-recipe\\\",\\\"research-harness\\\",\\\"goal-command\\\"]\"",
+    "2026-06-05T16:36:28.138Z INFO  experimental flags enabled  flags=\"[\\\"physics-memory\\\",\\\"research-ledger\\\",\\\"research-action\\\",\\\"domain-profile\\\",\\\"workflow-recipe\\\",\\\"research-harness\\\",\\\"goal-command\\\"]\""
+  ],
+  "scorer_exit_code": 1
+}

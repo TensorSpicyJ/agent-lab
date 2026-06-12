@@ -1,0 +1,46 @@
+﻿{
+    "benchmark_id":  "existing-cmt-hard-stress-v0.1",
+    "task_id":  "cmt-hard-research-8",
+    "run_id":  "20260605-203143__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p7_runner_fix_smoke",
+    "mode":  "default_on",
+    "model_alias":  "deepseek/deepseek-v4-pro",
+    "problem_numbers":  [
+                            7
+                        ],
+    "passed":  0,
+    "total":  1,
+    "hard_score":  0,
+    "provider_status":  "completed",
+    "provider_exit_code":  null,
+    "provider_runtime_seconds":  2.032,
+    "version_status":  "completed",
+    "version_exit_code":  null,
+    "version_runtime_seconds":  2.012,
+    "version_stdout":  "0.13.0",
+    "provider_stdout":  "deepseek  type=openai  models=1  source=deepseek\nmanaged:kimi-code  type=kimi  models=1  source=oauth\n\nDefault model: deepseek/deepseek-v4-pro",
+    "experimental_flag_log_lines":  [
+                                        "2026-06-05T12:31:44.894Z INFO  experimental flags enabled  flags=\"[\\\"physics-memory\\\",\\\"research-ledger\\\",\\\"research-action\\\",\\\"domain-profile\\\",\\\"workflow-recipe\\\",\\\"research-harness\\\",\\\"goal-command\\\"]\"",
+                                        "2026-06-05T12:31:49.021Z INFO  experimental flags enabled  flags=\"[\\\"physics-memory\\\",\\\"research-ledger\\\",\\\"research-action\\\",\\\"domain-profile\\\",\\\"workflow-recipe\\\",\\\"research-harness\\\",\\\"goal-command\\\"]\""
+                                    ],
+    "output":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-203143__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p7_runner_fix_smoke\\outputs\\cmt-hard-research-8.default_on.json",
+    "full_score":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-203143__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p7_runner_fix_smoke\\scores\\cmt-hard-research-8.default_on.full-score.json",
+    "item_runs":  [
+                      {
+                          "mode":  "default_on",
+                          "field":  "cmt_long_range_dqmc_sign_free",
+                          "problem_number":  7,
+                          "status":  "completed",
+                          "exit_code":  null,
+                          "runtime_seconds":  620.406,
+                          "stdout_bytes":  144,
+                          "stderr_bytes":  85231,
+                          "captured_json":  true,
+                          "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-203143__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p7_runner_fix_smoke\\logs\\default_on.item-07-cmt_long_range_dqmc_sign_free.prompt.md",
+                          "stdout":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-203143__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p7_runner_fix_smoke\\logs\\default_on.item-07-cmt_long_range_dqmc_sign_free.stdout.txt",
+                          "stderr":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-203143__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p7_runner_fix_smoke\\logs\\default_on.item-07-cmt_long_range_dqmc_sign_free.stderr.txt"
+                      }
+                  ],
+    "slice_check_fields":  [
+                               "cmt_long_range_dqmc_sign_free"
+                           ]
+}

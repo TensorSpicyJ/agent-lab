@@ -1,0 +1,52 @@
+{
+  "benchmark_id": "existing-cmt-hard-stress-v0.1",
+  "task_id": "cmt-hard-research-50",
+  "run_id": "20260606-003347__hakimi013_deepseek_watchdog__cmt_hard_research_50__smoke2_utf8_extractor_fix_20260606",
+  "agent": "hakimi013_deepseek_watchdog",
+  "model_alias": "deepseek/deepseek-v4-pro",
+  "command": "node main.mjs -m <model> -p <single problem prompt> --output-format text",
+  "started_at": "2026-06-06T00:33:47.989983+08:00",
+  "finished_at": "2026-06-06T00:38:51.841391+08:00",
+  "idle_timeout_minutes": 2.0,
+  "max_runtime_minutes": 3.0,
+  "poll_seconds": 5.0,
+  "problem_numbers": [
+    1,
+    2
+  ],
+  "source_config": "~/.hakimi/config.toml copied into isolated temp homes; API keys are not stored in this run directory.",
+  "temp_home_root": "C:\\Users\\TaiS\\AppData\\Local\\Temp\\agent-lab-20260606-003347__hakimi013_deepseek_watchdog__cmt_hard_research_50__smoke2_utf8_extractor_fix_20260606",
+  "local_leakage_boundary": "Each item temp cwd contains only prompt.md. Gold, verifier, source rows, and prior outputs are not mounted in cwd.",
+  "modes": [
+    {
+      "mode": "default_on",
+      "passed": 0,
+      "total": 2,
+      "hard_score": 0.0,
+      "output": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260606-003347__hakimi013_deepseek_watchdog__cmt_hard_research_50__smoke2_utf8_extractor_fix_20260606\\outputs\\cmt-hard-research-50.default_on.json",
+      "full_score": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260606-003347__hakimi013_deepseek_watchdog__cmt_hard_research_50__smoke2_utf8_extractor_fix_20260606\\scores\\cmt-hard-research-50.default_on.full-score.json",
+      "summary": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260606-003347__hakimi013_deepseek_watchdog__cmt_hard_research_50__smoke2_utf8_extractor_fix_20260606\\scores\\cmt-hard-research-50.default_on.summary.json",
+      "item_run_count": 2,
+      "experimental_flag_log_lines": [
+        "2026-06-05T16:33:48.834Z INFO  experimental flags enabled  flags=\"[\\\"physics-memory\\\",\\\"research-ledger\\\",\\\"research-action\\\",\\\"domain-profile\\\",\\\"workflow-recipe\\\",\\\"research-harness\\\",\\\"goal-command\\\"]\"",
+        "2026-06-05T16:33:53.079Z INFO  experimental flags enabled  flags=\"[\\\"physics-memory\\\",\\\"research-ledger\\\",\\\"research-action\\\",\\\"domain-profile\\\",\\\"workflow-recipe\\\",\\\"research-harness\\\",\\\"goal-command\\\"]\"",
+        "2026-06-05T16:36:28.138Z INFO  experimental flags enabled  flags=\"[\\\"physics-memory\\\",\\\"research-ledger\\\",\\\"research-action\\\",\\\"domain-profile\\\",\\\"workflow-recipe\\\",\\\"research-harness\\\",\\\"goal-command\\\"]\""
+      ]
+    },
+    {
+      "mode": "all_default_on_flags_off",
+      "passed": 0,
+      "total": 2,
+      "hard_score": 0.0,
+      "output": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260606-003347__hakimi013_deepseek_watchdog__cmt_hard_research_50__smoke2_utf8_extractor_fix_20260606\\outputs\\cmt-hard-research-50.all_default_on_flags_off.json",
+      "full_score": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260606-003347__hakimi013_deepseek_watchdog__cmt_hard_research_50__smoke2_utf8_extractor_fix_20260606\\scores\\cmt-hard-research-50.all_default_on_flags_off.full-score.json",
+      "summary": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260606-003347__hakimi013_deepseek_watchdog__cmt_hard_research_50__smoke2_utf8_extractor_fix_20260606\\scores\\cmt-hard-research-50.all_default_on_flags_off.summary.json",
+      "item_run_count": 2,
+      "experimental_flag_log_lines": [
+        "2026-06-05T16:36:53.243Z INFO  experimental flags enabled  flags=[]",
+        "2026-06-05T16:36:57.342Z INFO  experimental flags enabled  flags=[]",
+        "2026-06-05T16:38:07.403Z INFO  experimental flags enabled  flags=[]"
+      ]
+    }
+  ]
+}

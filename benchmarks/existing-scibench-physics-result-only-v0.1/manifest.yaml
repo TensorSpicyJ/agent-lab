@@ -1,0 +1,7 @@
+benchmark_id: existing-scibench-physics-result-only-v0.1
+version: 0.1
+description: Small local result-only subset built from original SciBench physics problems.
+task_ids:
+  - scibench-physics-mixed-8
+expected_checks: 8
+source_family: SciBench

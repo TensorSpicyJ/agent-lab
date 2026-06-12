@@ -1,0 +1,167 @@
+version: 0.1
+updated_at: 2026-06-02
+source_repo_note: PhysLib content inspected from local clone of HEPLean/PhysLean, whose README notes the move to leanprover-community/physlib.
+modules:
+  - path: ClassicalMechanics/HarmonicOscillator/Basic.lean
+    domain: classical_mechanics
+    subdomain: harmonic_oscillator
+    candidate_role: canonical_undergrad_formal_task
+    declaration_count: 36
+    likely_task_shapes:
+      - theorem_completion
+      - equation_equivalence_check
+      - conservation_law_proof
+  - path: ClassicalMechanics/HarmonicOscillator/Solution.lean
+    domain: classical_mechanics
+    subdomain: harmonic_oscillator
+    candidate_role: solution_behavior_formal_task
+    declaration_count: 21
+    likely_task_shapes:
+      - closed_form_solution_check
+      - initial_condition_reasoning
+      - trajectory_identity_completion
+  - path: ClassicalMechanics/EulerLagrange.lean
+    domain: classical_mechanics
+    subdomain: analytical_mechanics
+    candidate_role: central_formal_principle
+    declaration_count: 3
+    likely_task_shapes:
+      - theorem_statement_completion
+      - proof_reconstruction
+  - path: ClassicalMechanics/HamiltonsEquations.lean
+    domain: classical_mechanics
+    subdomain: analytical_mechanics
+    candidate_role: central_formal_principle
+    declaration_count: 3
+    likely_task_shapes:
+      - theorem_statement_completion
+      - proof_reconstruction
+  - path: ClassicalMechanics/OrbitalMechanics/VisViva.lean
+    domain: classical_mechanics
+    subdomain: orbital_mechanics
+    candidate_role: compact_law_task
+    declaration_count: 1
+    likely_task_shapes:
+      - law_specialization
+      - identity_proof
+  - path: ClassicalMechanics/WaveEquation/Basic.lean
+    domain: classical_mechanics
+    subdomain: wave_equation
+    candidate_role: pde_style_formal_task
+    declaration_count: 20
+    likely_task_shapes:
+      - solution_verification
+      - differential_identity_completion
+  - path: Electromagnetism/Kinematics/ElectricField.lean
+    domain: electromagnetism
+    subdomain: field_kinematics
+    candidate_role: canonical_field_object_task
+    declaration_count: 19
+    likely_task_shapes:
+      - definition_completion
+      - tensor_component_identity
+  - path: Electromagnetism/Kinematics/MagneticField.lean
+    domain: electromagnetism
+    subdomain: field_kinematics
+    candidate_role: canonical_field_object_task
+    declaration_count: 25
+    likely_task_shapes:
+      - definition_completion
+      - tensor_component_identity
+  - path: Electromagnetism/Kinematics/FieldStrength.lean
+    domain: electromagnetism
+    subdomain: field_kinematics
+    candidate_role: structural_em_task
+    declaration_count: 33
+    likely_task_shapes:
+      - field_tensor_relation
+      - component_equivalence_proof
+  - path: Electromagnetism/ThreeDimension/MaxwellEquations.lean
+    domain: electromagnetism
+    subdomain: maxwell_equations
+    candidate_role: flagship_formal_em_task
+    declaration_count: 4
+    likely_task_shapes:
+      - canonical_equation_proof
+      - theorem_name_completion
+  - path: Electromagnetism/Vacuum/HarmonicWave.lean
+    domain: electromagnetism
+    subdomain: vacuum_waves
+    candidate_role: wave_solution_formal_task
+    declaration_count: 23
+    likely_task_shapes:
+      - wave_identity_proof
+      - propagation_relation_completion
+  - path: QuantumMechanics/DDimensions/Basic.lean
+    domain: quantum_mechanics
+    subdomain: d_dimensions
+    candidate_role: broad_qm_entry_task
+    declaration_count: 19
+    likely_task_shapes:
+      - operator_or_space_relation
+      - formal_qm_identity
+  - path: QuantumMechanics/OneDimension/HilbertSpace/Basic.lean
+    domain: quantum_mechanics
+    subdomain: hilbert_space
+    candidate_role: foundational_qm_formal_task
+    declaration_count: 23
+    likely_task_shapes:
+      - space_property_proof
+      - basis_or_inner_product_relation
+  - path: QuantumMechanics/OneDimension/HarmonicOscillator/Basic.lean
+    domain: quantum_mechanics
+    subdomain: harmonic_oscillator
+    candidate_role: canonical_qm_system_task
+    declaration_count: 19
+    likely_task_shapes:
+      - operator_identity
+      - eigen_relation_completion
+  - path: QuantumMechanics/DDimensions/Hydrogen/Basic.lean
+    domain: quantum_mechanics
+    subdomain: hydrogen
+    candidate_role: atomic_qm_formal_task
+    declaration_count: 5
+    likely_task_shapes:
+      - potential_identity_proof
+      - hamiltonian_definition_check
+  - path: Thermodynamics/Temperature/Basic.lean
+    domain: thermodynamics
+    subdomain: temperature
+    candidate_role: basic_thermo_formal_task
+    declaration_count: 17
+    likely_task_shapes:
+      - definition_completion
+      - state_relation_proof
+  - path: Thermodynamics/IdealGas/Basic.lean
+    domain: thermodynamics
+    subdomain: ideal_gas
+    candidate_role: equation_of_state_formal_task
+    declaration_count: 3
+    likely_task_shapes:
+      - canonical_relation_proof
+      - adiabatic_identity_completion
+  - path: StatisticalMechanics/CanonicalEnsemble/Basic.lean
+    domain: statistical_mechanics
+    subdomain: canonical_ensemble
+    candidate_role: flagship_statmech_task
+    declaration_count: 72
+    likely_task_shapes:
+      - partition_function_relation
+      - probability_identity_proof
+      - thermodynamic_quantity_derivation
+  - path: StatisticalMechanics/MicroCanonicalEnsemble/Basic.lean
+    domain: statistical_mechanics
+    subdomain: microcanonical_ensemble
+    candidate_role: statmech_complement_task
+    declaration_count: 2
+    likely_task_shapes:
+      - definition_completion
+      - ensemble_relation_check
+  - path: CondensedMatter/TightBindingChain/Basic.lean
+    domain: condensed_matter
+    subdomain: tight_binding
+    candidate_role: scarce_condensed_matter_anchor
+    declaration_count: 15
+    likely_task_shapes:
+      - lattice_hamiltonian_identity
+      - dispersion_relation_formalization

@@ -1,0 +1,755 @@
+{
+  "benchmark_id": "existing-cmt-hard-stress-v0.1",
+  "task_id": "cmt-hard-research-50",
+  "hard_score": 0.0,
+  "passed": 0,
+  "total": 50,
+  "checks": [
+    {
+      "field": "cmt_index_00_answer",
+      "type": "symbolic",
+      "source": "CMT-Benchmark",
+      "source_index": 0,
+      "cmt_type": "HF",
+      "difficulty": "research",
+      "passed": false,
+      "expected": "U_1/2",
+      "actual_raw": "\\frac{U_0}{3}+2U_1",
+      "actual_normalized": "(u_0)/(3)+2u_1",
+      "expected_normalized": "u_1/2"
+    },
+    {
+      "field": "cmt_index_01_answer",
+      "type": "symbolic",
+      "source": "CMT-Benchmark",
+      "source_index": 1,
+      "cmt_type": "HF",
+      "difficulty": "research",
+      "passed": false,
+      "expected": "\\langle c_\\uparrow^\\dagger(k) c_\\uparrow(k) \\rangle; \\langle c_\\downarrow^\\dagger(k) c_\\downarrow(k) \\rangle",
+      "actual_raw": "\\langle c_{\\uparrow}^{\\dagger}(k) c_{\\uparrow}(k) \\rangle ; \\langle c_{\\downarrow}^{\\dagger}(k) c_{\\downarrow}(k) \\rangle ; \\langle c_{\\uparrow}^{\\dagger}(k) c_{\\downarrow}(k) \\rangle ; \\langle c_{\\downarrow}^{\\dagger}(k) c_{\\uparrow}(k) \\rangle",
+      "actual_normalized": "langlec_uparrow^dagger(k)c_uparrow(k)rangle;langlec_downarrow^dagger(k)c_downarrow(k)rangle;langlec_uparrow^dagger(k)c_downarrow(k)rangle;langlec_downarrow^dagger(k)c_uparrow(k)rangle",
+      "expected_normalized": "langlec_uparrowdagger(k)c_uparrow(k)rangle;langlec_downarrowdagger(k)c_downarrow(k)rangle"
+    },
+    {
+      "field": "cmt_index_02_answer",
+      "type": "numeric_vector",
+      "source": "CMT-Benchmark",
+      "source_index": 2,
+      "cmt_type": "HF",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        2.09,
+        1.21,
+        0.0,
+        2.41,
+        -2.09,
+        1.21,
+        -2.09,
+        -1.21,
+        0.0,
+        -2.41,
+        2.09,
+        -1.21
+      ],
+      "actual_raw": null,
+      "actual_parsed": [],
+      "abs_errors": [],
+      "abs_tol": 0.01
+    },
+    {
+      "field": "cmt_index_03_answer",
+      "type": "symbolic",
+      "source": "CMT-Benchmark",
+      "source_index": 3,
+      "cmt_type": "HF",
+      "difficulty": "research",
+      "passed": false,
+      "expected": "16N_q^2",
+      "actual_raw": null,
+      "actual_normalized": "none",
+      "expected_normalized": "16n_q^2"
+    },
+    {
+      "field": "cmt_index_04_answer",
+      "type": "symbolic",
+      "source": "CMT-Benchmark",
+      "source_index": 4,
+      "cmt_type": "HF",
+      "difficulty": "research",
+      "passed": false,
+      "expected": "c",
+      "actual_raw": null,
+      "actual_normalized": "none",
+      "expected_normalized": "c"
+    },
+    {
+      "field": "cmt_index_05_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 5,
+      "cmt_type": "ED",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "a",
+        "b",
+        "d"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_06_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 6,
+      "cmt_type": "VMC",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "a",
+        "b",
+        "d"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_07_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 7,
+      "cmt_type": "DMRG",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "d"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_08_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 8,
+      "cmt_type": "QMC",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "b",
+        "f",
+        "i"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_09_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 9,
+      "cmt_type": "QMC",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "b",
+        "e"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_10_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 10,
+      "cmt_type": "QMC",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "g"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_11_answer",
+      "type": "symbolic",
+      "source": "CMT-Benchmark",
+      "source_index": 11,
+      "cmt_type": "DMRG",
+      "difficulty": "research",
+      "passed": false,
+      "expected": "2^{N/2-1}; c=1/2",
+      "actual_raw": null,
+      "actual_normalized": "none",
+      "expected_normalized": "2^n/2-1;c=1/2"
+    },
+    {
+      "field": "cmt_index_12_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 12,
+      "cmt_type": "DMRG",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "c"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_13_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 13,
+      "cmt_type": "VMC",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "d",
+        "e"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_14_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 14,
+      "cmt_type": "ED",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "b",
+        "e"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_15_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 15,
+      "cmt_type": "ED",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "a",
+        "d"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_16_answer",
+      "type": "numeric_vector",
+      "source": "CMT-Benchmark",
+      "source_index": 16,
+      "cmt_type": "ED",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        7.0
+      ],
+      "actual_raw": null,
+      "actual_parsed": [],
+      "abs_errors": [],
+      "abs_tol": 0.0
+    },
+    {
+      "field": "cmt_index_17_answer",
+      "type": "symbolic",
+      "source": "CMT-Benchmark",
+      "source_index": 17,
+      "cmt_type": "Other",
+      "difficulty": "research",
+      "passed": false,
+      "expected": "-t (p^{\\dagger}_{i,\\sigma}p_{j,\\sigma}+p^{\\dagger}_{j,\\sigma}p_{i,\\sigma})-U (m_{i,\\uparrow}-\\frac{1}{2})(m_{i,\\downarrow}-\\frac{1}{2})-\\mu (m_{i,\\uparrow}-m_{i,\\downarrow}) -\\mu",
+      "actual_raw": null,
+      "actual_normalized": "none",
+      "expected_normalized": "-t(p^dagger_i,sigmap_j,sigma+p^dagger_j,sigmap_i,sigma)-u(m_i,uparrow-(1)/(2))(m_i,downarrow-(1)/(2))-mu(m_i,uparrow-m_i,downarrow)-mu"
+    },
+    {
+      "field": "cmt_index_18_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 18,
+      "cmt_type": "QMC",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "a",
+        "b"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_19_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 19,
+      "cmt_type": "ED",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "a"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_20_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 20,
+      "cmt_type": "ED",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "a",
+        "c"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_21_answer",
+      "type": "symbolic",
+      "source": "CMT-Benchmark",
+      "source_index": 21,
+      "cmt_type": "PEPS",
+      "difficulty": "research",
+      "passed": false,
+      "expected": "N_k B",
+      "actual_raw": null,
+      "actual_normalized": "none",
+      "expected_normalized": "n_kb"
+    },
+    {
+      "field": "cmt_index_22_answer",
+      "type": "numeric_vector",
+      "source": "CMT-Benchmark",
+      "source_index": 22,
+      "cmt_type": "ED",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        4.0
+      ],
+      "actual_raw": null,
+      "actual_parsed": [],
+      "abs_errors": [],
+      "abs_tol": 0.0
+    },
+    {
+      "field": "cmt_index_23_answer",
+      "type": "numeric_vector",
+      "source": "CMT-Benchmark",
+      "source_index": 23,
+      "cmt_type": "Other",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        0.2,
+        0.003,
+        0.017,
+        0.027,
+        0.038
+      ],
+      "actual_raw": null,
+      "actual_parsed": [],
+      "abs_errors": [],
+      "abs_tol": 0.01
+    },
+    {
+      "field": "cmt_index_24_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 24,
+      "cmt_type": "QMC",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "c",
+        "d",
+        "e"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_25_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 25,
+      "cmt_type": "ED",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "b",
+        "c",
+        "e"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_26_answer",
+      "type": "symbolic",
+      "source": "CMT-Benchmark",
+      "source_index": 26,
+      "cmt_type": "Other",
+      "difficulty": "research",
+      "passed": false,
+      "expected": "O_n=E_n-E_{n-1}",
+      "actual_raw": null,
+      "actual_normalized": "none",
+      "expected_normalized": "o_n=e_n-e_n-1"
+    },
+    {
+      "field": "cmt_index_27_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 27,
+      "cmt_type": "QMC",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "d",
+        "g"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_28_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 28,
+      "cmt_type": "DMRG",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "a"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_29_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 29,
+      "cmt_type": "Other",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "b",
+        "c"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_30_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 30,
+      "cmt_type": "Other",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "a",
+        "b",
+        "c"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_31_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 31,
+      "cmt_type": "Other",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "a",
+        "c"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_32_answer",
+      "type": "symbolic",
+      "source": "CMT-Benchmark",
+      "source_index": 32,
+      "cmt_type": "Other",
+      "difficulty": "research",
+      "passed": false,
+      "expected": "\\mu-tq^2B/4",
+      "actual_raw": null,
+      "actual_normalized": "none",
+      "expected_normalized": "mu-tq^2b/4"
+    },
+    {
+      "field": "cmt_index_33_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 33,
+      "cmt_type": "Other",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "c"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_34_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 34,
+      "cmt_type": "Other",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "a",
+        "c"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_35_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 35,
+      "cmt_type": "Other",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "a",
+        "b"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_36_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 36,
+      "cmt_type": "PEPS",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "g"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_37_answer",
+      "type": "numeric_vector",
+      "source": "CMT-Benchmark",
+      "source_index": 37,
+      "cmt_type": "Other",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        1.0,
+        3.0
+      ],
+      "actual_raw": null,
+      "actual_parsed": [],
+      "abs_errors": [],
+      "abs_tol": 0.0
+    },
+    {
+      "field": "cmt_index_38_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 38,
+      "cmt_type": "Other",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "a",
+        "d",
+        "i"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_39_answer",
+      "type": "symbolic",
+      "source": "CMT-Benchmark",
+      "source_index": 39,
+      "cmt_type": "Other",
+      "difficulty": "research",
+      "passed": false,
+      "expected": "2t_1(t_1/t_2)^n",
+      "actual_raw": null,
+      "actual_normalized": "none",
+      "expected_normalized": "2t_1(t_1/t_2)^n"
+    },
+    {
+      "field": "cmt_index_40_answer",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 40,
+      "cmt_type": "Other",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "a",
+        "d",
+        "e"
+      ],
+      "actual_raw": null,
+      "actual_parsed": []
+    },
+    {
+      "field": "cmt_index_41_answer",
+      "type": "symbolic",
+      "source": "CMT-Benchmark",
+      "source_index": 41,
+      "cmt_type": "Other",
+      "difficulty": "research",
+      "passed": false,
+      "expected": "\\frac{2\\tanh(\\frac{\\beta \\omega}{2})}{\\omega}",
+      "actual_raw": null,
+      "actual_normalized": "none",
+      "expected_normalized": "frac2tanh((betaomega)/(2))omega"
+    },
+    {
+      "field": "cmt_index_42_answer",
+      "type": "symbolic",
+      "source": "CMT-Benchmark",
+      "source_index": 42,
+      "cmt_type": "SM",
+      "difficulty": "research",
+      "passed": false,
+      "expected": "D_o = \\frac{\\tau^2 \\rho v_0^2 \\Omega (2+\\rho)}{[(1+\\rho)^2 + (\\Omega \\tau)^2][1+(\\Omega \\tau)^2]}",
+      "actual_raw": null,
+      "actual_normalized": "none",
+      "expected_normalized": "d_o=(tau^2rhov_0^2omega(2+rho))/([(1+rho)^2+(omegatau)^2][1+(omegatau)^2])"
+    },
+    {
+      "field": "cmt_index_43_answer",
+      "type": "symbolic",
+      "source": "CMT-Benchmark",
+      "source_index": 43,
+      "cmt_type": "SM",
+      "difficulty": "research",
+      "passed": false,
+      "expected": "c",
+      "actual_raw": null,
+      "actual_normalized": "none",
+      "expected_normalized": "c"
+    },
+    {
+      "field": "cmt_index_44_answer",
+      "type": "symbolic",
+      "source": "CMT-Benchmark",
+      "source_index": 44,
+      "cmt_type": "SM",
+      "difficulty": "research",
+      "passed": false,
+      "expected": "K_c = \\sigma [1 - \\frac{1}{\\sqrt{3}}]\\sqrt{\\gamma + \\frac{2\\sigma^2}{3}(1 + \\sqrt{1 + \\frac{3\\gamma}{\\sigma^2}})}",
+      "actual_raw": null,
+      "actual_normalized": "none",
+      "expected_normalized": "k_c=sigma[1-frac1sqrt3]sqrtgamma+(2sigma^2)/(3)(1+sqrt1+(3gamma)/(sigma^2))"
+    },
+    {
+      "field": "cmt_index_45_answer",
+      "type": "symbolic",
+      "source": "CMT-Benchmark",
+      "source_index": 45,
+      "cmt_type": "SM",
+      "difficulty": "research",
+      "passed": false,
+      "expected": "d",
+      "actual_raw": null,
+      "actual_normalized": "none",
+      "expected_normalized": "d"
+    },
+    {
+      "field": "cmt_index_46_answer",
+      "type": "symbolic",
+      "source": "CMT-Benchmark",
+      "source_index": 46,
+      "cmt_type": "SM",
+      "difficulty": "research",
+      "passed": false,
+      "expected": "\\frac{(p + x^3)^2}{4 x^4} + 4 x^2",
+      "actual_raw": null,
+      "actual_normalized": "none",
+      "expected_normalized": "((p+x^3)^2)/(4x^4)+4x^2"
+    },
+    {
+      "field": "cmt_index_47_answer",
+      "type": "numeric_vector",
+      "source": "CMT-Benchmark",
+      "source_index": 47,
+      "cmt_type": "Other",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        2.0,
+        2.0,
+        1.0
+      ],
+      "actual_raw": null,
+      "actual_parsed": [],
+      "abs_errors": [],
+      "abs_tol": 0.0
+    },
+    {
+      "field": "cmt_index_48_answer",
+      "type": "numeric_vector",
+      "source": "CMT-Benchmark",
+      "source_index": 48,
+      "cmt_type": "PEPS",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        6.0
+      ],
+      "actual_raw": null,
+      "actual_parsed": [],
+      "abs_errors": [],
+      "abs_tol": 0.0
+    },
+    {
+      "field": "cmt_index_49_answer",
+      "type": "numeric_vector",
+      "source": "CMT-Benchmark",
+      "source_index": 49,
+      "cmt_type": "SM",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        0.33,
+        0.27
+      ],
+      "actual_raw": null,
+      "actual_parsed": [],
+      "abs_errors": [],
+      "abs_tol": 0.01
+    }
+  ]
+}

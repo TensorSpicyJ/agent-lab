@@ -1,0 +1,26 @@
+benchmark_id: existing-physlib-formal-lane-v0.1
+task_id: visviva-speedcircular-sq-proof
+status: task_defined_environment_blocked
+source_family:
+  - PhysLib
+  - LeanPhysBench_style
+source_module: ClassicalMechanics/OrbitalMechanics/VisViva.lean
+target_declaration: VisViva.speedCircular_sq
+physics_domain: classical_mechanics
+physics_subdomain: orbital_mechanics
+secondary_domain: vis_viva_relation
+task_type: lean_proof_completion
+answer_format: lean_proof_body
+grading_mode: machine_checked_formal_verification
+verifier_style: inject_proof_body_then_run_lake_env_lean
+educational_level: undergraduate
+frontier_relevance: low
+reasoning_profile:
+  - invoke_existing_theorem
+  - formal_rewrite
+  - theorem_application
+answer_object: proof_term_or_tactic_script
+figure_required: false
+multiple_choice: false
+uses_hidden_parameters: false
+expected_output_semantics: proof_of_speed_squared_identity

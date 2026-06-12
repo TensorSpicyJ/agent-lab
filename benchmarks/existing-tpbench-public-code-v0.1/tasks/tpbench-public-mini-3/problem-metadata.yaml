@@ -1,0 +1,100 @@
+benchmark_id: existing-tpbench-public-code-v0.1
+task_id: tpbench-public-mini-3
+suite_metadata:
+  source_dataset: ZhiqiGao/TPBench
+  source_url: https://huggingface.co/datasets/ZhiqiGao/TPBench
+  public_problem_hub: https://tpbench.org/?page_id=2
+  suite_type: public_problem_subset
+  answer_format: python_function_block
+  grading_mode: executable_hidden_checks
+  verifier_style: function_execution_with_numeric_tests
+  multimodal_dependency: none
+  question_style: theoretical_physics_open_problem
+  primary_capabilities:
+    - analytic_relationship_derivation
+    - symbolic_to_executable_translation
+    - theoretical_physics_model_identification
+    - closed_form_function_construction
+  benchmark_lane: frontier_theory_public_demo
+problems:
+  - order: 1
+    local_function: answer
+    public_title: Blackbody in d Dimensions
+    source_collection: TPBench public problems
+    original_difficulty_level: 1
+    physics_domain: statistical_mechanics
+    physics_subdomain: blackbody_radiation
+    secondary_domain: higher_dimensional_scaling
+    task_type: scaling_law_identification
+    reasoning_profile:
+      - dimensional_scaling
+      - density_of_states_reasoning
+      - analytic_exponent_extraction
+    answer_object: scalar
+    answer_semantics: temperature_exponent_n
+    answer_unit: dimensionless
+    code_interface:
+      function_name: answer
+      inputs: []
+      output: float
+    educational_level: undergraduate_to_early_theory
+    frontier_relevance: medium
+    public_visibility: public
+    multiple_choice: false
+    figure_required: false
+  - order: 2
+    local_function: speed
+    public_title: Boosted Parabolic Trajectory
+    source_collection: TPBench public problems
+    original_difficulty_level: 1
+    physics_domain: classical_mechanics
+    physics_subdomain: orbital_mechanics
+    secondary_domain: escape_trajectory_dynamics
+    task_type: analytic_expression_derivation
+    reasoning_profile:
+      - orbital_energy_conservation
+      - impulsive_boost_model
+      - asymptotic_speed_relation
+    answer_object: python_function
+    answer_semantics: escaped_speed_as_function
+    answer_unit: same_as_velocity_input
+    code_interface:
+      function_name: speed
+      inputs:
+        - v_e: periapsis_speed
+        - delta_v: impulsive_boost
+      output: float
+    educational_level: undergraduate_to_theory
+    frontier_relevance: medium
+    public_visibility: public
+    multiple_choice: false
+    figure_required: false
+  - order: 3
+    local_function: expectation_value
+    public_title: A 3-State QM Problem
+    source_collection: TPBench public problems
+    original_difficulty_level: 2
+    physics_domain: quantum_mechanics
+    physics_subdomain: finite_dimensional_hamiltonians
+    secondary_domain: expectation_values
+    task_type: analytic_quantum_relation
+    reasoning_profile:
+      - matrix_hamiltonian_structure
+      - time_evolution_invariant_expectation
+      - bra_ket_to_function_translation
+    answer_object: python_function
+    answer_semantics: energy_expectation_value
+    answer_unit: same_as_energy_inputs
+    code_interface:
+      function_name: expectation_value
+      inputs:
+        - A: coupling_parameter
+        - E_a: diagonal_energy_a
+        - E_b: diagonal_energy_b
+        - t: time
+      output: float
+    educational_level: undergraduate_advanced_to_early_graduate
+    frontier_relevance: medium
+    public_visibility: public
+    multiple_choice: false
+    figure_required: false

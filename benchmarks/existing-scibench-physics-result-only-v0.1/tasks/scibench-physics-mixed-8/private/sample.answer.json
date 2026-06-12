@@ -1,0 +1,12 @@
+﻿{
+  "answers": {
+    "class_2_6_big_bertha_range_km": 202.0,
+    "class_7_10_hemisphere_leave_angle_deg": 48.189685,
+    "class_8_5_hohmann_transfer_time_1e7_s": 2.24,
+    "matter_4_1_photoelectric_lambda_max_nm": 540.0,
+    "matter_17_1_hydrogenic_heplus_energy_ev": -6.04697,
+    "matter_37_4_thermal_neutron_wavelength_pm": 226.0,
+    "quan_1_6_1_b_position_probability": 0.4908,
+    "quan_6_6_1_hydrogen_ground_energy_ev": -13.598
+  }
+}

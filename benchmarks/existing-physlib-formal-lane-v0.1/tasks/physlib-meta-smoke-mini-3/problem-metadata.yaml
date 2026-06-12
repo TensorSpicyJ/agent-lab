@@ -1,0 +1,35 @@
+benchmark_id: existing-physlib-formal-lane-v0.1
+task_id: physlib-meta-smoke-mini-3
+status: runnable_formal_smoke
+source_family:
+  - PhysLib
+  - LeanPhysBench_style
+source_modules:
+  - Meta/Informal/Basic.lean
+  - Meta/TODO/Basic.lean
+target_declarations:
+  - InformalDefinition.deps
+  - InformalLemma.tag
+  - Physlib.todoInfo.line
+physics_domain: formal_physics_infrastructure
+physics_subdomain: physlib_meta_layer
+secondary_domain: lean4_formal_verification_smoke
+task_type: lean_proof_completion
+answer_format: json_object_of_lean_proof_bodies
+grading_mode: machine_checked_formal_verification
+verifier_style: inject_proof_body_then_run_lake_env_lean
+educational_level: formal_methods_smoke
+frontier_relevance: infrastructure_only
+reasoning_profile:
+  - record_projection
+  - definitional_equality
+  - lean_tactic_minimality
+answer_object: proof_term_or_tactic_script
+figure_required: false
+multiple_choice: false
+uses_hidden_parameters: false
+expected_output_semantics: proof_bodies_for_three_structural_physlib_meta_statements
+notes:
+  - This is a formal-smoke subset for validating the Lean verifier and Kimi scoring loop.
+  - It is not a hard physics reasoning task.
+  - The heavier physics proof tasks remain in the lane but need local prebuild completion.

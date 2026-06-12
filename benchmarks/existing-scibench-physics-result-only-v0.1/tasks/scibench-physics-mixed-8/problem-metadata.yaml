@@ -1,0 +1,210 @@
+benchmark_id: existing-scibench-physics-result-only-v0.1
+task_id: scibench-physics-mixed-8
+suite_metadata:
+  source_dataset: xw27/scibench
+  source_url: https://huggingface.co/datasets/xw27/scibench
+  suite_type: original_benchmark_subset
+  answer_format: json_scalar_answers
+  grading_mode: result_only_numeric
+  verifier_style: unit_aware_numeric_tolerance
+  multimodal_dependency: none
+  question_style: open_ended_free_response
+  primary_capabilities:
+    - physics_formula_selection
+    - multi_step_numeric_calculation
+    - unit_handling
+    - textbook_word_problem_modeling
+  benchmark_lane: breadth_numeric_baseline
+problems:
+  - order: 1
+    local_field: class_2_6_big_bertha_range_km
+    source_partition: class_sol.json
+    original_problem_id: "2.6"
+    original_collection: class
+    original_book_family: Classical Dynamics of Particles and Systems
+    short_label: Big Bertha projectile range
+    physics_domain: classical_mechanics
+    physics_subdomain: projectile_motion
+    secondary_domain: ballistics
+    task_type: textbook_numeric_word_problem
+    reasoning_profile:
+      - closed_form_kinematics
+      - parameter_substitution
+      - unit_conversion
+    answer_object: scalar
+    answer_unit: km
+    output_semantics: predicted_range
+    difficulty_band: undergraduate_intro_intermediate
+    educational_level: undergraduate
+    frontier_relevance: low
+    uses_hidden_parameters: false
+    figure_required: false
+    multiple_choice: false
+  - order: 2
+    local_field: class_7_10_hemisphere_leave_angle_deg
+    source_partition: class_sol.json
+    original_problem_id: "7.10"
+    original_collection: class
+    original_book_family: Classical Dynamics of Particles and Systems
+    short_label: Particle leaving a smooth hemisphere
+    physics_domain: classical_mechanics
+    physics_subdomain: constrained_motion
+    secondary_domain: energy_and_normal_force
+    task_type: analytic_then_numeric_mechanics
+    reasoning_profile:
+      - conservation_of_energy
+      - force_balance
+      - detachment_condition
+    answer_object: scalar
+    answer_unit: deg
+    output_semantics: leave_contact_angle
+    difficulty_band: undergraduate_intermediate
+    educational_level: undergraduate
+    frontier_relevance: low
+    uses_hidden_parameters: false
+    figure_required: false
+    multiple_choice: false
+  - order: 3
+    local_field: class_8_5_hohmann_transfer_time_1e7_s
+    source_partition: class_sol.json
+    original_problem_id: "8.5"
+    original_collection: class
+    original_book_family: Classical Dynamics of Particles and Systems
+    short_label: Earth-to-Mars Hohmann transfer time
+    physics_domain: classical_mechanics
+    physics_subdomain: orbital_mechanics
+    secondary_domain: astrodynamics
+    task_type: applied_orbital_calculation
+    reasoning_profile:
+      - keplerian_orbit_model
+      - transfer_orbit_time
+      - astronomical_parameter_handling
+    answer_object: scalar
+    answer_unit: 10^7 s
+    output_semantics: transfer_time
+    difficulty_band: undergraduate_intermediate
+    educational_level: undergraduate
+    frontier_relevance: low
+    uses_hidden_parameters: false
+    figure_required: false
+    multiple_choice: false
+  - order: 4
+    local_field: matter_4_1_photoelectric_lambda_max_nm
+    source_partition: matter_sol.json
+    original_problem_id: "4.1"
+    original_collection: matter
+    original_book_family: Physical Chemistry Quanta Matter and Change
+    short_label: Photoelectric threshold wavelength
+    physics_domain: modern_physics
+    physics_subdomain: photoelectric_effect
+    secondary_domain: atomic_physics
+    task_type: textbook_numeric_word_problem
+    reasoning_profile:
+      - energy_conservation
+      - photon_energy_relation
+      - threshold_condition
+    answer_object: scalar
+    answer_unit: nm
+    output_semantics: maximum_ejecting_wavelength
+    difficulty_band: undergraduate_intro_intermediate
+    educational_level: undergraduate
+    frontier_relevance: low
+    uses_hidden_parameters: false
+    figure_required: false
+    multiple_choice: false
+  - order: 5
+    local_field: matter_17_1_hydrogenic_heplus_energy_ev
+    source_partition: matter_sol.json
+    original_problem_id: "17.1"
+    original_collection: matter
+    original_book_family: Physical Chemistry Quanta Matter and Change
+    short_label: Hydrogenic He+ excited-state energy
+    physics_domain: atomic_physics
+    physics_subdomain: hydrogenic_energy_levels
+    secondary_domain: quantum_mechanics
+    task_type: formula_lookup_and_substitution
+    reasoning_profile:
+      - quantum_number_identification
+      - hydrogenic_scaling_with_Z
+      - bound_state_energy_formula
+    answer_object: scalar
+    answer_unit: eV
+    output_semantics: eigenstate_energy
+    difficulty_band: undergraduate_intermediate
+    educational_level: undergraduate
+    frontier_relevance: low
+    uses_hidden_parameters: false
+    figure_required: false
+    multiple_choice: false
+  - order: 6
+    local_field: matter_37_4_thermal_neutron_wavelength_pm
+    source_partition: matter_sol.json
+    original_problem_id: "37.4"
+    original_collection: matter
+    original_book_family: Physical Chemistry Quanta Matter and Change
+    short_label: Thermal neutron de Broglie wavelength
+    physics_domain: modern_physics
+    physics_subdomain: matter_waves
+    secondary_domain: statistical_mechanics
+    task_type: thermal_scale_estimate
+    reasoning_profile:
+      - equipartition_like_temperature_scale
+      - de_broglie_relation
+      - dimensional_consistency
+    answer_object: scalar
+    answer_unit: pm
+    output_semantics: typical_wavelength
+    difficulty_band: undergraduate_intermediate
+    educational_level: undergraduate
+    frontier_relevance: low
+    uses_hidden_parameters: false
+    figure_required: false
+    multiple_choice: false
+  - order: 7
+    local_field: quan_1_6_1_b_position_probability
+    source_partition: quan_sol.json
+    original_problem_id: "1.6.1_b"
+    original_collection: quan
+    original_book_family: Quantum Chemistry
+    short_label: Exponential wavefunction interval probability
+    physics_domain: quantum_mechanics
+    physics_subdomain: wavefunction_probability
+    secondary_domain: one_dimensional_quantum_systems
+    task_type: integral_probability_evaluation
+    reasoning_profile:
+      - probability_density_construction
+      - one_dimensional_integration
+      - normalized_wavefunction_use
+    answer_object: scalar
+    answer_unit: dimensionless
+    output_semantics: measurement_interval_probability
+    difficulty_band: undergraduate_intro_intermediate
+    educational_level: undergraduate
+    frontier_relevance: low
+    uses_hidden_parameters: false
+    figure_required: false
+    multiple_choice: false
+  - order: 8
+    local_field: quan_6_6_1_hydrogen_ground_energy_ev
+    source_partition: quan_sol.json
+    original_problem_id: "6.6.1"
+    original_collection: quan
+    original_book_family: Quantum Chemistry
+    short_label: Hydrogen ground-state energy
+    physics_domain: quantum_mechanics
+    physics_subdomain: hydrogen_atom
+    secondary_domain: atomic_physics
+    task_type: canonical_constant_formula_evaluation
+    reasoning_profile:
+      - bound_state_energy_formula
+      - SI_to_eV_conversion
+      - physical_constant_substitution
+    answer_object: scalar
+    answer_unit: eV
+    output_semantics: ground_state_energy
+    difficulty_band: undergraduate_intro
+    educational_level: undergraduate
+    frontier_relevance: low
+    uses_hidden_parameters: false
+    figure_required: false
+    multiple_choice: false

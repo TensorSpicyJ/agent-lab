@@ -1,0 +1,29 @@
+﻿{
+    "benchmark_id":  "web-physics-hard-result-only-v0.1",
+    "task_id":  "quantum-hard-result-only-suite",
+    "run_id":  "20260602-145032__kimi_code_kimi26_file_isolated_network_not_enforced__quantum-hard-result-only-suite",
+    "agent":  "kimi_code_kimi26_file_isolated_network_not_enforced",
+    "model_alias":  "kimi-code/kimi-for-coding",
+    "model_display_name_note":  "Local config displays kimi-code/kimi-for-coding as Kimi-k2.6.",
+    "command":  "kimi -m kimi-code/kimi-for-coding -p \u003cread prompt.md and output JSON\u003e --output-format text",
+    "started_at":  "2026-06-02T14:50:32.2249770+08:00",
+    "finished_at":  "2026-06-02T14:56:26.4428701+08:00",
+    "runtime_seconds":  354.218,
+    "kimi_exit_code":  0,
+    "scorer_exit_code":  0,
+    "kimi_executable":  "C:\\Users\\TaiS\\.kimi-code\\bin\\kimi.exe",
+    "kimi_version":  "0.5.0",
+    "temp_cwd":  "C:\\Users\\TaiS\\AppData\\Local\\Temp\\agent-lab-kimi-hard-20260602-145032",
+    "cwd_listing":  [
+                        "compute.py",
+                        "prompt.md"
+                    ],
+    "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\web-physics-hard-result-only-v0.1\\tasks\\quantum-hard-result-only-suite\\prompt.md",
+    "prompt_sha256":  "4E4611225437917C05F35FD84A37D83464F509F4BA29B22F430667198B23D67C",
+    "output":  "D:\\Playground\\agent-lab\\benchmarks\\web-physics-hard-result-only-v0.1\\runs\\20260602-145032__kimi_code_kimi26_file_isolated_network_not_enforced__quantum-hard-result-only-suite\\outputs\\quantum-hard-result-only-suite.md",
+    "output_sha256":  "677D79359114A816823AE7F84D8E7BE68BE039F86AC253D919BC25B1FD40AB91",
+    "score":  "D:\\Playground\\agent-lab\\benchmarks\\web-physics-hard-result-only-v0.1\\runs\\20260602-145032__kimi_code_kimi26_file_isolated_network_not_enforced__quantum-hard-result-only-suite\\scores\\quantum-hard-result-only-suite.score.json",
+    "network_allowed":  false,
+    "network_enforced":  false,
+    "local_leakage_boundary":  "Initial temp cwd contained only prompt.md. During the run, Kimi created compute.py as a scratch calculation file; gold, verifier, run history, and source metadata were still not mounted in cwd."
+}

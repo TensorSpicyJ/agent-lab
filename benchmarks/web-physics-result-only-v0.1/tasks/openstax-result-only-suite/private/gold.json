@@ -1,0 +1,150 @@
+{
+  "benchmark_id": "web-physics-result-only-v0.1",
+  "task_id": "openstax-result-only-suite",
+  "sources": [
+    {
+      "id": "college-physics-2e-7-2",
+      "title": "OpenStax College Physics 2e, Section 7.2 Kinetic Energy and the Work-Energy Theorem",
+      "url": "https://openstax.org/books/college-physics-2e/pages/7-2-kinetic-energy-and-the-work-energy-theorem",
+      "used_for": ["package_ke_j", "package_final_speed_m_s"]
+    },
+    {
+      "id": "university-physics-v1-7-2",
+      "title": "OpenStax University Physics Volume 1, Section 7.2 Kinetic Energy",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/7-2-kinetic-energy",
+      "used_for": ["athlete_ke_j", "asteroid_mass_kg", "thermal_neutron_ke_j"]
+    },
+    {
+      "id": "university-physics-v1-4-3",
+      "title": "OpenStax University Physics Volume 1, Section 4.3 Projectile Motion",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/4-3-projectile-motion",
+      "used_for": [
+        "firework_max_height_m",
+        "firework_apex_time_s",
+        "firework_apex_x_m",
+        "tennis_time_s",
+        "tennis_impact_speed_m_s",
+        "tennis_impact_angle_deg_below_horizontal",
+        "golf_30deg_speed_m_s",
+        "golf_70deg_speed_m_s"
+      ]
+    },
+    {
+      "id": "college-physics-2e-18-3",
+      "title": "OpenStax College Physics 2e, Section 18.3 Coulomb's Law",
+      "url": "https://openstax.org/books/college-physics-2e/pages/18-3-coulombs-law",
+      "used_for": ["coulomb_force_n", "gravity_force_n", "coulomb_gravity_ratio"]
+    },
+    {
+      "id": "college-physics-2e-20-2",
+      "title": "OpenStax College Physics 2e, Section 20.2 Ohm's Law: Resistance and Simple Circuits",
+      "url": "https://openstax.org/books/college-physics-2e/pages/20-2-ohms-law-resistance-and-simple-circuits",
+      "used_for": ["headlight_resistance_ohm"]
+    }
+  ],
+  "answers": {
+    "package_ke_j": {
+      "value": 3.75,
+      "unit": "J",
+      "rel_tol": 0.01,
+      "abs_tol": 0.03
+    },
+    "package_final_speed_m_s": {
+      "value": 2.53,
+      "unit": "m/s",
+      "rel_tol": 0.02,
+      "abs_tol": 0.03
+    },
+    "athlete_ke_j": {
+      "value": 4000.0,
+      "unit": "J",
+      "rel_tol": 0.02,
+      "abs_tol": 20.0
+    },
+    "asteroid_mass_kg": {
+      "value": 1.7e15,
+      "unit": "kg",
+      "rel_tol": 0.05,
+      "abs_tol": 1.0e12
+    },
+    "thermal_neutron_ke_j": {
+      "value": 4.1e-21,
+      "unit": "J",
+      "rel_tol": 0.05,
+      "abs_tol": 1.0e-23
+    },
+    "firework_max_height_m": {
+      "value": 233.0,
+      "unit": "m",
+      "rel_tol": 0.02,
+      "abs_tol": 2.0
+    },
+    "firework_apex_time_s": {
+      "value": 6.90,
+      "unit": "s",
+      "rel_tol": 0.02,
+      "abs_tol": 0.08
+    },
+    "firework_apex_x_m": {
+      "value": 125.0,
+      "unit": "m",
+      "rel_tol": 0.03,
+      "abs_tol": 3.0
+    },
+    "tennis_time_s": {
+      "value": 3.79,
+      "unit": "s",
+      "rel_tol": 0.02,
+      "abs_tol": 0.05
+    },
+    "tennis_impact_speed_m_s": {
+      "value": 26.5,
+      "unit": "m/s",
+      "rel_tol": 0.02,
+      "abs_tol": 0.3
+    },
+    "tennis_impact_angle_deg_below_horizontal": {
+      "value": 36.9,
+      "unit": "deg",
+      "rel_tol": 0.03,
+      "abs_tol": 1.0,
+      "allow_abs_value": true
+    },
+    "golf_30deg_speed_m_s": {
+      "value": 31.9,
+      "unit": "m/s",
+      "rel_tol": 0.02,
+      "abs_tol": 0.3
+    },
+    "golf_70deg_speed_m_s": {
+      "value": 37.0,
+      "unit": "m/s",
+      "rel_tol": 0.02,
+      "abs_tol": 0.4
+    },
+    "coulomb_force_n": {
+      "value": 8.19e-8,
+      "unit": "N",
+      "rel_tol": 0.03,
+      "abs_tol": 2.0e-10
+    },
+    "gravity_force_n": {
+      "value": 3.61e-47,
+      "unit": "N",
+      "rel_tol": 0.05,
+      "abs_tol": 1.0e-49
+    },
+    "coulomb_gravity_ratio": {
+      "value": 2.27e39,
+      "unit": "dimensionless",
+      "rel_tol": 0.05,
+      "abs_tol": 1.0e37
+    },
+    "headlight_resistance_ohm": {
+      "value": 4.80,
+      "unit": "ohm",
+      "rel_tol": 0.01,
+      "abs_tol": 0.03
+    }
+  }
+}

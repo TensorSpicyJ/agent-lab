@@ -1,0 +1,41 @@
+﻿{
+    "benchmark_id":  "existing-cmt-hard-stress-v0.1",
+    "task_id":  "cmt-hard-research-50",
+    "run_id":  "20260603-224928__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50",
+    "problem_numbers":  [
+                            1
+                        ],
+    "passed":  0,
+    "total":  1,
+    "hard_score":  0,
+    "item_runs":  [
+                      {
+                          "field":  "cmt_index_00_answer",
+                          "problem_number":  1,
+                          "status":  "completed",
+                          "exit_code":  null,
+                          "runtime_seconds":  420.267,
+                          "stdout_bytes":  42,
+                          "stderr_bytes":  55962,
+                          "captured_json":  true,
+                          "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-224928__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50\\logs\\item-01-cmt_index_00_answer.prompt.md",
+                          "stdout":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-224928__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50\\logs\\item-01-cmt_index_00_answer.stdout.txt",
+                          "stderr":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-224928__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50\\logs\\item-01-cmt_index_00_answer.stderr.txt"
+                      }
+                  ],
+    "checks":  [
+                   {
+                       "field":  "cmt_index_00_answer",
+                       "type":  "symbolic",
+                       "source":  "CMT-Benchmark",
+                       "source_index":  0,
+                       "cmt_type":  "HF",
+                       "difficulty":  "research",
+                       "passed":  false,
+                       "expected":  "U_1/2",
+                       "actual_raw":  "U_0/3+2U_1",
+                       "actual_normalized":  "u_0/3+2u_1",
+                       "expected_normalized":  "u_1/2"
+                   }
+               ]
+}

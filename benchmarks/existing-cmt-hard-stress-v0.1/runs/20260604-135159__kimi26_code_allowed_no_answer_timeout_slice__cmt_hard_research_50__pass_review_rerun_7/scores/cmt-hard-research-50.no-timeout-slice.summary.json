@@ -1,0 +1,239 @@
+﻿{
+    "benchmark_id":  "existing-cmt-hard-stress-v0.1",
+    "task_id":  "cmt-hard-research-50",
+    "run_id":  "20260604-135159__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50__pass_review_rerun_7",
+    "run_label":  "pass-review-rerun-7",
+    "prompt_variant":  "pass-review",
+    "problem_numbers":  [
+                            5,
+                            6,
+                            11,
+                            15,
+                            21,
+                            25,
+                            36
+                        ],
+    "passed":  4,
+    "total":  7,
+    "hard_score":  0.5714285714285714,
+    "item_runs":  [
+                      {
+                          "field":  "cmt_index_04_answer",
+                          "problem_number":  5,
+                          "status":  "completed",
+                          "exit_code":  null,
+                          "runtime_seconds":  870.588,
+                          "stdout_bytes":  34,
+                          "stderr_bytes":  94637,
+                          "captured_json":  true,
+                          "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260604-135159__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50__pass_review_rerun_7\\logs\\item-05-cmt_index_04_answer.prompt.md",
+                          "stdout":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260604-135159__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50__pass_review_rerun_7\\logs\\item-05-cmt_index_04_answer.stdout.txt",
+                          "stderr":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260604-135159__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50__pass_review_rerun_7\\logs\\item-05-cmt_index_04_answer.stderr.txt"
+                      },
+                      {
+                          "field":  "cmt_index_05_answer",
+                          "problem_number":  6,
+                          "status":  "completed",
+                          "exit_code":  null,
+                          "runtime_seconds":  1230.654,
+                          "stdout_bytes":  37,
+                          "stderr_bytes":  129796,
+                          "captured_json":  true,
+                          "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260604-135159__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50__pass_review_rerun_7\\logs\\item-06-cmt_index_05_answer.prompt.md",
+                          "stdout":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260604-135159__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50__pass_review_rerun_7\\logs\\item-06-cmt_index_05_answer.stdout.txt",
+                          "stderr":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260604-135159__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50__pass_review_rerun_7\\logs\\item-06-cmt_index_05_answer.stderr.txt"
+                      },
+                      {
+                          "field":  "cmt_index_10_answer",
+                          "problem_number":  11,
+                          "status":  "completed",
+                          "exit_code":  null,
+                          "runtime_seconds":  660.418,
+                          "stdout_bytes":  34,
+                          "stderr_bytes":  86363,
+                          "captured_json":  true,
+                          "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260604-135159__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50__pass_review_rerun_7\\logs\\item-11-cmt_index_10_answer.prompt.md",
+                          "stdout":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260604-135159__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50__pass_review_rerun_7\\logs\\item-11-cmt_index_10_answer.stdout.txt",
+                          "stderr":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260604-135159__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50__pass_review_rerun_7\\logs\\item-11-cmt_index_10_answer.stderr.txt"
+                      },
+                      {
+                          "field":  "cmt_index_14_answer",
+                          "problem_number":  15,
+                          "status":  "completed",
+                          "exit_code":  null,
+                          "runtime_seconds":  810.361,
+                          "stdout_bytes":  36,
+                          "stderr_bytes":  100180,
+                          "captured_json":  true,
+                          "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260604-135159__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50__pass_review_rerun_7\\logs\\item-15-cmt_index_14_answer.prompt.md",
+                          "stdout":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260604-135159__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50__pass_review_rerun_7\\logs\\item-15-cmt_index_14_answer.stdout.txt",
+                          "stderr":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260604-135159__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50__pass_review_rerun_7\\logs\\item-15-cmt_index_14_answer.stderr.txt"
+                      },
+                      {
+                          "field":  "cmt_index_20_answer",
+                          "problem_number":  21,
+                          "status":  "completed",
+                          "exit_code":  null,
+                          "runtime_seconds":  450.25,
+                          "stdout_bytes":  52,
+                          "stderr_bytes":  63380,
+                          "captured_json":  true,
+                          "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260604-135159__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50__pass_review_rerun_7\\logs\\item-21-cmt_index_20_answer.prompt.md",
+                          "stdout":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260604-135159__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50__pass_review_rerun_7\\logs\\item-21-cmt_index_20_answer.stdout.txt",
+                          "stderr":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260604-135159__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50__pass_review_rerun_7\\logs\\item-21-cmt_index_20_answer.stderr.txt"
+                      },
+                      {
+                          "field":  "cmt_index_24_answer",
+                          "problem_number":  25,
+                          "status":  "completed",
+                          "exit_code":  null,
+                          "runtime_seconds":  1680.901,
+                          "stdout_bytes":  37,
+                          "stderr_bytes":  180405,
+                          "captured_json":  true,
+                          "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260604-135159__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50__pass_review_rerun_7\\logs\\item-25-cmt_index_24_answer.prompt.md",
+                          "stdout":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260604-135159__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50__pass_review_rerun_7\\logs\\item-25-cmt_index_24_answer.stdout.txt",
+                          "stderr":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260604-135159__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50__pass_review_rerun_7\\logs\\item-25-cmt_index_24_answer.stderr.txt"
+                      },
+                      {
+                          "field":  "cmt_index_35_answer",
+                          "problem_number":  36,
+                          "status":  "completed",
+                          "exit_code":  null,
+                          "runtime_seconds":  960.501,
+                          "stdout_bytes":  40,
+                          "stderr_bytes":  112689,
+                          "captured_json":  true,
+                          "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260604-135159__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50__pass_review_rerun_7\\logs\\item-36-cmt_index_35_answer.prompt.md",
+                          "stdout":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260604-135159__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50__pass_review_rerun_7\\logs\\item-36-cmt_index_35_answer.stdout.txt",
+                          "stderr":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260604-135159__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50__pass_review_rerun_7\\logs\\item-36-cmt_index_35_answer.stderr.txt"
+                      }
+                  ],
+    "checks":  [
+                   {
+                       "field":  "cmt_index_04_answer",
+                       "type":  "symbolic",
+                       "source":  "CMT-Benchmark",
+                       "source_index":  4,
+                       "cmt_type":  "HF",
+                       "difficulty":  "research",
+                       "passed":  true,
+                       "expected":  "c",
+                       "actual_raw":  "c",
+                       "actual_normalized":  "c",
+                       "expected_normalized":  "c"
+                   },
+                   {
+                       "field":  "cmt_index_05_answer",
+                       "type":  "choice_set",
+                       "source":  "CMT-Benchmark",
+                       "source_index":  5,
+                       "cmt_type":  "ED",
+                       "difficulty":  "research",
+                       "passed":  true,
+                       "expected":  [
+                                        "a",
+                                        "b",
+                                        "d"
+                                    ],
+                       "actual_raw":  "a;b;d",
+                       "actual_parsed":  [
+                                             "a",
+                                             "b",
+                                             "d"
+                                         ]
+                   },
+                   {
+                       "field":  "cmt_index_10_answer",
+                       "type":  "choice_set",
+                       "source":  "CMT-Benchmark",
+                       "source_index":  10,
+                       "cmt_type":  "QMC",
+                       "difficulty":  "research",
+                       "passed":  false,
+                       "expected":  [
+                                        "g"
+                                    ],
+                       "actual_raw":  "c",
+                       "actual_parsed":  [
+                                             "c"
+                                         ]
+                   },
+                   {
+                       "field":  "cmt_index_14_answer",
+                       "type":  "choice_set",
+                       "source":  "CMT-Benchmark",
+                       "source_index":  14,
+                       "cmt_type":  "ED",
+                       "difficulty":  "research",
+                       "passed":  false,
+                       "expected":  [
+                                        "b",
+                                        "e"
+                                    ],
+                       "actual_raw":  "b;c",
+                       "actual_parsed":  [
+                                             "b",
+                                             "c"
+                                         ]
+                   },
+                   {
+                       "field":  "cmt_index_20_answer",
+                       "type":  "choice_set",
+                       "source":  "CMT-Benchmark",
+                       "source_index":  20,
+                       "cmt_type":  "ED",
+                       "difficulty":  "research",
+                       "passed":  true,
+                       "expected":  [
+                                        "a",
+                                        "c"
+                                    ],
+                       "actual_raw":  "a;c",
+                       "actual_parsed":  [
+                                             "a",
+                                             "c"
+                                         ]
+                   },
+                   {
+                       "field":  "cmt_index_24_answer",
+                       "type":  "choice_set",
+                       "source":  "CMT-Benchmark",
+                       "source_index":  24,
+                       "cmt_type":  "QMC",
+                       "difficulty":  "research",
+                       "passed":  true,
+                       "expected":  [
+                                        "c",
+                                        "d",
+                                        "e"
+                                    ],
+                       "actual_raw":  "c;d;e",
+                       "actual_parsed":  [
+                                             "c",
+                                             "d",
+                                             "e"
+                                         ]
+                   },
+                   {
+                       "field":  "cmt_index_35_answer",
+                       "type":  "choice_set",
+                       "source":  "CMT-Benchmark",
+                       "source_index":  35,
+                       "cmt_type":  "Other",
+                       "difficulty":  "research",
+                       "passed":  false,
+                       "expected":  [
+                                        "a",
+                                        "b"
+                                    ],
+                       "actual_raw":  "a;b;c;d",
+                       "actual_parsed":  [
+                                             "a",
+                                             "b",
+                                             "c",
+                                             "d"
+                                         ]
+                   }
+               ]
+}

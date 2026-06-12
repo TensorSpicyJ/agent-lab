@@ -1,0 +1,14 @@
+﻿{
+    "cmt_index_01_answer":  "c_↑^\\dagger(k) c_↑(k);c_↓^\\dagger(k) c_↓(k);c_↑^\\dagger(k) c_↓(k);c_↓^\\dagger(k) c_↑(k)",
+    "cmt_index_02_answer":  "\\boxed{(2.09, 0.56); (0.56, 2.09); (-1.53, 1.53); (-2.09, -0.56); (-0.56, -2.09); (1.53, -1.53)}",
+    "cmt_index_03_answer":  "\\boxed{O(N_q^2)}",
+    "cmt_index_04_answer":  "c",
+    "cmt_index_05_answer":  "a;b;d",
+    "cmt_index_06_answer":  "a",
+    "cmt_index_07_answer":  "a",
+    "cmt_index_08_answer":  "f",
+    "cmt_index_09_answer":  "b;c",
+    "cmt_index_10_answer":  "g",
+    "cmt_index_11_answer":  "$\\boxed{2^{cN}}$",
+    "cmt_index_12_answer":  "b"
+}

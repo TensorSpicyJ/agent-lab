@@ -1,0 +1,45 @@
+task_id: open-physics-diverse-core-7
+benchmark_id: existing-open-physics-diverse-v0.1
+problem_count: 7
+answer_field_count: 12
+sources:
+  - source: ThermoQA
+    source_url: https://huggingface.co/datasets/olivenet/thermoqa
+    local_items:
+      - thermoqa_T1_SL_008
+      - thermoqa_T1_SF_011
+    benchmark_type: applied_engineering_thermodynamics
+    answer_type: numeric_multi_property
+  - source: CMPhysBench
+    source_url: https://huggingface.co/datasets/weidawang/CMPhysBench
+    local_items:
+      - cmphysbench_id4
+      - cmphysbench_id42
+    benchmark_type: graduate_condensed_matter_physics_calculation
+    answer_type: symbolic_expression
+  - source: CMT-Benchmark
+    source_url: https://huggingface.co/datasets/JVRoggeveen/cmt_benchmark
+    local_items:
+      - cmt_hubbard_conserved_quantum_numbers
+      - cmt_dmrg_critical_bond_dimension_scaling
+      - cmt_qmc_average_sign_true_statements
+    benchmark_type: expert_research_level_condensed_matter_theory
+    answer_type: choice_set
+domains:
+  - engineering_thermodynamics
+  - quantum_mechanics_theoretical_foundations
+  - condensed_matter_theory
+  - dmrg
+  - quantum_monte_carlo
+difficulties:
+  - easy
+  - medium
+  - graduate_basic
+  - research
+grading:
+  mode: mixed_local_verifier
+  numeric_tolerance: per_field
+  symbolic_matching: normalized_string_with_alternatives
+  choice_matching: exact_set
+notes:
+  - The harder CMT Hartree-Fock triangular CDW item remains in open-physics-diverse-mini-8 and caused an unresolved long run in the first Kimi attempt.

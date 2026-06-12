@@ -1,0 +1,123 @@
+{
+  "benchmark_id": "existing-open-physics-diverse-v0.1",
+  "task_id": "open-physics-diverse-core-7",
+  "checks": [
+    {
+      "field": "thermoqa_T1_SL_008_h_kJ_kg",
+      "type": "numeric",
+      "expected": 372.78,
+      "rel_tol": 0.02,
+      "abs_tol": 0.5,
+      "source": "ThermoQA",
+      "domain": "engineering_thermodynamics",
+      "difficulty": "easy"
+    },
+    {
+      "field": "thermoqa_T1_SL_008_s_kJ_kgK",
+      "type": "numeric",
+      "expected": 1.1922,
+      "rel_tol": 0.02,
+      "abs_tol": 0.01,
+      "source": "ThermoQA",
+      "domain": "engineering_thermodynamics",
+      "difficulty": "easy"
+    },
+    {
+      "field": "thermoqa_T1_SL_008_v_m3_kg",
+      "type": "numeric",
+      "expected": 0.0010353,
+      "rel_tol": 0.02,
+      "abs_tol": 0.00002,
+      "source": "ThermoQA",
+      "domain": "engineering_thermodynamics",
+      "difficulty": "easy"
+    },
+    {
+      "field": "thermoqa_T1_SF_011_P_kPa",
+      "type": "numeric",
+      "expected": 445.56,
+      "rel_tol": 0.02,
+      "abs_tol": 1.0,
+      "source": "ThermoQA",
+      "domain": "engineering_thermodynamics",
+      "difficulty": "medium"
+    },
+    {
+      "field": "thermoqa_T1_SF_011_h_kJ_kg",
+      "type": "numeric",
+      "expected": 618.17,
+      "rel_tol": 0.02,
+      "abs_tol": 1.0,
+      "source": "ThermoQA",
+      "domain": "engineering_thermodynamics",
+      "difficulty": "medium"
+    },
+    {
+      "field": "thermoqa_T1_SF_011_s_kJ_kgK",
+      "type": "numeric",
+      "expected": 1.8104,
+      "rel_tol": 0.02,
+      "abs_tol": 0.02,
+      "source": "ThermoQA",
+      "domain": "engineering_thermodynamics",
+      "difficulty": "medium"
+    },
+    {
+      "field": "thermoqa_T1_SF_011_v_m3_kg",
+      "type": "numeric",
+      "expected": 0.0010804,
+      "rel_tol": 0.02,
+      "abs_tol": 0.00002,
+      "source": "ThermoQA",
+      "domain": "engineering_thermodynamics",
+      "difficulty": "medium"
+    },
+    {
+      "field": "cmphysbench_id4_commutator_x_px",
+      "type": "symbolic",
+      "expected": "i*hbar",
+      "alternatives": ["i*hbar", "i\\hbar", "i hbar", "ihbar"],
+      "source": "CMPhysBench",
+      "domain": "quantum_mechanics_theoretical_foundations",
+      "difficulty": "graduate_basic"
+    },
+    {
+      "field": "cmphysbench_id42_forced_oscillator_ground_energy",
+      "type": "symbolic",
+      "expected": "hbar*omega/2 - F^2/(2*m*omega^2)",
+      "alternatives": [
+        "hbar*omega/2 - F^2/(2*m*omega^2)",
+        "\\hbar\\omega/2 - F^2/(2m\\omega^2)",
+        "\\frac{\\hbar\\omega}{2}-\\frac{F^2}{2m\\omega^2}",
+        "\\frac{1}{2}\\hbar\\omega - \\frac{F^2}{2m\\omega^2}"
+      ],
+      "source": "CMPhysBench",
+      "domain": "quantum_mechanics_theoretical_foundations",
+      "difficulty": "graduate_basic"
+    },
+    {
+      "field": "cmt_hubbard_conserved_quantum_numbers",
+      "type": "choice_set",
+      "expected": ["a", "b", "d"],
+      "source": "CMT-Benchmark",
+      "domain": "condensed_matter_theory_hubbard_model",
+      "difficulty": "research"
+    },
+    {
+      "field": "cmt_dmrg_critical_bond_dimension_scaling",
+      "type": "choice_set",
+      "expected": ["d"],
+      "source": "CMT-Benchmark",
+      "domain": "condensed_matter_theory_dmrg",
+      "difficulty": "research"
+    },
+    {
+      "field": "cmt_qmc_average_sign_true_statements",
+      "type": "choice_set",
+      "expected": ["b", "f", "i"],
+      "source": "CMT-Benchmark",
+      "domain": "condensed_matter_theory_quantum_monte_carlo",
+      "difficulty": "research"
+    }
+  ]
+}

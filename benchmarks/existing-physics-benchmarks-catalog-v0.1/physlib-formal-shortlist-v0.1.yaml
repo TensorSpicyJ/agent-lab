@@ -1,0 +1,89 @@
+version: 0.1
+updated_at: 2026-06-02
+purpose: first_formal_physics_lane_seed
+selection_criteria:
+  - mainstream_physics_domains_first
+  - module_names_with_basic_solution_or_canonical_equations
+  - moderate_size_for_initial_lean_harness
+  - pedagogically_interpretable_topics
+shortlist:
+  - path: ClassicalMechanics/HarmonicOscillator/Basic.lean
+    domain: ClassicalMechanics
+    subdomain: HarmonicOscillator
+    why_selected: Canonical undergraduate mechanics topic with rich but still interpretable formal content.
+  - path: ClassicalMechanics/HarmonicOscillator/Solution.lean
+    domain: ClassicalMechanics
+    subdomain: HarmonicOscillator
+    why_selected: Natural companion to the oscillator basics and useful for solution-style formal checks.
+  - path: ClassicalMechanics/EulerLagrange.lean
+    domain: ClassicalMechanics
+    subdomain: AnalyticalMechanics
+    why_selected: Central bridge from textbook derivation language to formal mechanics.
+  - path: ClassicalMechanics/HamiltonsEquations.lean
+    domain: ClassicalMechanics
+    subdomain: AnalyticalMechanics
+    why_selected: Core formal mechanics relation with strong benchmark value.
+  - path: ClassicalMechanics/OrbitalMechanics/VisViva.lean
+    domain: ClassicalMechanics
+    subdomain: OrbitalMechanics
+    why_selected: Compact, recognizable physics law suitable for a small formal benchmark item.
+  - path: ClassicalMechanics/WaveEquation/Basic.lean
+    domain: ClassicalMechanics
+    subdomain: WaveEquation
+    why_selected: Broadens the lane beyond point-particle mechanics.
+  - path: Electromagnetism/Kinematics/ElectricField.lean
+    domain: Electromagnetism
+    subdomain: Kinematics
+    why_selected: Canonical EM object with manageable symbolic structure.
+  - path: Electromagnetism/Kinematics/MagneticField.lean
+    domain: Electromagnetism
+    subdomain: Kinematics
+    why_selected: Pairs naturally with electric-field formalization.
+  - path: Electromagnetism/Kinematics/FieldStrength.lean
+    domain: Electromagnetism
+    subdomain: Kinematics
+    why_selected: Captures the unified field object and supports more structural formal tests.
+  - path: Electromagnetism/ThreeDimension/MaxwellEquations.lean
+    domain: Electromagnetism
+    subdomain: MaxwellEquations
+    why_selected: High-value canonical target for formal physics reasoning.
+  - path: Electromagnetism/Vacuum/HarmonicWave.lean
+    domain: Electromagnetism
+    subdomain: VacuumWaves
+    why_selected: Connects EM and wave propagation in a familiar benchmarkable form.
+  - path: QuantumMechanics/DDimensions/Basic.lean
+    domain: QuantumMechanics
+    subdomain: DDimensions
+    why_selected: Broad entry point into the formal QM stack.
+  - path: QuantumMechanics/OneDimension/HilbertSpace/Basic.lean
+    domain: QuantumMechanics
+    subdomain: HilbertSpace
+    why_selected: Good candidate for state-space and operator prerequisites.
+  - path: QuantumMechanics/OneDimension/HarmonicOscillator/Basic.lean
+    domain: QuantumMechanics
+    subdomain: HarmonicOscillator
+    why_selected: Canonical benchmark topic across both physics and quantum pedagogy.
+  - path: QuantumMechanics/DDimensions/Hydrogen/Basic.lean
+    domain: QuantumMechanics
+    subdomain: Hydrogen
+    why_selected: Directly connects with standard atomic-physics benchmark themes.
+  - path: Thermodynamics/Temperature/Basic.lean
+    domain: Thermodynamics
+    subdomain: Temperature
+    why_selected: Simple mainstream thermodynamics anchor for the formal lane.
+  - path: Thermodynamics/IdealGas/Basic.lean
+    domain: Thermodynamics
+    subdomain: IdealGas
+    why_selected: Familiar and interpretable equation-of-state style target.
+  - path: StatisticalMechanics/CanonicalEnsemble/Basic.lean
+    domain: StatisticalMechanics
+    subdomain: CanonicalEnsemble
+    why_selected: Highest-signal stat mech module in the current scan.
+  - path: StatisticalMechanics/MicroCanonicalEnsemble/Basic.lean
+    domain: StatisticalMechanics
+    subdomain: MicroCanonicalEnsemble
+    why_selected: Natural partner to the canonical ensemble module.
+  - path: CondensedMatter/TightBindingChain/Basic.lean
+    domain: CondensedMatter
+    subdomain: TightBinding
+    why_selected: Valuable because condensed matter is under-covered elsewhere in the benchmark stack.

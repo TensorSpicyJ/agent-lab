@@ -1,0 +1,1900 @@
+{
+  "created_at": "2026-06-06T13:27:47.176393+08:00",
+  "run_root": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260606-003930__hakimi013_deepseek_watchdog__cmt_hard_research_50__full50_onoff_watchdog_20260606",
+  "run_id": "20260606-003930__hakimi013_deepseek_watchdog__cmt_hard_research_50__full50_onoff_watchdog_20260606",
+  "started_at": "2026-06-06T00:39:30.209392+08:00",
+  "finished_at": "2026-06-06T04:47:52.533835+08:00",
+  "model_alias": "deepseek/deepseek-v4-pro",
+  "mode_summaries": {
+    "default_on": {
+      "label": "experimental_default_on",
+      "passed": 5,
+      "total": 50,
+      "hard_score": 0.1,
+      "valid_json": 44,
+      "timeouts_or_no_answer": 6,
+      "status_counts": {
+        "completed": 44,
+        "max_runtime_timeout": 6
+      },
+      "passed_problems": [
+        6,
+        22,
+        26,
+        27,
+        49
+      ],
+      "timeout_problems": [
+        3,
+        23,
+        24,
+        43,
+        45,
+        48
+      ]
+    },
+    "all_default_on_flags_off": {
+      "label": "experimental_flags_off",
+      "passed": 5,
+      "total": 50,
+      "hard_score": 0.1,
+      "valid_json": 40,
+      "timeouts_or_no_answer": 10,
+      "status_counts": {
+        "completed": 40,
+        "max_runtime_timeout": 10
+      },
+      "passed_problems": [
+        5,
+        6,
+        16,
+        27,
+        36
+      ],
+      "timeout_problems": [
+        12,
+        17,
+        23,
+        25,
+        26,
+        33,
+        42,
+        45,
+        48,
+        49
+      ]
+    }
+  },
+  "pair_category_counts": {
+    "both_wrong_different_answer": 19,
+    "on_no_answer_off_wrong": 3,
+    "both_wrong_same_answer": 12,
+    "off_only_pass": 3,
+    "both_pass": 2,
+    "off_no_answer_on_wrong": 5,
+    "on_only_pass": 3,
+    "both_timeout_or_no_answer": 3
+  },
+  "pair_category_items": {
+    "both_pass": [
+      6,
+      27
+    ],
+    "both_timeout_or_no_answer": [
+      23,
+      45,
+      48
+    ],
+    "both_wrong_different_answer": [
+      1,
+      2,
+      7,
+      9,
+      11,
+      13,
+      14,
+      15,
+      18,
+      19,
+      28,
+      30,
+      34,
+      37,
+      38,
+      39,
+      40,
+      47,
+      50
+    ],
+    "both_wrong_same_answer": [
+      4,
+      8,
+      10,
+      20,
+      21,
+      29,
+      31,
+      32,
+      35,
+      41,
+      44,
+      46
+    ],
+    "off_no_answer_on_wrong": [
+      12,
+      17,
+      25,
+      33,
+      42
+    ],
+    "off_only_pass": [
+      5,
+      16,
+      36
+    ],
+    "on_no_answer_off_wrong": [
+      3,
+      24,
+      43
+    ],
+    "on_only_pass": [
+      22,
+      26,
+      49
+    ]
+  },
+  "failure_counts": {
+    "default_on": {
+      "symbolic_formula_mismatch": 11,
+      "symbolic_format_or_extra_lhs": 1,
+      "runtime_timeout_no_json": 6,
+      "choice_under_selected": 5,
+      "choice_wrong_set": 12,
+      "numeric_value_mismatch": 3,
+      "choice_over_selected": 7
+    },
+    "all_default_on_flags_off": {
+      "symbolic_formula_mismatch": 9,
+      "numeric_value_mismatch": 4,
+      "choice_under_selected": 5,
+      "choice_wrong_set": 11,
+      "runtime_timeout_no_json": 10,
+      "choice_over_selected": 5,
+      "symbolic_format_or_extra_lhs": 1
+    }
+  },
+  "success_reviews": [
+    {
+      "mode": "all_default_on_flags_off",
+      "problem": 5,
+      "field": "cmt_index_04_answer",
+      "review": "uncertain_capability",
+      "note": "Reasoned about TBG symmetries, but the tool trace says the prompt line looked truncated."
+    },
+    {
+      "mode": "default_on",
+      "problem": 6,
+      "field": "cmt_index_05_answer",
+      "review": "capability",
+      "note": "Commutation reasoning for N, S^z, and eta^2; no gold-file evidence."
+    },
+    {
+      "mode": "all_default_on_flags_off",
+      "problem": 6,
+      "field": "cmt_index_05_answer",
+      "review": "capability",
+      "note": "Same stable commutation result as ON."
+    },
+    {
+      "mode": "all_default_on_flags_off",
+      "problem": 16,
+      "field": "cmt_index_15_answer",
+      "review": "capability_low_confidence",
+      "note": "Long Hubbard-ring reasoning with explicit uncertainty; final a;d matched verifier."
+    },
+    {
+      "mode": "default_on",
+      "problem": 22,
+      "field": "cmt_index_21_answer",
+      "review": "format_sensitive",
+      "note": "Answered N_k B. OFF answered f = N_k B, which is physically equivalent but fails the strict expected form."
+    },
+    {
+      "mode": "default_on",
+      "problem": 26,
+      "field": "cmt_index_25_answer",
+      "review": "capability",
+      "note": "Magnetic-translation/gauge-invariance reasoning led to b;c;e; OFF timed out."
+    },
+    {
+      "mode": "default_on",
+      "problem": 27,
+      "field": "cmt_index_26_answer",
+      "review": "capability_with_parameter_cue",
+      "note": "Derived O_n = E_n - E_{n-1}; listed parameters strongly constrain the form."
+    },
+    {
+      "mode": "all_default_on_flags_off",
+      "problem": 27,
+      "field": "cmt_index_26_answer",
+      "review": "capability_with_parameter_cue",
+      "note": "Same derivation as ON; parameters strongly constrain the form."
+    },
+    {
+      "mode": "all_default_on_flags_off",
+      "problem": 36,
+      "field": "cmt_index_35_answer",
+      "review": "capability",
+      "note": "Kitaev/PEPS operator mapping reasoning led to a;b."
+    },
+    {
+      "mode": "default_on",
+      "problem": 49,
+      "field": "cmt_index_48_answer",
+      "review": "capability",
+      "note": "Long SU(2) and C4 representation-counting trace; OFF timed out."
+    }
+  ],
+  "leakage_scan": {
+    "gold_file_mentions": 0,
+    "private_file_mentions": 0,
+    "note": "Manual Select-String scan found no gold.json/private/sample.correct leakage in logs; some prompts expose Parameters lists that can cue answer format."
+  },
+  "per_problem": [
+    {
+      "problem": 1,
+      "field": "cmt_index_00_answer",
+      "type": "symbolic",
+      "expected": "U_1/2",
+      "pair_category": "both_wrong_different_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 160.079,
+        "actual_raw": "\\frac{U_0}{3}+2U_1",
+        "actual_parsed": null,
+        "failure_reason": "symbolic_formula_mismatch",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 90.058,
+        "actual_raw": "U_0/3 + 2U_1",
+        "actual_parsed": null,
+        "failure_reason": "symbolic_formula_mismatch",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 2,
+      "field": "cmt_index_01_answer",
+      "type": "symbolic",
+      "expected": "\\langle c_\\uparrow^\\dagger(k) c_\\uparrow(k) \\rangle; \\langle c_\\downarrow^\\dagger(k) c_\\downarrow(k) \\rangle",
+      "pair_category": "both_wrong_different_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 80.176,
+        "actual_raw": "\\langle c_\\uparrow^\\dagger(k) c_\\uparrow(k) \\rangle; \\langle c_\\downarrow^\\dagger(k) c_\\downarrow(k) \\rangle; \\langle c_\\uparrow^\\dagger(k) c_\\downarrow(k) \\rangle; \\langle c_\\downarrow^\\dagger(k) c_\\uparrow(k) \\rangle",
+        "actual_parsed": null,
+        "failure_reason": "symbolic_format_or_extra_lhs",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 50.051,
+        "actual_raw": "\\langle c^\\dagger_\\uparrow(k) c_\\uparrow(k) \\rangle;\\langle c^\\dagger_\\downarrow(k) c_\\downarrow(k) \\rangle;\\langle c^\\dagger_\\uparrow(k) c_\\downarrow(k) \\rangle;\\langle c^\\dagger_\\downarrow(k) c_\\uparrow(k) \\rangle",
+        "actual_parsed": null,
+        "failure_reason": "symbolic_formula_mismatch",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 3,
+      "field": "cmt_index_02_answer",
+      "type": "numeric_vector",
+      "expected": [
+        2.09,
+        1.21,
+        0.0,
+        2.41,
+        -2.09,
+        1.21,
+        -2.09,
+        -1.21,
+        0.0,
+        -2.41,
+        2.09,
+        -1.21
+      ],
+      "pair_category": "on_no_answer_off_wrong",
+      "default_on": {
+        "passed": false,
+        "status": "max_runtime_timeout",
+        "captured_json": false,
+        "runtime_seconds": 361.246,
+        "actual_raw": null,
+        "actual_parsed": [],
+        "failure_reason": "runtime_timeout_no_json",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 60.055,
+        "actual_raw": "\\boxed{(0.00, 0.00); (0.00, 0.00); (0.00, 0.00); (0.00, 0.00); (0.00, 0.00); (0.00, 0.00)}",
+        "actual_parsed": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "failure_reason": "numeric_value_mismatch",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 4,
+      "field": "cmt_index_03_answer",
+      "type": "symbolic",
+      "expected": "16N_q^2",
+      "pair_category": "both_wrong_same_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 30.055,
+        "actual_raw": "\\boxed{\\mathcal{O}(N_q^2)}",
+        "actual_parsed": null,
+        "failure_reason": "symbolic_formula_mismatch",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 80.054,
+        "actual_raw": "\\boxed{\\mathcal{O}(N_q^2)}",
+        "actual_parsed": null,
+        "failure_reason": "symbolic_formula_mismatch",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 5,
+      "field": "cmt_index_04_answer",
+      "type": "symbolic",
+      "expected": "c",
+      "pair_category": "off_only_pass",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 350.112,
+        "actual_raw": "e",
+        "actual_parsed": null,
+        "failure_reason": "symbolic_formula_mismatch",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": true,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 120.062,
+        "actual_raw": "c",
+        "actual_parsed": null,
+        "failure_reason": null,
+        "success_review": "uncertain_capability"
+      }
+    },
+    {
+      "problem": 6,
+      "field": "cmt_index_05_answer",
+      "type": "choice_set",
+      "expected": [
+        "a",
+        "b",
+        "d"
+      ],
+      "pair_category": "both_pass",
+      "default_on": {
+        "passed": true,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 80.057,
+        "actual_raw": "a;b;d",
+        "actual_parsed": [
+          "a",
+          "b",
+          "d"
+        ],
+        "failure_reason": null,
+        "success_review": "capability"
+      },
+      "all_default_on_flags_off": {
+        "passed": true,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 50.049,
+        "actual_raw": "a;b;d",
+        "actual_parsed": [
+          "a",
+          "b",
+          "d"
+        ],
+        "failure_reason": null,
+        "success_review": "capability"
+      }
+    },
+    {
+      "problem": 7,
+      "field": "cmt_index_06_answer",
+      "type": "choice_set",
+      "expected": [
+        "a",
+        "b",
+        "d"
+      ],
+      "pair_category": "both_wrong_different_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 20.043,
+        "actual_raw": "a",
+        "actual_parsed": [
+          "a"
+        ],
+        "failure_reason": "choice_under_selected",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 70.05,
+        "actual_raw": "\\boxed{a}",
+        "actual_parsed": [
+          "a"
+        ],
+        "failure_reason": "choice_under_selected",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 8,
+      "field": "cmt_index_07_answer",
+      "type": "choice_set",
+      "expected": [
+        "d"
+      ],
+      "pair_category": "both_wrong_same_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 20.046,
+        "actual_raw": "a",
+        "actual_parsed": [
+          "a"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 20.042,
+        "actual_raw": "a",
+        "actual_parsed": [
+          "a"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 9,
+      "field": "cmt_index_08_answer",
+      "type": "choice_set",
+      "expected": [
+        "b",
+        "f",
+        "i"
+      ],
+      "pair_category": "both_wrong_different_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 60.055,
+        "actual_raw": "f",
+        "actual_parsed": [
+          "f"
+        ],
+        "failure_reason": "choice_under_selected",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 50.046,
+        "actual_raw": "a",
+        "actual_parsed": [
+          "a"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 10,
+      "field": "cmt_index_09_answer",
+      "type": "choice_set",
+      "expected": [
+        "b",
+        "e"
+      ],
+      "pair_category": "both_wrong_same_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 100.166,
+        "actual_raw": "b;c",
+        "actual_parsed": [
+          "b",
+          "c"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 60.057,
+        "actual_raw": "b;c",
+        "actual_parsed": [
+          "b",
+          "c"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 11,
+      "field": "cmt_index_10_answer",
+      "type": "choice_set",
+      "expected": [
+        "g"
+      ],
+      "pair_category": "both_wrong_different_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 120.061,
+        "actual_raw": "c",
+        "actual_parsed": [
+          "c"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 80.055,
+        "actual_raw": "\\boxed{c}",
+        "actual_parsed": [
+          "c"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 12,
+      "field": "cmt_index_11_answer",
+      "type": "symbolic",
+      "expected": "2^{N/2-1}; c=1/2",
+      "pair_category": "off_no_answer_on_wrong",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 280.096,
+        "actual_raw": "\\boxed{2^{N/2},\\ c = \\frac{1}{2}}",
+        "actual_parsed": null,
+        "failure_reason": "symbolic_formula_mismatch",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "max_runtime_timeout",
+        "captured_json": false,
+        "runtime_seconds": 361.007,
+        "actual_raw": null,
+        "actual_parsed": null,
+        "failure_reason": "runtime_timeout_no_json",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 13,
+      "field": "cmt_index_12_answer",
+      "type": "choice_set",
+      "expected": [
+        "c"
+      ],
+      "pair_category": "both_wrong_different_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 60.163,
+        "actual_raw": "b",
+        "actual_parsed": [
+          "b"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 30.052,
+        "actual_raw": "a",
+        "actual_parsed": [
+          "a"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 14,
+      "field": "cmt_index_13_answer",
+      "type": "choice_set",
+      "expected": [
+        "d",
+        "e"
+      ],
+      "pair_category": "both_wrong_different_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 70.055,
+        "actual_raw": "b;e",
+        "actual_parsed": [
+          "b",
+          "e"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 150.07,
+        "actual_raw": "\\boxed{d}",
+        "actual_parsed": [
+          "d"
+        ],
+        "failure_reason": "choice_under_selected",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 15,
+      "field": "cmt_index_14_answer",
+      "type": "choice_set",
+      "expected": [
+        "b",
+        "e"
+      ],
+      "pair_category": "both_wrong_different_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 80.056,
+        "actual_raw": "\\boxed{a;d;e}",
+        "actual_parsed": [
+          "a",
+          "d",
+          "e"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 40.046,
+        "actual_raw": "a;d",
+        "actual_parsed": [
+          "a",
+          "d"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 16,
+      "field": "cmt_index_15_answer",
+      "type": "choice_set",
+      "expected": [
+        "a",
+        "d"
+      ],
+      "pair_category": "off_only_pass",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 140.072,
+        "actual_raw": "b;d",
+        "actual_parsed": [
+          "b",
+          "d"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": true,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 130.066,
+        "actual_raw": "a;d",
+        "actual_parsed": [
+          "a",
+          "d"
+        ],
+        "failure_reason": null,
+        "success_review": "capability_low_confidence"
+      }
+    },
+    {
+      "problem": 17,
+      "field": "cmt_index_16_answer",
+      "type": "numeric_vector",
+      "expected": [
+        7.0
+      ],
+      "pair_category": "off_no_answer_on_wrong",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 270.092,
+        "actual_raw": "\\boxed{5}",
+        "actual_parsed": [
+          5.0
+        ],
+        "failure_reason": "numeric_value_mismatch",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "max_runtime_timeout",
+        "captured_json": false,
+        "runtime_seconds": 361.05,
+        "actual_raw": null,
+        "actual_parsed": [],
+        "failure_reason": "runtime_timeout_no_json",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 18,
+      "field": "cmt_index_17_answer",
+      "type": "symbolic",
+      "expected": "-t (p^{\\dagger}_{i,\\sigma}p_{j,\\sigma}+p^{\\dagger}_{j,\\sigma}p_{i,\\sigma})-U (m_{i,\\uparrow}-\\frac{1}{2})(m_{i,\\downarrow}-\\frac{1}{2})-\\mu (m_{i,\\uparrow}-m_{i,\\downarrow}) -\\mu",
+      "pair_category": "both_wrong_different_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 120.06,
+        "actual_raw": "\\boxed{-t(p^{\\dagger}_{i,\\sigma}p_{j,\\sigma}+p^{\\dagger}_{j,\\sigma}p_{i,\\sigma}) - U m_{i,\\uparrow}m_{i,\\downarrow} + (U - \\mu)m_{i,\\uparrow} + \\mu m_{i,\\downarrow} - \\mu}",
+        "actual_parsed": null,
+        "failure_reason": "symbolic_formula_mismatch",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 160.075,
+        "actual_raw": "\\boxed{-t(p^{\\dagger}_{i,\\sigma}p_{j,\\sigma}+p^{\\dagger}_{j,\\sigma}p_{i,\\sigma})-U m_{i,\\uparrow}m_{i,\\downarrow}-\\mu m_{i,\\uparrow}+\\mu m_{i,\\downarrow}}",
+        "actual_parsed": null,
+        "failure_reason": "symbolic_formula_mismatch",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 19,
+      "field": "cmt_index_18_answer",
+      "type": "choice_set",
+      "expected": [
+        "a",
+        "b"
+      ],
+      "pair_category": "both_wrong_different_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 150.069,
+        "actual_raw": "b;c",
+        "actual_parsed": [
+          "b",
+          "c"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 60.053,
+        "actual_raw": "a;d",
+        "actual_parsed": [
+          "a",
+          "d"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 20,
+      "field": "cmt_index_19_answer",
+      "type": "choice_set",
+      "expected": [
+        "a"
+      ],
+      "pair_category": "both_wrong_same_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 140.186,
+        "actual_raw": "a;e",
+        "actual_parsed": [
+          "a",
+          "e"
+        ],
+        "failure_reason": "choice_over_selected",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 130.07,
+        "actual_raw": "a;e",
+        "actual_parsed": [
+          "a",
+          "e"
+        ],
+        "failure_reason": "choice_over_selected",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 21,
+      "field": "cmt_index_20_answer",
+      "type": "choice_set",
+      "expected": [
+        "a",
+        "c"
+      ],
+      "pair_category": "both_wrong_same_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 50.047,
+        "actual_raw": "a;c;d",
+        "actual_parsed": [
+          "a",
+          "c",
+          "d"
+        ],
+        "failure_reason": "choice_over_selected",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 40.051,
+        "actual_raw": "a;c;d",
+        "actual_parsed": [
+          "a",
+          "c",
+          "d"
+        ],
+        "failure_reason": "choice_over_selected",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 22,
+      "field": "cmt_index_21_answer",
+      "type": "symbolic",
+      "expected": "N_k B",
+      "pair_category": "on_only_pass",
+      "default_on": {
+        "passed": true,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 40.047,
+        "actual_raw": "\\boxed{N_k B}",
+        "actual_parsed": null,
+        "failure_reason": null,
+        "success_review": "format_sensitive"
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 80.055,
+        "actual_raw": "\\boxed{f = N_k B}",
+        "actual_parsed": null,
+        "failure_reason": "symbolic_format_or_extra_lhs",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 23,
+      "field": "cmt_index_22_answer",
+      "type": "numeric_vector",
+      "expected": [
+        4.0
+      ],
+      "pair_category": "both_timeout_or_no_answer",
+      "default_on": {
+        "passed": false,
+        "status": "max_runtime_timeout",
+        "captured_json": false,
+        "runtime_seconds": 361.036,
+        "actual_raw": null,
+        "actual_parsed": [],
+        "failure_reason": "runtime_timeout_no_json",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "max_runtime_timeout",
+        "captured_json": false,
+        "runtime_seconds": 360.955,
+        "actual_raw": null,
+        "actual_parsed": [],
+        "failure_reason": "runtime_timeout_no_json",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 24,
+      "field": "cmt_index_23_answer",
+      "type": "numeric_vector",
+      "expected": [
+        0.2,
+        0.003,
+        0.017,
+        0.027,
+        0.038
+      ],
+      "pair_category": "on_no_answer_off_wrong",
+      "default_on": {
+        "passed": false,
+        "status": "max_runtime_timeout",
+        "captured_json": false,
+        "runtime_seconds": 361.135,
+        "actual_raw": null,
+        "actual_parsed": [],
+        "failure_reason": "runtime_timeout_no_json",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 220.125,
+        "actual_raw": "\\boxed{(0.200, 0.003, 0.017, 0.007, 0.038)}",
+        "actual_parsed": [
+          0.2,
+          0.003,
+          0.017,
+          0.007,
+          0.038
+        ],
+        "failure_reason": "numeric_value_mismatch",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 25,
+      "field": "cmt_index_24_answer",
+      "type": "choice_set",
+      "expected": [
+        "c",
+        "d",
+        "e"
+      ],
+      "pair_category": "off_no_answer_on_wrong",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 230.086,
+        "actual_raw": "c;e",
+        "actual_parsed": [
+          "c",
+          "e"
+        ],
+        "failure_reason": "choice_under_selected",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "max_runtime_timeout",
+        "captured_json": false,
+        "runtime_seconds": 361.168,
+        "actual_raw": null,
+        "actual_parsed": [],
+        "failure_reason": "runtime_timeout_no_json",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 26,
+      "field": "cmt_index_25_answer",
+      "type": "choice_set",
+      "expected": [
+        "b",
+        "c",
+        "e"
+      ],
+      "pair_category": "on_only_pass",
+      "default_on": {
+        "passed": true,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 250.091,
+        "actual_raw": "b;c;e",
+        "actual_parsed": [
+          "b",
+          "c",
+          "e"
+        ],
+        "failure_reason": null,
+        "success_review": "capability"
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "max_runtime_timeout",
+        "captured_json": false,
+        "runtime_seconds": 360.904,
+        "actual_raw": null,
+        "actual_parsed": [],
+        "failure_reason": "runtime_timeout_no_json",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 27,
+      "field": "cmt_index_26_answer",
+      "type": "symbolic",
+      "expected": "O_n=E_n-E_{n-1}",
+      "pair_category": "both_pass",
+      "default_on": {
+        "passed": true,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 50.053,
+        "actual_raw": "\\boxed{O_n = E_n - E_{n-1}}",
+        "actual_parsed": null,
+        "failure_reason": null,
+        "success_review": "capability_with_parameter_cue"
+      },
+      "all_default_on_flags_off": {
+        "passed": true,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 90.06,
+        "actual_raw": "\\boxed{O_n = E_n - E_{n-1}}",
+        "actual_parsed": null,
+        "failure_reason": null,
+        "success_review": "capability_with_parameter_cue"
+      }
+    },
+    {
+      "problem": 28,
+      "field": "cmt_index_27_answer",
+      "type": "choice_set",
+      "expected": [
+        "d",
+        "g"
+      ],
+      "pair_category": "both_wrong_different_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 90.06,
+        "actual_raw": "a;b;f;g",
+        "actual_parsed": [
+          "a",
+          "b",
+          "f",
+          "g"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 170.081,
+        "actual_raw": "\\boxed{g}",
+        "actual_parsed": [
+          "g"
+        ],
+        "failure_reason": "choice_under_selected",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 29,
+      "field": "cmt_index_28_answer",
+      "type": "choice_set",
+      "expected": [
+        "a"
+      ],
+      "pair_category": "both_wrong_same_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 20.047,
+        "actual_raw": "b",
+        "actual_parsed": [
+          "b"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 20.052,
+        "actual_raw": "b",
+        "actual_parsed": [
+          "b"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 30,
+      "field": "cmt_index_29_answer",
+      "type": "choice_set",
+      "expected": [
+        "b",
+        "c"
+      ],
+      "pair_category": "both_wrong_different_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 110.059,
+        "actual_raw": "b;c;d;e",
+        "actual_parsed": [
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "failure_reason": "choice_over_selected",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 120.071,
+        "actual_raw": "b;d;e",
+        "actual_parsed": [
+          "b",
+          "d",
+          "e"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 31,
+      "field": "cmt_index_30_answer",
+      "type": "choice_set",
+      "expected": [
+        "a",
+        "b",
+        "c"
+      ],
+      "pair_category": "both_wrong_same_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 120.062,
+        "actual_raw": "a;c",
+        "actual_parsed": [
+          "a",
+          "c"
+        ],
+        "failure_reason": "choice_under_selected",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 110.064,
+        "actual_raw": "a;c",
+        "actual_parsed": [
+          "a",
+          "c"
+        ],
+        "failure_reason": "choice_under_selected",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 32,
+      "field": "cmt_index_31_answer",
+      "type": "choice_set",
+      "expected": [
+        "a",
+        "c"
+      ],
+      "pair_category": "both_wrong_same_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 40.046,
+        "actual_raw": "a;b;c",
+        "actual_parsed": [
+          "a",
+          "b",
+          "c"
+        ],
+        "failure_reason": "choice_over_selected",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 100.061,
+        "actual_raw": "a;b;c",
+        "actual_parsed": [
+          "a",
+          "b",
+          "c"
+        ],
+        "failure_reason": "choice_over_selected",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 33,
+      "field": "cmt_index_32_answer",
+      "type": "symbolic",
+      "expected": "\\mu-tq^2B/4",
+      "pair_category": "off_no_answer_on_wrong",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 280.093,
+        "actual_raw": "\\boxed{1}",
+        "actual_parsed": null,
+        "failure_reason": "symbolic_formula_mismatch",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "max_runtime_timeout",
+        "captured_json": false,
+        "runtime_seconds": 361.113,
+        "actual_raw": null,
+        "actual_parsed": null,
+        "failure_reason": "runtime_timeout_no_json",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 34,
+      "field": "cmt_index_33_answer",
+      "type": "choice_set",
+      "expected": [
+        "c"
+      ],
+      "pair_category": "both_wrong_different_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 50.05,
+        "actual_raw": "a;c",
+        "actual_parsed": [
+          "a",
+          "c"
+        ],
+        "failure_reason": "choice_over_selected",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 30.045,
+        "actual_raw": "\\boxed{a;c}",
+        "actual_parsed": [
+          "a",
+          "c"
+        ],
+        "failure_reason": "choice_over_selected",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 35,
+      "field": "cmt_index_34_answer",
+      "type": "choice_set",
+      "expected": [
+        "a",
+        "c"
+      ],
+      "pair_category": "both_wrong_same_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 70.055,
+        "actual_raw": "a;c;d",
+        "actual_parsed": [
+          "a",
+          "c",
+          "d"
+        ],
+        "failure_reason": "choice_over_selected",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 50.049,
+        "actual_raw": "a;c;d",
+        "actual_parsed": [
+          "a",
+          "c",
+          "d"
+        ],
+        "failure_reason": "choice_over_selected",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 36,
+      "field": "cmt_index_35_answer",
+      "type": "choice_set",
+      "expected": [
+        "a",
+        "b"
+      ],
+      "pair_category": "off_only_pass",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 300.098,
+        "actual_raw": "a;b;c;d",
+        "actual_parsed": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "failure_reason": "choice_over_selected",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": true,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 150.074,
+        "actual_raw": "a;b",
+        "actual_parsed": [
+          "a",
+          "b"
+        ],
+        "failure_reason": null,
+        "success_review": "capability"
+      }
+    },
+    {
+      "problem": 37,
+      "field": "cmt_index_36_answer",
+      "type": "choice_set",
+      "expected": [
+        "g"
+      ],
+      "pair_category": "both_wrong_different_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 20.044,
+        "actual_raw": "\\boxed{c;d}",
+        "actual_parsed": [
+          "c",
+          "d"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 60.054,
+        "actual_raw": "a;b;c;d",
+        "actual_parsed": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 38,
+      "field": "cmt_index_37_answer",
+      "type": "numeric_vector",
+      "expected": [
+        1.0,
+        3.0
+      ],
+      "pair_category": "both_wrong_different_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 170.073,
+        "actual_raw": "$\\boxed{2;3}$",
+        "actual_parsed": [
+          2.0,
+          3.0
+        ],
+        "failure_reason": "numeric_value_mismatch",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 60.052,
+        "actual_raw": "\\boxed{2;3}",
+        "actual_parsed": [
+          2.0,
+          3.0
+        ],
+        "failure_reason": "numeric_value_mismatch",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 39,
+      "field": "cmt_index_38_answer",
+      "type": "choice_set",
+      "expected": [
+        "a",
+        "d",
+        "i"
+      ],
+      "pair_category": "both_wrong_different_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 140.072,
+        "actual_raw": "b;f;i",
+        "actual_parsed": [
+          "b",
+          "f",
+          "i"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 110.061,
+        "actual_raw": "b;f;j",
+        "actual_parsed": [
+          "b",
+          "f"
+        ],
+        "failure_reason": "choice_wrong_set",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 40,
+      "field": "cmt_index_39_answer",
+      "type": "symbolic",
+      "expected": "2t_1(t_1/t_2)^n",
+      "pair_category": "both_wrong_different_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 70.057,
+        "actual_raw": "\\boxed{2(t_2 - t_1)}",
+        "actual_parsed": null,
+        "failure_reason": "symbolic_formula_mismatch",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 70.049,
+        "actual_raw": "\\boxed{2(t_2-t_1)\\left(\\frac{t_1}{t_2}\\right)^n}",
+        "actual_parsed": null,
+        "failure_reason": "symbolic_formula_mismatch",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 41,
+      "field": "cmt_index_40_answer",
+      "type": "choice_set",
+      "expected": [
+        "a",
+        "d",
+        "e"
+      ],
+      "pair_category": "both_wrong_same_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 30.048,
+        "actual_raw": "a;e",
+        "actual_parsed": [
+          "a",
+          "e"
+        ],
+        "failure_reason": "choice_under_selected",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 60.05,
+        "actual_raw": "a;e",
+        "actual_parsed": [
+          "a",
+          "e"
+        ],
+        "failure_reason": "choice_under_selected",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 42,
+      "field": "cmt_index_41_answer",
+      "type": "symbolic",
+      "expected": "\\frac{2\\tanh(\\frac{\\beta \\omega}{2})}{\\omega}",
+      "pair_category": "off_no_answer_on_wrong",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 120.066,
+        "actual_raw": "\\boxed{\\frac{1-e^{-\\beta\\hbar\\omega}}{\\hbar\\omega V}}",
+        "actual_parsed": null,
+        "failure_reason": "symbolic_formula_mismatch",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "max_runtime_timeout",
+        "captured_json": false,
+        "runtime_seconds": 360.964,
+        "actual_raw": null,
+        "actual_parsed": null,
+        "failure_reason": "runtime_timeout_no_json",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 43,
+      "field": "cmt_index_42_answer",
+      "type": "symbolic",
+      "expected": "D_o = \\frac{\\tau^2 \\rho v_0^2 \\Omega (2+\\rho)}{[(1+\\rho)^2 + (\\Omega \\tau)^2][1+(\\Omega \\tau)^2]}",
+      "pair_category": "on_no_answer_off_wrong",
+      "default_on": {
+        "passed": false,
+        "status": "max_runtime_timeout",
+        "captured_json": false,
+        "runtime_seconds": 361.065,
+        "actual_raw": null,
+        "actual_parsed": null,
+        "failure_reason": "runtime_timeout_no_json",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 320.101,
+        "actual_raw": "\\boxed{-\\frac{\\rho v_0^2 \\Omega \\tau^4 (\\rho\\tau^2+2)}{(1+\\tau^2\\Omega^2)[(\\rho\\tau^2+1)^2+\\Omega^2\\tau^2]}}",
+        "actual_parsed": null,
+        "failure_reason": "symbolic_formula_mismatch",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 44,
+      "field": "cmt_index_43_answer",
+      "type": "symbolic",
+      "expected": "c",
+      "pair_category": "both_wrong_same_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 20.14,
+        "actual_raw": "a",
+        "actual_parsed": null,
+        "failure_reason": "symbolic_formula_mismatch",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 50.046,
+        "actual_raw": "a",
+        "actual_parsed": null,
+        "failure_reason": "symbolic_formula_mismatch",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 45,
+      "field": "cmt_index_44_answer",
+      "type": "symbolic",
+      "expected": "K_c = \\sigma [1 - \\frac{1}{\\sqrt{3}}]\\sqrt{\\gamma + \\frac{2\\sigma^2}{3}(1 + \\sqrt{1 + \\frac{3\\gamma}{\\sigma^2}})}",
+      "pair_category": "both_timeout_or_no_answer",
+      "default_on": {
+        "passed": false,
+        "status": "max_runtime_timeout",
+        "captured_json": false,
+        "runtime_seconds": 361.312,
+        "actual_raw": null,
+        "actual_parsed": null,
+        "failure_reason": "runtime_timeout_no_json",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "max_runtime_timeout",
+        "captured_json": false,
+        "runtime_seconds": 361.157,
+        "actual_raw": null,
+        "actual_parsed": null,
+        "failure_reason": "runtime_timeout_no_json",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 46,
+      "field": "cmt_index_45_answer",
+      "type": "symbolic",
+      "expected": "d",
+      "pair_category": "both_wrong_same_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 20.048,
+        "actual_raw": "b",
+        "actual_parsed": null,
+        "failure_reason": "symbolic_formula_mismatch",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 20.045,
+        "actual_raw": "b",
+        "actual_parsed": null,
+        "failure_reason": "symbolic_formula_mismatch",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 47,
+      "field": "cmt_index_46_answer",
+      "type": "symbolic",
+      "expected": "\\frac{(p + x^3)^2}{4 x^4} + 4 x^2",
+      "pair_category": "both_wrong_different_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 270.105,
+        "actual_raw": "\\boxed{\\frac{(p+x^{3})^{2}}{4x^{4}}+\\frac{3}{2}x^{2}}",
+        "actual_parsed": null,
+        "failure_reason": "symbolic_formula_mismatch",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 280.106,
+        "actual_raw": "\\boxed{\\frac{(p + x^3)^2}{4x^4} - \\frac{x^2}{2}}",
+        "actual_parsed": null,
+        "failure_reason": "symbolic_formula_mismatch",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 48,
+      "field": "cmt_index_47_answer",
+      "type": "numeric_vector",
+      "expected": [
+        2.0,
+        2.0,
+        1.0
+      ],
+      "pair_category": "both_timeout_or_no_answer",
+      "default_on": {
+        "passed": false,
+        "status": "max_runtime_timeout",
+        "captured_json": false,
+        "runtime_seconds": 361.016,
+        "actual_raw": null,
+        "actual_parsed": [],
+        "failure_reason": "runtime_timeout_no_json",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "max_runtime_timeout",
+        "captured_json": false,
+        "runtime_seconds": 361.103,
+        "actual_raw": null,
+        "actual_parsed": [],
+        "failure_reason": "runtime_timeout_no_json",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 49,
+      "field": "cmt_index_48_answer",
+      "type": "numeric_vector",
+      "expected": [
+        6.0
+      ],
+      "pair_category": "on_only_pass",
+      "default_on": {
+        "passed": true,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 280.094,
+        "actual_raw": "6",
+        "actual_parsed": [
+          6.0
+        ],
+        "failure_reason": null,
+        "success_review": "capability"
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "max_runtime_timeout",
+        "captured_json": false,
+        "runtime_seconds": 361.091,
+        "actual_raw": null,
+        "actual_parsed": [],
+        "failure_reason": "runtime_timeout_no_json",
+        "success_review": null
+      }
+    },
+    {
+      "problem": 50,
+      "field": "cmt_index_49_answer",
+      "type": "numeric_vector",
+      "expected": [
+        0.33,
+        0.27
+      ],
+      "pair_category": "both_wrong_different_answer",
+      "default_on": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 130.162,
+        "actual_raw": "0.50,0.36",
+        "actual_parsed": [
+          0.5,
+          0.36
+        ],
+        "failure_reason": "numeric_value_mismatch",
+        "success_review": null
+      },
+      "all_default_on_flags_off": {
+        "passed": false,
+        "status": "completed",
+        "captured_json": true,
+        "runtime_seconds": 170.089,
+        "actual_raw": "\\boxed{0.33, 0.45}",
+        "actual_parsed": [
+          0.33,
+          0.45
+        ],
+        "failure_reason": "numeric_value_mismatch",
+        "success_review": null
+      }
+    }
+  ]
+}

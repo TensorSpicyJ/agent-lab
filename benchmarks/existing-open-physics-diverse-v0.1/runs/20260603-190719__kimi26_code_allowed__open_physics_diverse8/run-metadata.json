@@ -1,0 +1,32 @@
+﻿{
+    "benchmark_id":  "existing-open-physics-diverse-v0.1",
+    "task_id":  "open-physics-diverse-mini-8",
+    "run_id":  "20260603-190719__kimi26_code_allowed__open_physics_diverse8",
+    "agent":  "kimi26_code_allowed",
+    "model_alias":  "kimi-code/kimi-for-coding",
+    "model_display_name_note":  "Local config displays kimi-code/kimi-for-coding as Kimi-k2.6.",
+    "command":  "kimi -m kimi-code/kimi-for-coding -p \u003cread prompt.md and output JSON\u003e --output-format text",
+    "started_at":  "2026-06-03T19:07:19.6065926+08:00",
+    "finished_at":  "2026-06-03T19:07:20.2097683+08:00",
+    "runtime_seconds":  0.603,
+    "kimi_exit_code":  1,
+    "scorer_exit_code":  1,
+    "kimi_executable":  "C:\\Users\\TaiS\\.kimi-code\\bin\\kimi.exe",
+    "kimi_version":  "0.8.0",
+    "python_executable":  "C:\\Users\\TaiS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "temp_cwd":  "C:\\Users\\TaiS\\AppData\\Local\\Temp\\agent-lab-kimi-open-physics-diverse-20260603-190719",
+    "cwd_listing":  [
+                        "prompt.md"
+                    ],
+    "agent_created_files":  [
+
+                            ],
+    "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\existing-open-physics-diverse-v0.1\\tasks\\open-physics-diverse-mini-8\\prompt.md",
+    "prompt_sha256":  "ED07FA099631A1C951488A66D7559F97817386CDA0F03B6453F5CF32B8FA5F90",
+    "output":  "D:\\Playground\\agent-lab\\benchmarks\\existing-open-physics-diverse-v0.1\\runs\\20260603-190719__kimi26_code_allowed__open_physics_diverse8\\outputs\\open-physics-diverse-mini-8.md",
+    "output_sha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+    "score":  "D:\\Playground\\agent-lab\\benchmarks\\existing-open-physics-diverse-v0.1\\runs\\20260603-190719__kimi26_code_allowed__open_physics_diverse8\\scores\\open-physics-diverse-mini-8.score.json",
+    "network_allowed":  false,
+    "network_enforced":  false,
+    "local_leakage_boundary":  "Initial temp cwd contains only prompt.md. Gold, verifier, run history, and source metadata are not mounted in cwd."
+}

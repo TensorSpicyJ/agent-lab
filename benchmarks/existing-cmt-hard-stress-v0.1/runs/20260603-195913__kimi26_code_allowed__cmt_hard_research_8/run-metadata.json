@@ -1,0 +1,32 @@
+﻿{
+    "benchmark_id":  "existing-cmt-hard-stress-v0.1",
+    "task_id":  "cmt-hard-research-8",
+    "run_id":  "20260603-195913__kimi26_code_allowed__cmt_hard_research_8",
+    "agent":  "kimi26_code_allowed",
+    "model_alias":  "kimi-code/kimi-for-coding",
+    "model_display_name_note":  "Local config displays kimi-code/kimi-for-coding as Kimi-k2.6.",
+    "command":  "kimi -m kimi-code/kimi-for-coding -p \u003cread prompt.md and output JSON\u003e --output-format text",
+    "started_at":  "2026-06-03T19:59:13.6431119+08:00",
+    "finished_at":  "2026-06-03T20:04:20.6638262+08:00",
+    "runtime_seconds":  307.021,
+    "kimi_exit_code":  -1,
+    "scorer_exit_code":  1,
+    "kimi_executable":  "C:\\Users\\TaiS\\.kimi-code\\bin\\kimi.exe",
+    "kimi_version":  "0.8.0",
+    "python_executable":  "C:\\Users\\TaiS\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "temp_cwd":  "C:\\Users\\TaiS\\AppData\\Local\\Temp\\agent-lab-kimi-cmt-hard-stress-20260603-195913",
+    "cwd_listing":  [
+                        "prompt.md"
+                    ],
+    "agent_created_files":  [
+
+                            ],
+    "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\tasks\\cmt-hard-research-8\\prompt.md",
+    "prompt_sha256":  "8843372D92585C4F688D9239FA333A77FFB1696C5DC9E4D3B1901B870584B0B9",
+    "output":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-195913__kimi26_code_allowed__cmt_hard_research_8\\outputs\\cmt-hard-research-8.md",
+    "output_sha256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+    "score":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-195913__kimi26_code_allowed__cmt_hard_research_8\\scores\\cmt-hard-research-8.score.json",
+    "network_allowed":  false,
+    "network_enforced":  false,
+    "local_leakage_boundary":  "Initial temp cwd contains only prompt.md. Gold, verifier, run history, and source metadata are not mounted in cwd."
+}

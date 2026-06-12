@@ -1,0 +1,1630 @@
+{
+  "version": "0.1",
+  "updated_at": "2026-06-02",
+  "records": [
+    {
+      "relative_path": "ClassicalMechanics/HarmonicOscillator/Basic.lean",
+      "domain": "ClassicalMechanics",
+      "subdomain": "HarmonicOscillator",
+      "declaration_count": 39,
+      "declarations": [
+        {
+          "kind": "lemma",
+          "name": "k_ne_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "m_ne_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "ω_pos"
+        },
+        {
+          "kind": "lemma",
+          "name": "ω_sq"
+        },
+        {
+          "kind": "lemma",
+          "name": "ω_ne_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "inverse_ω_sq"
+        },
+        {
+          "kind": "lemma",
+          "name": "kineticEnergy_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "potentialEnergy_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "energy_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "kineticEnergy_differentiable"
+        },
+        {
+          "kind": "lemma",
+          "name": "potentialEnergy_differentiable"
+        },
+        {
+          "kind": "lemma",
+          "name": "energy_differentiable"
+        },
+        {
+          "kind": "lemma",
+          "name": "kineticEnergy_deriv"
+        },
+        {
+          "kind": "lemma",
+          "name": "potentialEnergy_deriv"
+        },
+        {
+          "kind": "lemma",
+          "name": "energy_deriv"
+        },
+        {
+          "kind": "lemma",
+          "name": "lagrangian_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "lagrangian_eq_kineticEnergy_sub_potentialEnergy"
+        },
+        {
+          "kind": "lemma",
+          "name": "contDiff_lagrangian"
+        },
+        {
+          "kind": "lemma",
+          "name": "toDual_symm_innerSL"
+        },
+        {
+          "kind": "lemma",
+          "name": "gradient_inner_self"
+        },
+        {
+          "kind": "lemma",
+          "name": "gradient_const_mul_inner_self"
+        },
+        {
+          "kind": "lemma",
+          "name": "gradient_lagrangian_position_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "gradient_lagrangian_velocity_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "gradLagrangian_eq_eulerLagrangeOp"
+        },
+        {
+          "kind": "def",
+          "name": "EquationOfMotion"
+        },
+        {
+          "kind": "lemma",
+          "name": "equationOfMotion_iff_gradLagrangian_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "force_eq_linear"
+        },
+        {
+          "kind": "lemma",
+          "name": "gradLagrangian_eq_force"
+        },
+        {
+          "kind": "lemma",
+          "name": "equationOfMotion_iff_newtons_2nd_law"
+        },
+        {
+          "kind": "lemma",
+          "name": "energy_conservation_of_equationOfMotion"
+        },
+        {
+          "kind": "lemma",
+          "name": "energy_conservation_of_equationOfMotion'"
+        },
+        {
+          "kind": "lemma",
+          "name": "toCanonicalMomentum_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "hamiltonian_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "hamiltonian_contDiff"
+        },
+        {
+          "kind": "lemma",
+          "name": "gradient_hamiltonian_position_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "gradient_hamiltonian_momentum_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "hamiltonian_eq_energy"
+        },
+        {
+          "kind": "lemma",
+          "name": "equationOfMotion_iff_hamiltonEqOp_eq_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "equationOfMotion_tfae"
+        }
+      ]
+    },
+    {
+      "relative_path": "ClassicalMechanics/HarmonicOscillator/Solution.lean",
+      "domain": "ClassicalMechanics",
+      "subdomain": "HarmonicOscillator",
+      "declaration_count": 21,
+      "declarations": [
+        {
+          "kind": "lemma",
+          "name": "x₀_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "v₀_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "trajectory_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "trajectory_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "trajectory_contDiff"
+        },
+        {
+          "kind": "lemma",
+          "name": "trajectory_velocity"
+        },
+        {
+          "kind": "lemma",
+          "name": "trajectory_acceleration"
+        },
+        {
+          "kind": "lemma",
+          "name": "trajectory_position_at_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "trajectory_velocity_at_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "trajectory_equationOfMotion"
+        },
+        {
+          "kind": "lemma",
+          "name": "trajectories_unique"
+        },
+        {
+          "kind": "lemma",
+          "name": "trajectory_energy"
+        },
+        {
+          "kind": "lemma",
+          "name": "toInitialConditions_trajectory_at_t₀"
+        },
+        {
+          "kind": "lemma",
+          "name": "toInitialConditions_velocity_at_t₀"
+        },
+        {
+          "kind": "lemma",
+          "name": "toInitialConditions_energy_at_t₀"
+        },
+        {
+          "kind": "lemma",
+          "name": "tan_time_eq_of_trajectory_velocity_eq_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "trajectory_velocity_eq_zero_at_arctan"
+        },
+        {
+          "kind": "lemma",
+          "name": "trajectory_velocity_eq_zero_iff"
+        },
+        {
+          "kind": "lemma",
+          "name": "period_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "period_pos"
+        },
+        {
+          "kind": "lemma",
+          "name": "trajectory_periodic"
+        }
+      ]
+    },
+    {
+      "relative_path": "ClassicalMechanics/EulerLagrange.lean",
+      "domain": "ClassicalMechanics",
+      "subdomain": "AnalyticalMechanics",
+      "declaration_count": 3,
+      "declarations": [
+        {
+          "kind": "lemma",
+          "name": "eulerLagrangeOp_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "eulerLagrangeOp_zero"
+        },
+        {
+          "kind": "theorem",
+          "name": "euler_lagrange_varGradient"
+        }
+      ]
+    },
+    {
+      "relative_path": "ClassicalMechanics/HamiltonsEquations.lean",
+      "domain": "ClassicalMechanics",
+      "subdomain": "AnalyticalMechanics",
+      "declaration_count": 3,
+      "declarations": [
+        {
+          "kind": "lemma",
+          "name": "hamiltonEqOp_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "hamiltonEqOp_eq_zero_iff_hamiltons_equations"
+        },
+        {
+          "kind": "theorem",
+          "name": "hamiltons_equations_varGradient"
+        }
+      ]
+    },
+    {
+      "relative_path": "ClassicalMechanics/OrbitalMechanics/VisViva.lean",
+      "domain": "ClassicalMechanics",
+      "subdomain": "OrbitalMechanics",
+      "declaration_count": 1,
+      "declarations": [
+        {
+          "kind": "lemma",
+          "name": "speedCircular_sq"
+        }
+      ]
+    },
+    {
+      "relative_path": "ClassicalMechanics/WaveEquation/Basic.lean",
+      "domain": "ClassicalMechanics",
+      "subdomain": "WaveEquation",
+      "declaration_count": 20,
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "WaveEquation"
+        },
+        {
+          "kind": "lemma",
+          "name": "planeWave_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "planeWave_differentiable_time"
+        },
+        {
+          "kind": "lemma",
+          "name": "planeWave_differentiable_space"
+        },
+        {
+          "kind": "lemma",
+          "name": "planeWave_differentiable"
+        },
+        {
+          "kind": "lemma",
+          "name": "planeWave_time_deriv"
+        },
+        {
+          "kind": "lemma",
+          "name": "planeWave_time_deriv_time_deriv"
+        },
+        {
+          "kind": "lemma",
+          "name": "planeWave_space_deriv"
+        },
+        {
+          "kind": "lemma",
+          "name": "planeWave_apply_space_deriv"
+        },
+        {
+          "kind": "lemma",
+          "name": "planeWave_space_deriv_space_deriv"
+        },
+        {
+          "kind": "lemma",
+          "name": "planeWave_apply_space_deriv_space_deriv"
+        },
+        {
+          "kind": "lemma",
+          "name": "planeWave_laplacian"
+        },
+        {
+          "kind": "theorem",
+          "name": "planeWave_waveEquation"
+        },
+        {
+          "kind": "lemma",
+          "name": "wave_differentiable"
+        },
+        {
+          "kind": "lemma",
+          "name": "wave_dx2"
+        },
+        {
+          "kind": "lemma",
+          "name": "space_fderiv_of_inner_product_wave_eq_space_fderiv"
+        },
+        {
+          "kind": "lemma",
+          "name": "time_differentiable_of_eq_planewave"
+        },
+        {
+          "kind": "lemma",
+          "name": "crossProduct_time_differentiable_of_right_eq_planewave"
+        },
+        {
+          "kind": "lemma",
+          "name": "crossProduct_differentiable_of_right_eq_planewave"
+        },
+        {
+          "kind": "lemma",
+          "name": "wave_fderiv_inner_eq_inner_fderiv_proj"
+        }
+      ]
+    },
+    {
+      "relative_path": "Electromagnetism/Kinematics/ElectricField.lean",
+      "domain": "Electromagnetism",
+      "subdomain": "Kinematics",
+      "declaration_count": 19,
+      "declarations": [
+        {
+          "kind": "lemma",
+          "name": "electricField_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "ofElectromagneticField_electricField"
+        },
+        {
+          "kind": "lemma",
+          "name": "electricField_eq_fieldStrengthMatrix"
+        },
+        {
+          "kind": "lemma",
+          "name": "fieldStrengthMatrix_inl_inr_eq_electricField"
+        },
+        {
+          "kind": "lemma",
+          "name": "fieldStrengthMatrix_inr_inl_eq_electricField"
+        },
+        {
+          "kind": "lemma",
+          "name": "electricField_contDiff"
+        },
+        {
+          "kind": "lemma",
+          "name": "electricField_apply_contDiff"
+        },
+        {
+          "kind": "lemma",
+          "name": "electricField_apply_contDiff_space"
+        },
+        {
+          "kind": "lemma",
+          "name": "electricField_apply_contDiff_time"
+        },
+        {
+          "kind": "lemma",
+          "name": "electricField_differentiable"
+        },
+        {
+          "kind": "lemma",
+          "name": "electricField_differentiable_time"
+        },
+        {
+          "kind": "lemma",
+          "name": "electricField_differentiable_space"
+        },
+        {
+          "kind": "lemma",
+          "name": "electricField_apply_differentiable"
+        },
+        {
+          "kind": "lemma",
+          "name": "electricField_apply_differentiable_space"
+        },
+        {
+          "kind": "lemma",
+          "name": "electricField_apply_differentiable_time"
+        },
+        {
+          "kind": "lemma",
+          "name": "time_deriv_vectorPotential_eq_electricField"
+        },
+        {
+          "kind": "lemma",
+          "name": "time_deriv_comp_vectorPotential_eq_electricField"
+        },
+        {
+          "kind": "lemma",
+          "name": "time_deriv_electricField_eq_fieldStrengthMatrix"
+        },
+        {
+          "kind": "lemma",
+          "name": "div_electricField_eq_fieldStrengthMatrix{d}"
+        }
+      ]
+    },
+    {
+      "relative_path": "Electromagnetism/Kinematics/MagneticField.lean",
+      "domain": "Electromagnetism",
+      "subdomain": "Kinematics",
+      "declaration_count": 25,
+      "declarations": [
+        {
+          "kind": "lemma",
+          "name": "magneticField_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "magneticField_fst_eq_fieldStrengthMatrix"
+        },
+        {
+          "kind": "lemma",
+          "name": "magneticField_snd_eq_fieldStrengthMatrix"
+        },
+        {
+          "kind": "lemma",
+          "name": "magneticField_thd_eq_fieldStrengthMatrix"
+        },
+        {
+          "kind": "lemma",
+          "name": "magneticField_div_eq_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "ofElectromagneticField_magneticField"
+        },
+        {
+          "kind": "lemma",
+          "name": "fieldStrengthMatrix_eq_electric_magnetic"
+        },
+        {
+          "kind": "lemma",
+          "name": "fieldStrengthMatrix_eq_electric_magnetic_of_spaceTime"
+        },
+        {
+          "kind": "lemma",
+          "name": "magneticFieldMatrix_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "fieldStrengthMatrix_inr_inr_eq_magneticFieldMatrix"
+        },
+        {
+          "kind": "lemma",
+          "name": "magneticFieldMatrix_antisymm"
+        },
+        {
+          "kind": "lemma",
+          "name": "magneticFieldMatrix_diag_eq_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "magneticField_eq_magneticFieldMatrix"
+        },
+        {
+          "kind": "lemma",
+          "name": "magneticField_curl_eq_magneticFieldMatrix{c"
+        },
+        {
+          "kind": "lemma",
+          "name": "magneticFieldMatrix_eq_vectorPotential"
+        },
+        {
+          "kind": "lemma",
+          "name": "magneticFieldMatrix_contDiff"
+        },
+        {
+          "kind": "lemma",
+          "name": "magneticFieldMatrix_space_contDiff"
+        },
+        {
+          "kind": "lemma",
+          "name": "magneticFieldMatrix_time_contDiff"
+        },
+        {
+          "kind": "lemma",
+          "name": "magneticFieldMatrix_differentiable"
+        },
+        {
+          "kind": "lemma",
+          "name": "magneticFieldMatrix_differentiable_space"
+        },
+        {
+          "kind": "lemma",
+          "name": "magneticFieldMatrix_differentiable_time"
+        },
+        {
+          "kind": "lemma",
+          "name": "magneticFieldMatrix_space_deriv_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "time_deriv_magneticFieldMatrix"
+        },
+        {
+          "kind": "lemma",
+          "name": "time_deriv_time_deriv_magneticFieldMatrix"
+        },
+        {
+          "kind": "lemma",
+          "name": "curl_magneticFieldMatrix_eq_electricField_fieldStrengthMatrix"
+        }
+      ]
+    },
+    {
+      "relative_path": "Electromagnetism/Kinematics/FieldStrength.lean",
+      "domain": "Electromagnetism",
+      "subdomain": "Kinematics",
+      "declaration_count": 33,
+      "declarations": [
+        {
+          "kind": "lemma",
+          "name": "toFieldStrength_eq_deriv"
+        },
+        {
+          "kind": "lemma",
+          "name": "toFieldStrength_eq_tensorDeriv"
+        },
+        {
+          "kind": "lemma",
+          "name": "toFieldStrength_eq_add"
+        },
+        {
+          "kind": "lemma",
+          "name": "toFieldStrength_eq_sub_tensorDeriv"
+        },
+        {
+          "kind": "lemma",
+          "name": "toTensor_toFieldStrength"
+        },
+        {
+          "kind": "lemma",
+          "name": "toFieldStrength_eq_sum_basis_eval"
+        },
+        {
+          "kind": "lemma",
+          "name": "toFieldStrength_eq_sum_basis"
+        },
+        {
+          "kind": "lemma",
+          "name": "toFieldStrength_eq_sum_basis_single"
+        },
+        {
+          "kind": "lemma",
+          "name": "toFieldStrength_equivariant"
+        },
+        {
+          "kind": "lemma",
+          "name": "toFieldStrength_action_eq_sum"
+        },
+        {
+          "kind": "lemma",
+          "name": "differentiable_toFieldStrength"
+        },
+        {
+          "kind": "lemma",
+          "name": "differentiable_toFieldStrength_of_smooth"
+        },
+        {
+          "kind": "lemma",
+          "name": "contDiff_toFieldStrength"
+        },
+        {
+          "kind": "lemma",
+          "name": "toTensor_toFieldStrength_basis_repr"
+        },
+        {
+          "kind": "lemma",
+          "name": "toFieldStrength_tensor_basis_eq_basis"
+        },
+        {
+          "kind": "lemma",
+          "name": "toFieldStrength_basis_repr_apply"
+        },
+        {
+          "kind": "lemma",
+          "name": "toFieldStrength_basis_repr_apply_eq_single"
+        },
+        {
+          "kind": "lemma",
+          "name": "fieldStrengthMatrix_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "fieldStrengthMatrix_eq_tensor_basis_repr"
+        },
+        {
+          "kind": "lemma",
+          "name": "toFieldStrength_eq_fieldStrengthMatrix"
+        },
+        {
+          "kind": "lemma",
+          "name": "fieldStrengthMatrix_differentiable"
+        },
+        {
+          "kind": "lemma",
+          "name": "fieldStrengthMatrix_differentiable_space"
+        },
+        {
+          "kind": "lemma",
+          "name": "fieldStrengthMatrix_differentiable_time"
+        },
+        {
+          "kind": "lemma",
+          "name": "fieldStrengthMatrix_contDiff"
+        },
+        {
+          "kind": "lemma",
+          "name": "fieldStrengthMatrix_smooth"
+        },
+        {
+          "kind": "lemma",
+          "name": "toFieldStrength_antisymmetric"
+        },
+        {
+          "kind": "lemma",
+          "name": "fieldStrengthMatrix_antisymm"
+        },
+        {
+          "kind": "lemma",
+          "name": "fieldStrengthMatrix_diag_eq_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "fieldStrengthMatrix_equivariant"
+        },
+        {
+          "kind": "lemma",
+          "name": "toFieldStrength_add"
+        },
+        {
+          "kind": "lemma",
+          "name": "fieldStrengthMatrix_add"
+        },
+        {
+          "kind": "lemma",
+          "name": "toFieldStrength_smul"
+        },
+        {
+          "kind": "lemma",
+          "name": "fieldStrengthMatrix_smul"
+        }
+      ]
+    },
+    {
+      "relative_path": "Electromagnetism/ThreeDimension/MaxwellEquations.lean",
+      "domain": "Electromagnetism",
+      "subdomain": "MaxwellEquations",
+      "declaration_count": 4,
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "gaussLawElectric"
+        },
+        {
+          "kind": "theorem",
+          "name": "gaussLawMagnetic"
+        },
+        {
+          "kind": "theorem",
+          "name": "ampereLaw"
+        },
+        {
+          "kind": "theorem",
+          "name": "faradayLaw"
+        }
+      ]
+    },
+    {
+      "relative_path": "Electromagnetism/Vacuum/HarmonicWave.lean",
+      "domain": "Electromagnetism",
+      "subdomain": "VacuumWaves",
+      "declaration_count": 23,
+      "declarations": [
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_inl_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_inr_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_differentiable"
+        },
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_contDiff"
+        },
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_scalarPotential_eq_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_vectorPotential_zero_eq_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_vectorPotential_succ"
+        },
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_vectorPotential_succ'"
+        },
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_vectorPotential_space_deriv_succ"
+        },
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_vectorPotential_succ_space_deriv_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_electricField_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_electricField_succ"
+        },
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_electricField_space_deriv_same"
+        },
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_electricField_succ_time_deriv"
+        },
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_div_electricField_eq_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_magneticFieldMatrix_succ_succ"
+        },
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_magneticFieldMatrix_zero_succ"
+        },
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_magneticFieldMatrix_succ_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_magneticFieldMatrix_space_deriv_succ"
+        },
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_magneticFieldMatrix_zero_succ_space_deriv_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_isExtrema"
+        },
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_isPlaneWave"
+        },
+        {
+          "kind": "lemma",
+          "name": "harmonicWaveX_polarization_ellipse"
+        }
+      ]
+    },
+    {
+      "relative_path": "QuantumMechanics/DDimensions/Basic.lean",
+      "domain": "QuantumMechanics",
+      "subdomain": "DDimensions",
+      "declaration_count": 19,
+      "declarations": [
+        {
+          "kind": "lemma",
+          "name": "m_pos"
+        },
+        {
+          "kind": "lemma",
+          "name": "m_nonneg"
+        },
+        {
+          "kind": "lemma",
+          "name": "m_ne_zero"
+        },
+        {
+          "kind": "def",
+          "name": "kineticCLM"
+        },
+        {
+          "kind": "lemma",
+          "name": "kineticCLM_eq"
+        },
+        {
+          "kind": "def",
+          "name": "kineticOperator"
+        },
+        {
+          "kind": "lemma",
+          "name": "kineticOperator_eq"
+        },
+        {
+          "kind": "def",
+          "name": "potentialCLM"
+        },
+        {
+          "kind": "lemma",
+          "name": "potentialCLM_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "potentialCLM_apply"
+        },
+        {
+          "kind": "lemma",
+          "name": "potentialCLM_apply_apply"
+        },
+        {
+          "kind": "def",
+          "name": "potentialOperator"
+        },
+        {
+          "kind": "lemma",
+          "name": "potentialOperator_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "potentialOperator_isSelfAdjoint"
+        },
+        {
+          "kind": "lemma",
+          "name": "potentialOperator_domain_ge"
+        },
+        {
+          "kind": "def",
+          "name": "hamiltonianCLM"
+        },
+        {
+          "kind": "lemma",
+          "name": "hamiltonianCLM_eq"
+        },
+        {
+          "kind": "def",
+          "name": "hamiltonianOperator"
+        },
+        {
+          "kind": "lemma",
+          "name": "hamiltonianOperator_eq"
+        }
+      ]
+    },
+    {
+      "relative_path": "QuantumMechanics/OneDimension/HilbertSpace/Basic.lean",
+      "domain": "QuantumMechanics",
+      "subdomain": "HilbertSpace",
+      "declaration_count": 23,
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "toBra"
+        },
+        {
+          "kind": "lemma",
+          "name": "toBra_surjective"
+        },
+        {
+          "kind": "lemma",
+          "name": "toBra_injective"
+        },
+        {
+          "kind": "def",
+          "name": "MemHS"
+        },
+        {
+          "kind": "lemma",
+          "name": "aeStronglyMeasurable_of_memHS"
+        },
+        {
+          "kind": "lemma",
+          "name": "memHS_iff"
+        },
+        {
+          "kind": "lemma",
+          "name": "zero_memHS"
+        },
+        {
+          "kind": "lemma",
+          "name": "zero_fun_memHS"
+        },
+        {
+          "kind": "lemma",
+          "name": "memHS_add"
+        },
+        {
+          "kind": "lemma",
+          "name": "memHS_smul"
+        },
+        {
+          "kind": "lemma",
+          "name": "memHS_of_ae"
+        },
+        {
+          "kind": "lemma",
+          "name": "aeEqFun_mk_mem_iff"
+        },
+        {
+          "kind": "def",
+          "name": "mk"
+        },
+        {
+          "kind": "lemma",
+          "name": "coe_hilbertSpace_memHS"
+        },
+        {
+          "kind": "lemma",
+          "name": "mk_surjective"
+        },
+        {
+          "kind": "lemma",
+          "name": "coe_mk_ae"
+        },
+        {
+          "kind": "lemma",
+          "name": "inner_mk_mk"
+        },
+        {
+          "kind": "lemma",
+          "name": "eLpNorm_mk"
+        },
+        {
+          "kind": "lemma",
+          "name": "mem_iff'"
+        },
+        {
+          "kind": "lemma",
+          "name": "mk_add"
+        },
+        {
+          "kind": "lemma",
+          "name": "mk_smul"
+        },
+        {
+          "kind": "lemma",
+          "name": "mk_eq_iff"
+        },
+        {
+          "kind": "lemma",
+          "name": "ext_iff"
+        }
+      ]
+    },
+    {
+      "relative_path": "QuantumMechanics/OneDimension/HarmonicOscillator/Basic.lean",
+      "domain": "QuantumMechanics",
+      "subdomain": "HarmonicOscillator",
+      "declaration_count": 19,
+      "declarations": [
+        {
+          "kind": "lemma",
+          "name": "Complex.ofReal_hasDerivAt"
+        },
+        {
+          "kind": "lemma",
+          "name": "Complex.deriv_ofReal"
+        },
+        {
+          "kind": "lemma",
+          "name": "Complex.differentiableAt_ofReal"
+        },
+        {
+          "kind": "lemma",
+          "name": "m_mul_ω_div_two_ℏ_pos"
+        },
+        {
+          "kind": "lemma",
+          "name": "m_mul_ω_div_ℏ_pos"
+        },
+        {
+          "kind": "lemma",
+          "name": "m_ne_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "ξ_nonneg"
+        },
+        {
+          "kind": "lemma",
+          "name": "ξ_pos"
+        },
+        {
+          "kind": "lemma",
+          "name": "ξ_ne_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "ξ_sq"
+        },
+        {
+          "kind": "lemma",
+          "name": "ξ_abs"
+        },
+        {
+          "kind": "lemma",
+          "name": "one_over_ξ"
+        },
+        {
+          "kind": "lemma",
+          "name": "ξ_inverse"
+        },
+        {
+          "kind": "lemma",
+          "name": "one_over_ξ_sq"
+        },
+        {
+          "kind": "lemma",
+          "name": "schrodingerOperator_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "schrodingerOperator_eq_ξ"
+        },
+        {
+          "kind": "lemma",
+          "name": "schrodingerOperator_parity"
+        },
+        {
+          "kind": "lemma",
+          "name": "schrodingerOperator_add"
+        },
+        {
+          "kind": "lemma",
+          "name": "schrodingerOperator_smul"
+        }
+      ]
+    },
+    {
+      "relative_path": "QuantumMechanics/DDimensions/Hydrogen/Basic.lean",
+      "domain": "QuantumMechanics",
+      "subdomain": "Hydrogen",
+      "declaration_count": 5,
+      "declarations": [
+        {
+          "kind": "lemma",
+          "name": "potential_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "potential_AESM"
+        },
+        {
+          "kind": "lemma",
+          "name": "potential_AEM"
+        },
+        {
+          "kind": "def",
+          "name": "hamiltonianRegCLM"
+        },
+        {
+          "kind": "lemma",
+          "name": "hamiltonianRegCLM_eq"
+        }
+      ]
+    },
+    {
+      "relative_path": "Thermodynamics/Temperature/Basic.lean",
+      "domain": "Thermodynamics",
+      "subdomain": "Temperature",
+      "declaration_count": 17,
+      "declarations": [
+        {
+          "kind": "lemma",
+          "name": "ofβ_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "β_ofβ"
+        },
+        {
+          "kind": "lemma",
+          "name": "ofβ_β"
+        },
+        {
+          "kind": "lemma",
+          "name": "beta_pos"
+        },
+        {
+          "kind": "lemma",
+          "name": "ofβ_continuousOn"
+        },
+        {
+          "kind": "lemma",
+          "name": "ofβ_differentiableOn"
+        },
+        {
+          "kind": "lemma",
+          "name": "eventually_pos_ofβ"
+        },
+        {
+          "kind": "lemma",
+          "name": "tendsto_toReal_ofβ_atTop"
+        },
+        {
+          "kind": "lemma",
+          "name": "tendsto_ofβ_atTop"
+        },
+        {
+          "kind": "lemma",
+          "name": "ofNNReal_val"
+        },
+        {
+          "kind": "lemma",
+          "name": "coe_ofNNReal_coe"
+        },
+        {
+          "kind": "lemma",
+          "name": "coe_ofNNReal_real"
+        },
+        {
+          "kind": "lemma",
+          "name": "ofRealNonneg_val"
+        },
+        {
+          "kind": "lemma",
+          "name": "beta_fun_T_formula"
+        },
+        {
+          "kind": "lemma",
+          "name": "beta_fun_T_eq_on_Ioi"
+        },
+        {
+          "kind": "lemma",
+          "name": "deriv_beta_wrt_T"
+        },
+        {
+          "kind": "lemma",
+          "name": "chain_rule_T_beta"
+        }
+      ]
+    },
+    {
+      "relative_path": "Thermodynamics/IdealGas/Basic.lean",
+      "domain": "Thermodynamics",
+      "subdomain": "IdealGas",
+      "declaration_count": 3,
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "entropy"
+        },
+        {
+          "kind": "theorem",
+          "name": "adiabatic_relation_log"
+        },
+        {
+          "kind": "theorem",
+          "name": "adiabatic_relation_UaUbVaVb"
+        }
+      ]
+    },
+    {
+      "relative_path": "StatisticalMechanics/CanonicalEnsemble/Basic.lean",
+      "domain": "StatisticalMechanics",
+      "subdomain": "CanonicalEnsemble",
+      "declaration_count": 72,
+      "declarations": [
+        {
+          "kind": "lemma",
+          "name": "ext"
+        },
+        {
+          "kind": "lemma",
+          "name": "energy_measurable'"
+        },
+        {
+          "kind": "def",
+          "name": "empty"
+        },
+        {
+          "kind": "lemma",
+          "name": "congr_energy_comp_symmm"
+        },
+        {
+          "kind": "lemma",
+          "name": "dof_add"
+        },
+        {
+          "kind": "lemma",
+          "name": "phase_space_unit_add"
+        },
+        {
+          "kind": "lemma",
+          "name": "dof_nsmul"
+        },
+        {
+          "kind": "lemma",
+          "name": "phase_space_unit_nsmul"
+        },
+        {
+          "kind": "lemma",
+          "name": "dof_congr"
+        },
+        {
+          "kind": "lemma",
+          "name": "phase_space_unit_congr"
+        },
+        {
+          "kind": "lemma",
+          "name": "μ_add"
+        },
+        {
+          "kind": "lemma",
+          "name": "μ_nsmul"
+        },
+        {
+          "kind": "lemma",
+          "name": "μ_nsmul_zero_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "energy_add_apply"
+        },
+        {
+          "kind": "lemma",
+          "name": "energy_nsmul_apply"
+        },
+        {
+          "kind": "lemma",
+          "name": "energy_congr_apply"
+        },
+        {
+          "kind": "lemma",
+          "name": "nsmul_succ"
+        },
+        {
+          "kind": "lemma",
+          "name": "μBolt_add"
+        },
+        {
+          "kind": "lemma",
+          "name": "μBolt_congr"
+        },
+        {
+          "kind": "lemma",
+          "name": "μBolt_nsmul"
+        },
+        {
+          "kind": "lemma",
+          "name": "μBolt_ne_zero_of_μ_ne_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "mathematicalPartitionFunction_eq_integral"
+        },
+        {
+          "kind": "lemma",
+          "name": "mathematicalPartitionFunction_add"
+        },
+        {
+          "kind": "lemma",
+          "name": "mathematicalPartitionFunction_congr"
+        },
+        {
+          "kind": "lemma",
+          "name": "mathematicalPartitionFunction_nsmul"
+        },
+        {
+          "kind": "lemma",
+          "name": "mathematicalPartitionFunction_nonneg"
+        },
+        {
+          "kind": "lemma",
+          "name": "mathematicalPartitionFunction_eq_zero_iff"
+        },
+        {
+          "kind": "lemma",
+          "name": "mathematicalPartitionFunction_comp_ofβ_apply"
+        },
+        {
+          "kind": "lemma",
+          "name": "mathematicalPartitionFunction_pos"
+        },
+        {
+          "kind": "lemma",
+          "name": "probability_add"
+        },
+        {
+          "kind": "lemma",
+          "name": "probability_congr"
+        },
+        {
+          "kind": "lemma",
+          "name": "probability_nsmul"
+        },
+        {
+          "kind": "lemma",
+          "name": "μProd_add"
+        },
+        {
+          "kind": "lemma",
+          "name": "μProd_congr"
+        },
+        {
+          "kind": "lemma",
+          "name": "μProd_nsmul"
+        },
+        {
+          "kind": "lemma",
+          "name": "integrable_energy_add"
+        },
+        {
+          "kind": "lemma",
+          "name": "integrable_energy_congr"
+        },
+        {
+          "kind": "lemma",
+          "name": "integrable_energy_nsmul"
+        },
+        {
+          "kind": "lemma",
+          "name": "meanEnergy_add"
+        },
+        {
+          "kind": "lemma",
+          "name": "meanEnergy_congr"
+        },
+        {
+          "kind": "lemma",
+          "name": "meanEnergy_nsmul"
+        },
+        {
+          "kind": "lemma",
+          "name": "probability_nonneg"
+        },
+        {
+          "kind": "lemma",
+          "name": "probability_pos"
+        },
+        {
+          "kind": "lemma",
+          "name": "differentialEntropy_nonneg_of_prob_le_one"
+        },
+        {
+          "kind": "lemma",
+          "name": "partitionFunction_def"
+        },
+        {
+          "kind": "lemma",
+          "name": "partitionFunction_pos"
+        },
+        {
+          "kind": "lemma",
+          "name": "partitionFunction_congr"
+        },
+        {
+          "kind": "lemma",
+          "name": "partitionFunction_add"
+        },
+        {
+          "kind": "lemma",
+          "name": "partitionFunction_nsmul"
+        },
+        {
+          "kind": "lemma",
+          "name": "partitionFunction_dof_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "partitionFunction_phase_space_unit_one"
+        },
+        {
+          "kind": "lemma",
+          "name": "log_partitionFunction"
+        },
+        {
+          "kind": "lemma",
+          "name": "log_partitionFunction_ofβ"
+        },
+        {
+          "kind": "lemma",
+          "name": "log_mathematicalPartitionFunction_eq"
+        },
+        {
+          "kind": "lemma",
+          "name": "helmholtzFreeEnergy_def"
+        },
+        {
+          "kind": "lemma",
+          "name": "helmholtzFreeEnergy_congr"
+        },
+        {
+          "kind": "lemma",
+          "name": "helmholtzFreeEnergy_dof_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "helmholtzFreeEnergy_phase_space_unit_one"
+        },
+        {
+          "kind": "lemma",
+          "name": "helmholtzFreeEnergy_add"
+        },
+        {
+          "kind": "lemma",
+          "name": "helmholtzFreeEnergy_nsmul"
+        },
+        {
+          "kind": "lemma",
+          "name": "physicalProbability_def"
+        },
+        {
+          "kind": "lemma",
+          "name": "physicalProbability_measurable"
+        },
+        {
+          "kind": "lemma",
+          "name": "physicalProbability_nonneg"
+        },
+        {
+          "kind": "lemma",
+          "name": "physicalProbability_pos"
+        },
+        {
+          "kind": "lemma",
+          "name": "log_physicalProbability"
+        },
+        {
+          "kind": "lemma",
+          "name": "integral_probability"
+        },
+        {
+          "kind": "lemma",
+          "name": "integral_physicalProbability_base"
+        },
+        {
+          "kind": "lemma",
+          "name": "physicalProbability_dof_zero"
+        },
+        {
+          "kind": "lemma",
+          "name": "physicalProbability_phase_space_unit_one"
+        },
+        {
+          "kind": "lemma",
+          "name": "physicalProbability_congr"
+        },
+        {
+          "kind": "lemma",
+          "name": "physicalProbability_add"
+        },
+        {
+          "kind": "lemma",
+          "name": "thermodynamicEntropy_def"
+        }
+      ]
+    },
+    {
+      "relative_path": "StatisticalMechanics/MicroCanonicalEnsemble/Basic.lean",
+      "domain": "StatisticalMechanics",
+      "subdomain": "MicroCanonicalEnsemble",
+      "declaration_count": 2,
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "NVEHamiltonian.N"
+        },
+        {
+          "kind": "def",
+          "name": "NVEHamiltonian.V"
+        }
+      ]
+    },
+    {
+      "relative_path": "CondensedMatter/TightBindingChain/Basic.lean",
+      "domain": "CondensedMatter",
+      "subdomain": "TightBinding",
+      "declaration_count": 15,
+      "declarations": [
+        {
+          "kind": "lemma",
+          "name": "localizedState_orthonormal"
+        },
+        {
+          "kind": "lemma",
+          "name": "localizedState_orthonormal_eq_ite"
+        },
+        {
+          "kind": "lemma",
+          "name": "localizedComp_apply_localizedState"
+        },
+        {
+          "kind": "lemma",
+          "name": "localizedComp_adjoint"
+        },
+        {
+          "kind": "lemma",
+          "name": "hamiltonian_hermitian"
+        },
+        {
+          "kind": "lemma",
+          "name": "hamiltonian_apply_localizedState"
+        },
+        {
+          "kind": "lemma",
+          "name": "energy_localizedState"
+        },
+        {
+          "kind": "def",
+          "name": "BrillouinZone"
+        },
+        {
+          "kind": "def",
+          "name": "QuantaWaveNumber"
+        },
+        {
+          "kind": "lemma",
+          "name": "quantaWaveNumber_subset_brillouinZone"
+        },
+        {
+          "kind": "lemma",
+          "name": "quantaWaveNumber_exp_N"
+        },
+        {
+          "kind": "lemma",
+          "name": "quantaWaveNumber_exp_sub_one"
+        },
+        {
+          "kind": "lemma",
+          "name": "quantaWaveNumber_exp_add_one"
+        },
+        {
+          "kind": "lemma",
+          "name": "energyEigenstate_orthogonal"
+        },
+        {
+          "kind": "lemma",
+          "name": "hamiltonian_energyEigenstate"
+        }
+      ]
+    }
+  ]
+}

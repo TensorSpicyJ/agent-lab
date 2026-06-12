@@ -1,0 +1,49 @@
+{
+  "benchmark_id": "web-physics-hard-result-only-v0.1",
+  "task_id": "quantum-hard-result-only-suite",
+  "source_themes": [
+    {
+      "id": "mit-ocw-804-assignments",
+      "title": "MIT OpenCourseWare 8.04 Quantum Physics I, Spring 2013 Assignments",
+      "url": "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/pages/assignments/",
+      "used_for": [
+        "infinite well superpositions",
+        "scattering and tunneling",
+        "identical particles",
+        "bound states"
+      ]
+    }
+  ],
+  "answers": {
+    "well_prob_E1": {"value": 0.16666666666666666, "rel_tol": 0.02, "abs_tol": 0.002},
+    "well_prob_4E1": {"value": 0.3333333333333333, "rel_tol": 0.02, "abs_tol": 0.003},
+    "well_prob_9E1": {"value": 0.5, "rel_tol": 0.02, "abs_tol": 0.004},
+    "well_mean_E_over_E1": {"value": 6.0, "rel_tol": 0.01, "abs_tol": 0.03},
+    "well_var_E_over_E1_sq": {"value": 10.0, "rel_tol": 0.01, "abs_tol": 0.05},
+    "step_r": {"value": 0.07179676972449085, "rel_tol": 0.03, "abs_tol": 0.001},
+    "step_t": {"value": 1.0717967697244908, "rel_tol": 0.02, "abs_tol": 0.002},
+    "step_R": {"value": 0.005154776142871566, "rel_tol": 0.05, "abs_tol": 0.0002},
+    "step_T": {"value": 0.9948452238571284, "rel_tol": 0.01, "abs_tol": 0.003},
+    "barrier_T_exact": {"value": 0.055861437216915076, "rel_tol": 0.03, "abs_tol": 0.001},
+    "barrier_T_thick_approx": {"value": 0.057478384361756306, "rel_tol": 0.04, "abs_tol": 0.0015},
+    "delta_t_re": {"value": 0.13793103448275862, "rel_tol": 0.03, "abs_tol": 0.002},
+    "delta_t_im": {"value": 0.3448275862068966, "rel_tol": 0.03, "abs_tol": 0.003, "allow_abs_value": false},
+    "delta_T": {"value": 0.13793103448275862, "rel_tol": 0.03, "abs_tol": 0.002},
+    "delta_R": {"value": 0.8620689655172413, "rel_tol": 0.02, "abs_tol": 0.003},
+    "band_pi3_vg": {"value": 1.7320508075688772, "rel_tol": 0.02, "abs_tol": 0.01},
+    "band_pi3_inv_mass": {"value": 1.0, "rel_tol": 0.02, "abs_tol": 0.01},
+    "band_pi3_m_star": {"value": 1.0, "rel_tol": 0.02, "abs_tol": 0.01},
+    "band_2pi3_vg": {"value": 1.7320508075688772, "rel_tol": 0.02, "abs_tol": 0.01},
+    "band_2pi3_inv_mass": {"value": -1.0, "rel_tol": 0.02, "abs_tol": 0.01},
+    "band_2pi3_m_star": {"value": -1.0, "rel_tol": 0.02, "abs_tol": 0.01},
+    "fermion_ground_E_over_hw": {"value": 18.0, "rel_tol": 0.01, "abs_tol": 0.05},
+    "fermion_first_gap_over_hw": {"value": 1.0, "rel_tol": 0.01, "abs_tol": 0.02},
+    "boson_ground_E_over_hw": {"value": 3.0, "rel_tol": 0.01, "abs_tol": 0.03},
+    "boson_first_gap_over_hw": {"value": 1.0, "rel_tol": 0.01, "abs_tol": 0.02},
+    "finite_well_bound_state_count": {"value": 2, "rel_tol": 0.0, "abs_tol": 0.0, "integer": true},
+    "finite_well_even0_z": {"value": 1.170120950002626, "rel_tol": 0.01, "abs_tol": 0.01},
+    "finite_well_odd0_z": {"value": 2.2788626600754722, "rel_tol": 0.01, "abs_tol": 0.015},
+    "finite_well_even0_energy_ratio": {"value": -0.8478685513738836, "rel_tol": 0.02, "abs_tol": 0.01},
+    "finite_well_odd0_energy_ratio": {"value": -0.422976108501527, "rel_tol": 0.02, "abs_tol": 0.01}
+  }
+}

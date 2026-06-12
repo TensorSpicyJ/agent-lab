@@ -1,0 +1,197 @@
+﻿{
+  "benchmark_id": "existing-open-physics-diverse-v0.1",
+  "task_id": "open-physics-diverse-core-7",
+  "hard_score": 0.9166666666666666,
+  "passed": 11,
+  "total": 12,
+  "checks": [
+    {
+      "field": "thermoqa_T1_SL_008_h_kJ_kg",
+      "type": "numeric",
+      "source": "ThermoQA",
+      "domain": "engineering_thermodynamics",
+      "difficulty": "easy",
+      "passed": false,
+      "expected": 372.78,
+      "actual_raw": 380.7874402537,
+      "actual_parsed": 380.7874402537,
+      "abs_error": 8.007440253700054,
+      "rel_error": 0.021480337608509186,
+      "rel_tol": 0.02,
+      "abs_tol": 0.5
+    },
+    {
+      "field": "thermoqa_T1_SL_008_s_kJ_kgK",
+      "type": "numeric",
+      "source": "ThermoQA",
+      "domain": "engineering_thermodynamics",
+      "difficulty": "easy",
+      "passed": true,
+      "expected": 1.1922,
+      "actual_raw": 1.1737613609,
+      "actual_parsed": 1.1737613609,
+      "abs_error": 0.018438639099999987,
+      "rel_error": 0.01546606198624391,
+      "rel_tol": 0.02,
+      "abs_tol": 0.01
+    },
+    {
+      "field": "thermoqa_T1_SL_008_v_m3_kg",
+      "type": "numeric",
+      "source": "ThermoQA",
+      "domain": "engineering_thermodynamics",
+      "difficulty": "easy",
+      "passed": true,
+      "expected": 0.0010353,
+      "actual_raw": 0.0010302693,
+      "actual_parsed": 0.0010302693,
+      "abs_error": 5.030700000000074e-06,
+      "rel_error": 0.004859171254708851,
+      "rel_tol": 0.02,
+      "abs_tol": 2e-05
+    },
+    {
+      "field": "thermoqa_T1_SF_011_P_kPa",
+      "type": "numeric",
+      "source": "ThermoQA",
+      "domain": "engineering_thermodynamics",
+      "difficulty": "medium",
+      "passed": true,
+      "expected": 445.56,
+      "actual_raw": 439.0329257599,
+      "actual_parsed": 439.0329257599,
+      "abs_error": 6.527074240099978,
+      "rel_error": 0.014649147679549281,
+      "rel_tol": 0.02,
+      "abs_tol": 1.0
+    },
+    {
+      "field": "thermoqa_T1_SF_011_h_kJ_kg",
+      "type": "numeric",
+      "source": "ThermoQA",
+      "domain": "engineering_thermodynamics",
+      "difficulty": "medium",
+      "passed": true,
+      "expected": 618.17,
+      "actual_raw": 619.3091963328,
+      "actual_parsed": 619.3091963328,
+      "abs_error": 1.1391963327999974,
+      "rel_error": 0.001842852828186417,
+      "rel_tol": 0.02,
+      "abs_tol": 1.0
+    },
+    {
+      "field": "thermoqa_T1_SF_011_s_kJ_kgK",
+      "type": "numeric",
+      "source": "ThermoQA",
+      "domain": "engineering_thermodynamics",
+      "difficulty": "medium",
+      "passed": true,
+      "expected": 1.8104,
+      "actual_raw": 1.8113531029,
+      "actual_parsed": 1.8113531029,
+      "abs_error": 0.0009531029000000579,
+      "rel_error": 0.0005264598431286223,
+      "rel_tol": 0.02,
+      "abs_tol": 0.02
+    },
+    {
+      "field": "thermoqa_T1_SF_011_v_m3_kg",
+      "type": "numeric",
+      "source": "ThermoQA",
+      "domain": "engineering_thermodynamics",
+      "difficulty": "medium",
+      "passed": true,
+      "expected": 0.0010804,
+      "actual_raw": 0.0010872057,
+      "actual_parsed": 0.0010872057,
+      "abs_error": 6.805699999999941e-06,
+      "rel_error": 0.006299241021843706,
+      "rel_tol": 0.02,
+      "abs_tol": 2e-05
+    },
+    {
+      "field": "cmphysbench_id4_commutator_x_px",
+      "type": "symbolic",
+      "source": "CMPhysBench",
+      "domain": "quantum_mechanics_theoretical_foundations",
+      "difficulty": "graduate_basic",
+      "passed": true,
+      "expected": "i*hbar",
+      "actual_raw": "i\\hbar",
+      "actual_normalized": "ihbar",
+      "expected_normalized": [
+        "ihbar"
+      ]
+    },
+    {
+      "field": "cmphysbench_id42_forced_oscillator_ground_energy",
+      "type": "symbolic",
+      "source": "CMPhysBench",
+      "domain": "quantum_mechanics_theoretical_foundations",
+      "difficulty": "graduate_basic",
+      "passed": true,
+      "expected": "hbar*omega/2 - F^2/(2*m*omega^2)",
+      "actual_raw": "\\frac{1}{2}\\hbar\\omega - \\frac{F^2}{2m\\omega^2}",
+      "actual_normalized": "hbaromega/2-(f^2)/(2momega^2)",
+      "expected_normalized": [
+        "(hbaromega)/(2)-(f^2)/(2momega^2)",
+        "hbaromega/2-(f^2)/(2momega^2)",
+        "hbaromega/2-f^2/(2momega^2)"
+      ]
+    },
+    {
+      "field": "cmt_hubbard_conserved_quantum_numbers",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "domain": "condensed_matter_theory_hubbard_model",
+      "difficulty": "research",
+      "passed": true,
+      "expected": [
+        "a",
+        "b",
+        "d"
+      ],
+      "actual_raw": "a;b;d",
+      "actual_parsed": [
+        "a",
+        "b",
+        "d"
+      ]
+    },
+    {
+      "field": "cmt_dmrg_critical_bond_dimension_scaling",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "domain": "condensed_matter_theory_dmrg",
+      "difficulty": "research",
+      "passed": true,
+      "expected": [
+        "d"
+      ],
+      "actual_raw": "d",
+      "actual_parsed": [
+        "d"
+      ]
+    },
+    {
+      "field": "cmt_qmc_average_sign_true_statements",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "domain": "condensed_matter_theory_quantum_monte_carlo",
+      "difficulty": "research",
+      "passed": true,
+      "expected": [
+        "b",
+        "f",
+        "i"
+      ],
+      "actual_raw": "b;f;i",
+      "actual_parsed": [
+        "b",
+        "f",
+        "i"
+      ]
+    }
+  ]
+}

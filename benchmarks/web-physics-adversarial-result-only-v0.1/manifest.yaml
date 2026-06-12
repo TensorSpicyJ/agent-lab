@@ -1,0 +1,33 @@
+benchmark_id: web-physics-adversarial-result-only-v0.1
+created: 2026-06-02
+purpose: "Adversarial result-only baseline for Kimi Code + Kimi-k2.6 on higher-level physics translation tasks."
+status: draft
+
+agent:
+  default_cli: kimi
+  default_model_alias: kimi-code/kimi-for-coding
+  local_display_name: Kimi-k2.6
+  kimi_version_recorded_per_run: true
+
+validity_policy:
+  local_leakage_boundary: "Run script copies only prompt.md into a temp cwd."
+  network_allowed: false
+  network_enforced: false
+  scoring_scope: "Final numerical answers only; no derivation scoring."
+
+source_themes:
+  - title: "MIT OpenCourseWare 8.06 Quantum Physics III resources"
+    url: "https://ocw.mit.edu/courses/8-06-quantum-physics-iii-spring-2016/resources/"
+  - title: "MIT OpenCourseWare 8.333 Statistical Mechanics I resources"
+    url: "https://ocw.mit.edu/courses/8-333-statistical-mechanics-i-statistical-mechanics-of-particles-fall-2013/download/"
+  - title: "MIT OpenCourseWare 8.04 Quantum Physics I assignments"
+    url: "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/pages/assignments/"
+
+tasks:
+  - id: adversarial-physics-result-only-suite
+    revision: 0
+    status: ready
+    prompt: tasks/adversarial-physics-result-only-suite/prompt.md
+    gold: tasks/adversarial-physics-result-only-suite/private/gold.json
+    verifier: tasks/adversarial-physics-result-only-suite/verify.py
+    expected_checks: 32

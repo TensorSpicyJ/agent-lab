@@ -1,0 +1,46 @@
+{
+  "benchmark_id": "existing-scibench-physics-result-only-v0.1",
+  "task_id": "scibench-physics-mixed-8",
+  "answers": {
+    "class_2_6_big_bertha_range_km": {
+      "value": 202.0,
+      "rel_tol": 0.01,
+      "abs_tol": 0.05
+    },
+    "class_7_10_hemisphere_leave_angle_deg": {
+      "value": 48.189685,
+      "rel_tol": 0.001,
+      "abs_tol": 0.01
+    },
+    "class_8_5_hohmann_transfer_time_1e7_s": {
+      "value": 2.24,
+      "rel_tol": 0.01,
+      "abs_tol": 0.01
+    },
+    "matter_4_1_photoelectric_lambda_max_nm": {
+      "value": 540.0,
+      "rel_tol": 0.005,
+      "abs_tol": 0.5
+    },
+    "matter_17_1_hydrogenic_heplus_energy_ev": {
+      "value": -6.04697,
+      "rel_tol": 0.001,
+      "abs_tol": 0.005
+    },
+    "matter_37_4_thermal_neutron_wavelength_pm": {
+      "value": 226.0,
+      "rel_tol": 0.005,
+      "abs_tol": 0.5
+    },
+    "quan_1_6_1_b_position_probability": {
+      "value": 0.4908,
+      "rel_tol": 0.001,
+      "abs_tol": 0.0005
+    },
+    "quan_6_6_1_hydrogen_ground_energy_ev": {
+      "value": -13.598,
+      "rel_tol": 0.001,
+      "abs_tol": 0.005
+    }
+  }
+}

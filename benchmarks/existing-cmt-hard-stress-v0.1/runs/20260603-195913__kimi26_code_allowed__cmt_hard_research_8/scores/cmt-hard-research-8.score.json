@@ -1,0 +1,132 @@
+﻿{
+  "benchmark_id": "existing-cmt-hard-stress-v0.1",
+  "task_id": "cmt-hard-research-8",
+  "hard_score": 0.0,
+  "passed": 0,
+  "total": 8,
+  "status": "no_parseable_json_output",
+  "checks": [
+    {
+      "field": "cmt_vmc_rnn_gradient_choices",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 13,
+      "domain": "variational_monte_carlo",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "d",
+        "e"
+      ],
+      "actual_raw": null,
+      "error": "no parseable JSON output: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "field": "cmt_lll_quarter_spectrum_scaling",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 14,
+      "domain": "fractional_quantum_hall_exact_diagonalization",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "b",
+        "e"
+      ],
+      "actual_raw": null,
+      "error": "no parseable JSON output: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "field": "cmt_four_site_hubbard_adiabatic",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 15,
+      "domain": "hubbard_model_exact_diagonalization",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "a",
+        "d"
+      ],
+      "actual_raw": null,
+      "error": "no parseable JSON output: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "field": "cmt_particle_hole_transformed_terms",
+      "type": "symbolic",
+      "source": "CMT-Benchmark",
+      "source_index": 17,
+      "domain": "hubbard_model_particle_hole_transformation",
+      "difficulty": "research",
+      "passed": false,
+      "expected": "-t(pdag_i_sigma*p_j_sigma+pdag_j_sigma*p_i_sigma)-U(m_i_up-1/2)(m_i_down-1/2)-mu(m_i_up-m_i_down)-mu",
+      "actual_raw": null,
+      "error": "no parseable JSON output: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "field": "cmt_dimer_chain_density_vector",
+      "type": "numeric_vector",
+      "source": "CMT-Benchmark",
+      "source_index": 23,
+      "domain": "strongly_interacting_hubbard_chain",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        0.2,
+        0.003,
+        0.017,
+        0.027,
+        0.038
+      ],
+      "actual_raw": null,
+      "error": "no parseable JSON output: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "field": "cmt_two_band_dqmc_sign_free",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 24,
+      "domain": "determinant_quantum_monte_carlo",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "c",
+        "d",
+        "e"
+      ],
+      "actual_raw": null,
+      "error": "no parseable JSON output: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "field": "cmt_long_range_dqmc_sign_free",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 27,
+      "domain": "determinant_quantum_monte_carlo_long_range_interactions",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "d",
+        "g"
+      ],
+      "actual_raw": null,
+      "error": "no parseable JSON output: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "field": "cmt_triangular_boson_transport",
+      "type": "choice_set",
+      "source": "CMT-Benchmark",
+      "source_index": 30,
+      "domain": "strongly_correlated_boson_transport",
+      "difficulty": "research",
+      "passed": false,
+      "expected": [
+        "a",
+        "b",
+        "c"
+      ],
+      "actual_raw": null,
+      "error": "no parseable JSON output: Expecting value: line 1 column 1 (char 0)"
+    }
+  ]
+}

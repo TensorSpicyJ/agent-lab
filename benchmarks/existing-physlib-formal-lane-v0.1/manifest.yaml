@@ -1,0 +1,21 @@
+benchmark_id: existing-physlib-formal-lane-v0.1
+version: 0.1
+status: formal_smoke_runnable_heavy_physics_prebuild_required
+description: Seed package for a Lean4 formal-physics benchmark lane based on PhysLib modules, with a runnable formal-smoke subset and heavier physics proof-completion tasks defined.
+source_family:
+  - PhysLib
+  - LeanPhysBench
+answer_format:
+  - lean4_proof
+  - lean4_statement_completion
+grading_mode:
+  - machine_checked_formal_verification
+module_count: 20
+task_ids:
+  - physlib-meta-smoke-mini-3
+  - visviva-speedcircular-sq-proof
+  - eulerlagrange-zero-proof
+  - idealgas-adiabatic-product-proof
+module_catalog: D:/Playground/agent-lab/benchmarks/existing-physlib-formal-lane-v0.1/modules/physlib-formal-seed-modules.yaml
+declaration_index: D:/Playground/agent-lab/benchmarks/existing-physlib-formal-lane-v0.1/modules/physlib-formal-shortlist-decls.json
+tooling_status: D:/Playground/agent-lab/benchmarks/existing-physlib-formal-lane-v0.1/TOOLING-STATUS-2026-06-02.md

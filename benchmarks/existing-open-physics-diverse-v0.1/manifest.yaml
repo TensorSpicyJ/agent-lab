@@ -1,0 +1,20 @@
+benchmark_id: existing-open-physics-diverse-v0.1
+version: 0.1
+created_at: 2026-06-03
+status: runnable_local_mini_suite
+task_ids:
+  - open-physics-diverse-core-7
+  - open-physics-diverse-mini-8
+default_task_id: open-physics-diverse-core-7
+sources:
+  - ThermoQA
+  - CMPhysBench
+  - CMT-Benchmark
+local_grading:
+  - numeric_tolerance
+  - exact_choice_set
+  - symbolic_normalized_string
+notes:
+  - Small public/open-data sample to complement existing SciBench, TPBench, and PhysLib local runs.
+  - open-physics-diverse-mini-8 keeps the extra CMT Hartree-Fock hard item; open-physics-diverse-core-7 is the runnable first-score subset.
+  - Full-dataset extraction remains pending for later scale-up.

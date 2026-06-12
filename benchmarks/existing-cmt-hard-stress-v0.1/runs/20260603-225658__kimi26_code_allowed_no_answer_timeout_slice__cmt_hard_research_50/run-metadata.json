@@ -1,0 +1,39 @@
+﻿{
+    "benchmark_id":  "existing-cmt-hard-stress-v0.1",
+    "task_id":  "cmt-hard-research-50",
+    "run_id":  "20260603-225658__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50",
+    "agent":  "kimi26_code_allowed_no_answer_timeout_slice",
+    "model_alias":  "kimi-code/kimi-for-coding",
+    "command":  "no-answer-timeout itemwise slice kimi -m kimi-code/kimi-for-coding -p \u003csingle problem prompt\u003e --output-format text",
+    "started_at":  "2026-06-03T22:56:58.6200985+08:00",
+    "finished_at":  "2026-06-03T22:58:58.9481733+08:00",
+    "runtime_seconds":  120.328,
+    "idle_timeout_minutes":  20,
+    "poll_seconds":  30,
+    "problem_numbers":  [
+                            37
+                        ],
+    "scorer_exit_code":  1,
+    "kimi_executable":  "C:\\Users\\TaiS\\.kimi-code\\bin\\kimi.exe",
+    "kimi_version":  "0.8.0",
+    "python_executable":  "C:\\Users\\TaiS\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "output":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-225658__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50\\outputs\\cmt-hard-research-50.no-timeout-slice.json",
+    "full_score":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-225658__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50\\scores\\cmt-hard-research-50.no-timeout-slice.full-score.json",
+    "slice_summary":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-225658__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50\\scores\\cmt-hard-research-50.no-timeout-slice.summary.json",
+    "item_runs":  [
+                      {
+                          "field":  "cmt_index_36_answer",
+                          "problem_number":  37,
+                          "status":  "completed",
+                          "exit_code":  null,
+                          "runtime_seconds":  120.134,
+                          "stdout_bytes":  54,
+                          "stderr_bytes":  14400,
+                          "captured_json":  true,
+                          "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-225658__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50\\logs\\item-37-cmt_index_36_answer.prompt.md",
+                          "stdout":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-225658__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50\\logs\\item-37-cmt_index_36_answer.stdout.txt",
+                          "stderr":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-225658__kimi26_code_allowed_no_answer_timeout_slice__cmt_hard_research_50\\logs\\item-37-cmt_index_36_answer.stderr.txt"
+                      }
+                  ],
+    "local_leakage_boundary":  "Each item temp cwd contains only prompt.md. Gold and verifier are not mounted in cwd."
+}

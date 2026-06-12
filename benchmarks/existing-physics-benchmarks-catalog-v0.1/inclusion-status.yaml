@@ -1,0 +1,312 @@
+version: 0.1
+updated_at: 2026-06-03
+benchmarks:
+  scibench:
+    status: included
+    local_benchmark: D:/Playground/agent-lab/benchmarks/existing-scibench-physics-result-only-v0.1
+    metadata_path: D:/Playground/agent-lab/benchmarks/existing-scibench-physics-result-only-v0.1/tasks/scibench-physics-mixed-8/problem-metadata.yaml
+    source_url: https://huggingface.co/datasets/xw27/scibench
+    included_tasks:
+      - scibench-physics-mixed-8
+    current_result:
+      passed: 7
+      total: 8
+      hard_score: 0.875
+    notes:
+      - Original questions copied from public SciBench dataset pages.
+      - Good fit for result-only numeric grading.
+  tpbench_public:
+    status: included
+    local_benchmark: D:/Playground/agent-lab/benchmarks/existing-tpbench-public-code-v0.1
+    metadata_path: D:/Playground/agent-lab/benchmarks/existing-tpbench-public-code-v0.1/tasks/tpbench-public-mini-3/problem-metadata.yaml
+    source_url: https://tpbench.org/
+    included_tasks:
+      - tpbench-public-mini-3
+    current_result:
+      passed: 9
+      total: 9
+      hard_score: 1.0
+    notes:
+      - Public TPBench problems added in code-answer format.
+      - Current subset is small and should be expanded with more public TPBench problems.
+  open_physics_diverse:
+    status: included
+    local_benchmark: D:/Playground/agent-lab/benchmarks/existing-open-physics-diverse-v0.1
+    metadata_paths:
+      - D:/Playground/agent-lab/benchmarks/existing-open-physics-diverse-v0.1/tasks/open-physics-diverse-core-7/problem-metadata.yaml
+      - D:/Playground/agent-lab/benchmarks/existing-open-physics-diverse-v0.1/tasks/open-physics-diverse-mini-8/problem-metadata.yaml
+    source_urls:
+      - https://huggingface.co/datasets/olivenet/thermoqa
+      - https://huggingface.co/datasets/weidawang/CMPhysBench
+      - https://huggingface.co/datasets/JVRoggeveen/cmt_benchmark
+    included_tasks:
+      - open-physics-diverse-core-7
+      - open-physics-diverse-mini-8
+    current_result:
+      task_id: open-physics-diverse-core-7
+      passed: 11
+      total: 12
+      hard_score: 0.9166666666666666
+      status: verified_runner_completed_with_failed_check
+      run_summary: D:/Playground/agent-lab/benchmarks/existing-open-physics-diverse-v0.1/BASELINE-2026-06-03.md
+      score_file: D:/Playground/agent-lab/benchmarks/existing-open-physics-diverse-v0.1/runs/20260603-193247__kimi26_code_allowed__open_physics_diverse_core_7/scores/open-physics-diverse-core-7.score.json
+    hard_stress_result:
+      task_id: open-physics-diverse-mini-8
+      passed: 10
+      total: 13
+      hard_score: 0.7692307692307693
+      runtime_seconds: 1020.018
+      status: verified_long_run_stress_degradation
+      score_file: D:/Playground/agent-lab/benchmarks/existing-open-physics-diverse-v0.1/runs/20260603-191050__kimi26_code_allowed__open_physics_diverse8/scores/open-physics-diverse-mini-8.score.json
+    notes:
+      - Local mixed verifier built from ThermoQA, CMPhysBench, and CMT-Benchmark public pages/data.
+      - Fills applied thermodynamics, graduate symbolic physics, and condensed matter theory method gaps.
+      - The core task is the default scored lane; mini-8 keeps the hard CMT Hartree-Fock item as a stress track.
+  cmt_hard_stress:
+    status: included
+    local_benchmark: D:/Playground/agent-lab/benchmarks/existing-cmt-hard-stress-v0.1
+    metadata_paths:
+      - D:/Playground/agent-lab/benchmarks/existing-cmt-hard-stress-v0.1/tasks/cmt-hard-research-8/problem-metadata.yaml
+      - D:/Playground/agent-lab/benchmarks/existing-cmt-hard-stress-v0.1/tasks/cmt-hard-research-50/problem-metadata.yaml
+    source_urls:
+      - https://huggingface.co/datasets/JVRoggeveen/cmt_benchmark
+      - https://huggingface.co/datasets/JVRoggeveen/cmt_benchmark/blob/main/cmt_data.jsonl
+    included_tasks:
+      - cmt-hard-research-8
+      - cmt-hard-research-50
+    current_result:
+      task_id: cmt-hard-research-50
+      passed: 0
+      total: 50
+      hard_score: 0.0
+      per_item_timeout_seconds: 45
+      status: verified_itemwise_49_timeout_1_completed_wrong
+      run_summary: D:/Playground/agent-lab/benchmarks/existing-cmt-hard-stress-v0.1/BASELINE-CMT50-2026-06-03.md
+      score_file: D:/Playground/agent-lab/benchmarks/existing-cmt-hard-stress-v0.1/runs/20260603-204342__kimi26_code_allowed_itemwise__cmt_hard_research_50/scores/cmt-hard-research-50.itemwise.score.json
+    compact_result:
+      task_id: cmt-hard-research-8
+      passed: 0
+      total: 8
+      hard_score: 0.0
+      status: verified_full_suite_no_parseable_json_output
+      run_summary: D:/Playground/agent-lab/benchmarks/existing-cmt-hard-stress-v0.1/BASELINE-2026-06-03.md
+      score_file: D:/Playground/agent-lab/benchmarks/existing-cmt-hard-stress-v0.1/runs/20260603-195913__kimi26_code_allowed__cmt_hard_research_8/scores/cmt-hard-research-8.score.json
+    itemwise_result:
+      task_id: cmt-hard-research-8
+      passed: 0
+      total: 8
+      hard_score: 0.0
+      per_item_timeout_seconds: 90
+      status: verified_all_items_timeout
+      score_file: D:/Playground/agent-lab/benchmarks/existing-cmt-hard-stress-v0.1/runs/20260603-200843__kimi26_code_allowed_itemwise__cmt_hard_research_8/scores/cmt-hard-research-8.itemwise.score.json
+    notes:
+      - Full 50-row CMT-Benchmark task is now materialized locally as cmt-hard-research-50.
+      - Compact 8-problem task remains as the same-size comparison against open-physics-diverse-mini-8.
+      - Added specifically because the previous core/diverse suite was too easy for Kimi.
+      - The suite now has enough Kimi failures to be diagnostically useful.
+  olympiadbench_physics:
+    status: registered_pending_download
+    source_url: https://huggingface.co/datasets/Hothan/OlympiadBench
+    candidate_configs:
+      - OE_TO_physics_en_COMP
+      - TP_TO_physics_en_COMP
+    notes:
+      - Hugging Face direct download timed out from this machine on 2026-06-02.
+      - Register as next extraction target once download/API access works.
+      - Filter text-only entries first; handle multimodal entries later.
+  ugphysics:
+    status: registered_candidate_pending_download
+    source_urls:
+      - https://github.com/YangLabHKUST/UGPhysics
+      - https://huggingface.co/datasets/UGPhysics/ugphysics
+      - https://arxiv.org/abs/2502.00334
+    benchmark_type: undergraduate_physics_problem_solving
+    size_signal: "5,520 problems across 3 main domains, 13 core subjects, and 59 topics"
+    extraction_priority: high
+    notes:
+      - Broad undergraduate physics layer.
+      - Download and license/provenance need local verification before copying questions.
+  hipho:
+    status: registered_candidate_pending_multimodal_filter
+    source_urls:
+      - https://github.com/SciYu/HiPhO
+      - https://huggingface.co/datasets/SciYu/HiPhO
+      - https://arxiv.org/abs/2509.07894
+    benchmark_type: high_school_physics_olympiad_benchmark
+    size_signal: "13 olympiads and 360 problems"
+    extraction_priority: high
+    notes:
+      - Includes mechanics, electromagnetism, thermodynamics, optics, and modern physics.
+      - Supports answer-level and step-level scoring using official marking schemes.
+      - Mixed-modal content should be split into text-only and figure-dependent tracks.
+  physics_dataset:
+    status: registered_candidate_pending_download
+    source_urls:
+      - https://github.com/Zhengsh123/PHYSICS
+      - https://huggingface.co/datasets/desimfj/PHYSICS
+      - https://arxiv.org/abs/2506.00022
+    benchmark_type: large_scale_open_ended_physics_reasoning
+    size_signal: "16,568 total samples, including 14,568 train and 2,000 test"
+    extraction_priority: high
+    notes:
+      - Covers mechanics, electromagnetism, thermodynamics, optics, and modern physics.
+      - Use the test split for benchmark extraction; training split includes generated reasoning paths.
+  phybench:
+    status: registered_candidate_pending_data_field_inspection
+    source_urls:
+      - https://github.com/phybench-official/phybench
+      - https://huggingface.co/datasets/Eureka-Lab/PHYBench
+      - https://arxiv.org/abs/2504.16074
+    benchmark_type: symbolic_physics_reasoning_benchmark
+    size_signal: "500 original physics problems"
+    extraction_priority: high
+    notes:
+      - Provides Expression Edit Distance scoring for symbolic answers.
+      - Public release notes mention 100 fully detailed examples and 400 additional examples.
+  cmphysbench:
+    status: registered_candidate_high_priority_frontier
+    source_urls:
+      - https://github.com/CMPhysBench/CMPhysBench
+      - https://huggingface.co/datasets/weidawang/CMPhysBench
+      - https://arxiv.org/abs/2508.18124
+    benchmark_type: condensed_matter_physics_calculation_benchmark
+    size_signal: "520 graduate-level calculation problems"
+    extraction_priority: very_high
+    notes:
+      - Covers magnetism, superconductivity, strongly correlated systems, semiconductors, and theoretical foundations.
+      - Reproduce or wrap the SEED scorer before local model runs.
+  cmt_benchmark:
+    status: registered_candidate_high_priority_frontier
+    source_urls:
+      - https://huggingface.co/datasets/JVRoggeveen/cmt_benchmark
+      - https://github.com/JamesRoggeveen/cmt_benchmark_data
+      - https://arxiv.org/abs/2510.05228
+    benchmark_type: condensed_matter_theory_research_benchmark
+    size_signal: "50 original research-level problems"
+    extraction_priority: very_high
+    notes:
+      - Covers ED, statistical mechanics, QMC, Hartree-Fock, DMRG, PEPS, VMC, and other CMT methods.
+      - Check license and answer schema at data-file level before copying.
+  critpt:
+    status: registered_candidate_remote_grading
+    source_urls:
+      - https://github.com/CritPt-Benchmark/CritPt
+      - https://huggingface.co/datasets/CritPt-Benchmark/CritPt
+      - https://arxiv.org/abs/2509.26574
+    benchmark_type: frontier_physics_research_challenge_benchmark
+    size_signal: "71 challenges and 190 checkpoints"
+    extraction_priority: medium_after_local_baselines
+    notes:
+      - Broadly covers modern physics research areas.
+      - Official grading is server mediated, so local offline scoring may be incomplete.
+  openxrd:
+    status: registered_candidate_experimental_xrd
+    source_urls:
+      - https://github.com/niaz60/OpenXRD
+      - https://doi.org/10.1039/D5DD00519A
+    benchmark_type: xrd_question_answering_benchmark
+    extraction_priority: high_for_experimental_lane
+    notes:
+      - Public repo tracks a zipped evaluation dataset.
+      - Evaluation-only and noncommercial boundary; do not use for training or fine-tuning.
+  thermoqa:
+    status: registered_candidate_applied_thermo
+    source_urls:
+      - https://huggingface.co/datasets/olivenet/thermoqa
+    benchmark_type: engineering_thermodynamics_reasoning_benchmark
+    size_signal: "293 questions across 3 tiers"
+    extraction_priority: medium
+    notes:
+      - Covers real-fluid properties, component analysis, cycle analysis, and exergy.
+      - Verify code package and licenses before treating as canonical.
+  physunibench:
+    status: registered_candidate_multimodal_undergrad
+    source_urls:
+      - https://github.com/PrismaX-Team/PhysUniBenchmark
+    benchmark_type: undergraduate_multimodal_physics_reasoning_benchmark
+    extraction_priority: medium
+    notes:
+      - Repo describes diagram-paired QA and MCQ physics questions.
+      - Dataset size and schema need verification.
+  mmlu_physics:
+    status: registered_candidate_baseline_mcq
+    source_url: https://github.com/hendrycks/test
+    benchmark_type: general_llm_mcq_benchmark_physics_subset
+    extraction_priority: low_reference
+    notes:
+      - Use high_school_physics and college_physics as reference baselines.
+      - Not hard enough for frontier physics evaluation.
+  ceval_physics:
+    status: registered_candidate_chinese_mcq
+    source_urls:
+      - https://github.com/hkust-nlp/ceval
+      - https://huggingface.co/datasets/ceval/ceval-exam
+    benchmark_type: chinese_exam_mcq_physics_subset
+    size_signal: "C-Eval has 13,948 MCQ across 52 disciplines"
+    extraction_priority: medium_reference
+    notes:
+      - Includes high school physics and college physics; both are part of C-Eval Hard.
+      - Dataset license is CC BY-NC-SA 4.0.
+  agieval_gaokao_physics:
+    status: registered_candidate_exam_mcq
+    source_url: https://github.com/ruixiangcui/AGIEval
+    benchmark_type: public_exam_mcq_physics_subset
+    size_signal: "AGIEval v1.1 has 20 tasks"
+    extraction_priority: medium_reference
+    notes:
+      - Gaokao Physics is a public exam-style Chinese physics task.
+      - Follow original dataset licenses.
+  theoremqa_physics:
+    status: registered_candidate_theorem_qa
+    source_urls:
+      - https://github.com/TIGER-AI-Lab/TheoremQA
+      - https://huggingface.co/datasets/TIGER-Lab/TheoremQA
+      - https://arxiv.org/abs/2305.12524
+    benchmark_type: theorem_driven_stem_qa_physics_subset
+    size_signal: "800 QA pairs across 350+ theorems in Math, EE&CS, Physics, and Finance"
+    extraction_priority: medium_reference
+    notes:
+      - Need filter physics subset and inspect answer format.
+      - Useful for theorem selection and application, not just numeric calculation.
+  leanphysbench_physlib:
+    status: formal_smoke_runnable_heavy_physics_prebuild_required
+    local_benchmark: D:/Playground/agent-lab/benchmarks/existing-physlib-formal-lane-v0.1
+    source_urls:
+      - https://physlib.io/
+      - https://github.com/HEPLean/PhysLean
+      - https://github.com/leanprover-community/physlib
+      - https://openreview.net/forum?id=qRLOQ2U4Ea
+    local_repo_scan:
+      physlib_lean_files: 444
+      quantuminfo_lean_files: 84
+    formal_index_path: D:/Playground/agent-lab/benchmarks/existing-physics-benchmarks-catalog-v0.1/physlib-formal-module-index.json
+    shortlist_path: D:/Playground/agent-lab/benchmarks/existing-physics-benchmarks-catalog-v0.1/physlib-formal-shortlist-v0.1.yaml
+    seed_module_catalog: D:/Playground/agent-lab/benchmarks/existing-physlib-formal-lane-v0.1/modules/physlib-formal-seed-modules.yaml
+    declaration_index: D:/Playground/agent-lab/benchmarks/existing-physlib-formal-lane-v0.1/modules/physlib-formal-shortlist-decls.json
+    precheck_note: D:/Playground/agent-lab/benchmarks/existing-physlib-formal-lane-v0.1/PRECHECK-2026-06-02.md
+    repair_note: D:/Playground/agent-lab/benchmarks/existing-physlib-formal-lane-v0.1/OFFLINE-REPO-REPAIR-2026-06-02.md
+    included_tasks:
+      - physlib-meta-smoke-mini-3
+      - visviva-speedcircular-sq-proof
+      - eulerlagrange-zero-proof
+      - idealgas-adiabatic-product-proof
+    current_result:
+      task_id: physlib-meta-smoke-mini-3
+      passed: 3
+      total: 3
+      hard_score: 1.0
+      status: verified
+      run_summary: D:/Playground/agent-lab/benchmarks/existing-physlib-formal-lane-v0.1/runs/20260602-234928__kimi26_code_allowed__physlib_formal_smoke3/summary.md
+    notes:
+      - PhysLib is the supporting Lean4 library, not the benchmark itself.
+      - LeanPhysBench is the actual benchmark and is reported as 200 formal physics statements.
+      - A local task seed package now exists.
+      - A runnable formal-smoke task now exists and has a Kimi baseline score.
+      - Offline dependency repair for the temporary clone is now documented.
+      - Current blocking issue is prebuilding the required PhysLib modules under Lean 4.29.1 before theorem checking.
+  gpqa_physics:
+    status: registered_policy_sensitive
+    source_url: https://arxiv.org/abs/2311.12022
+    notes:
+      - Useful graduate/expert QA layer.
+      - Access and redistribution constraints should be checked before local materialization.

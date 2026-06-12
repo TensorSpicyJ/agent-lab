@@ -1,0 +1,8 @@
+benchmark_id: existing-tpbench-public-code-v0.1
+version: 0.1
+description: Local code-answer subset from TPBench public theoretical physics problems.
+task_ids:
+  - tpbench-public-mini-3
+expected_checks: 9
+source_family: TPBench
+answer_format: python_code

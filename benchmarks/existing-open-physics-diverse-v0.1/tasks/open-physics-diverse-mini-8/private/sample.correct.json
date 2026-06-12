@@ -1,0 +1,15 @@
+{
+  "thermoqa_T1_SL_008_h_kJ_kg": 372.78,
+  "thermoqa_T1_SL_008_s_kJ_kgK": 1.1922,
+  "thermoqa_T1_SL_008_v_m3_kg": 0.0010353,
+  "thermoqa_T1_SF_011_P_kPa": 445.56,
+  "thermoqa_T1_SF_011_h_kJ_kg": 618.17,
+  "thermoqa_T1_SF_011_s_kJ_kgK": 1.8104,
+  "thermoqa_T1_SF_011_v_m3_kg": 0.0010804,
+  "cmphysbench_id4_commutator_x_px": "i*hbar",
+  "cmphysbench_id42_forced_oscillator_ground_energy": "hbar*omega/2 - F^2/(2*m*omega^2)",
+  "cmt_hf_triangular_cdw_energy_per_unit_cell": "U1/2",
+  "cmt_hubbard_conserved_quantum_numbers": "a;b;d",
+  "cmt_dmrg_critical_bond_dimension_scaling": "d",
+  "cmt_qmc_average_sign_true_statements": "b;f;i"
+}

@@ -1,0 +1,520 @@
+{
+  "schema_version": "0.1",
+  "benchmark_id": "existing-cmt-hard-stress-v0.1",
+  "task_id": "cmt-hard-research-8",
+  "run_id": "hakimi_experimental_flags_ab_2026_06_05_clean_slice",
+  "created_at": "2026-06-05T21:05:00+08:00",
+  "score": {
+    "passed": 0,
+    "total": 4,
+    "hard_score": 0.0,
+    "unit": "item_mode_checks",
+    "note": "The verifier full-score files list all 8 task fields; this audit scores only the two probed fields across two modes."
+  },
+  "summary": {
+    "conclusion": "Hakimi 0.13.0 experimental flags change the runtime surface under the same DeepSeek model, but the two clean CMT probes do not show an accuracy win. Both modes failed both probed items; default ON had one JSON-emission failure and one partial answer, while flags OFF emitted JSON but produced wrong or source-contested answers.",
+    "dominant_failure_modes": [
+      "answer_accuracy",
+      "model_behavior",
+      "data_source",
+      "harness"
+    ],
+    "json_emission_rate": 0.75,
+    "answer_accuracy_rate": 0.0,
+    "notes": [
+      "default ON logged seven enabled experimental flags: physics-memory, research-ledger, research-action, domain-profile, workflow-recipe, research-harness, goal-command.",
+      "flags OFF logged flags=[] after setting the default-on experimental flag environment variables to 0.",
+      "Observed runtime surface changed from 25 tools to 20 tools and systemPromptChars dropped from the default-ON range to about 14689-14690 in flags-OFF runs.",
+      "Problem 1 is source/gold high-risk and should not be used as clean model capability evidence until manually adjudicated.",
+      "Earlier summary-writing hangs were attributed to PowerShell ConvertTo-Json pipeline behavior; the runner now uses ConvertTo-Json -InputObject."
+    ]
+  },
+  "evidence_files": [
+    "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-202807__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p1_runner_fix_smoke4\\run-metadata.json",
+    "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-202807__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p1_runner_fix_smoke4\\outputs\\cmt-hard-research-8.default_on.json",
+    "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-202807__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p1_runner_fix_smoke4\\outputs\\cmt-hard-research-8.all_default_on_flags_off.json",
+    "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-203143__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p7_runner_fix_smoke\\run-metadata.json",
+    "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-203143__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p7_runner_fix_smoke\\outputs\\cmt-hard-research-8.default_on.json",
+    "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-203143__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p7_runner_fix_smoke\\outputs\\cmt-hard-research-8.all_default_on_flags_off.json",
+    "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\tasks\\cmt-hard-research-8\\private\\gold.json",
+    "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\source-cmt_data.jsonl",
+    "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\run-hakimi-experimental-ab.ps1"
+  ],
+  "probes": [
+    {
+      "name": "experimental_flags_on_off_smoke",
+      "changed_variable": "KIMI_CODE_EXPERIMENTAL_* environment flags",
+      "result": "default ON logged seven enabled flags; all-default-on-flags-off logged flags=[].",
+      "interpretation": "The A/B runner is exercising different Hakimi runtime configurations, not merely repeating the same setup.",
+      "evidence_files": [
+        "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-202807__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p1_runner_fix_smoke4\\run-metadata.json",
+        "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-203143__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p7_runner_fix_smoke\\run-metadata.json"
+      ]
+    },
+    {
+      "name": "same_provider_model_smoke",
+      "changed_variable": "none; provider/model held fixed",
+      "result": "Both modes used Hakimi 0.13.0 with deepseek/deepseek-v4-pro from the local Hakimi config copied into isolated temp homes.",
+      "interpretation": "The comparison isolates the experimental flag surface better than the earlier original-Kimi plan, because the provider/model is held constant.",
+      "evidence_files": [
+        "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-202807__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p1_runner_fix_smoke4\\logs\\default_on.provider.stdout.txt",
+        "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-202807__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p1_runner_fix_smoke4\\logs\\all_default_on_flags_off.provider.stdout.txt"
+      ]
+    },
+    {
+      "name": "runner_summary_serialization_fix",
+      "changed_variable": "PowerShell JSON serialization call",
+      "result": "Earlier summary-writing hangs were resolved after changing the helper to ConvertTo-Json -InputObject.",
+      "interpretation": "The previous hang was a harness serialization issue, not model inability or API quota exhaustion.",
+      "evidence_files": [
+        "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\run-hakimi-experimental-ab.ps1",
+        "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-202807__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p1_runner_fix_smoke4\\run-metadata.json",
+        "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-203143__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p7_runner_fix_smoke\\run-metadata.json"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "item_id": "p1_default_on",
+      "field": "cmt_vmc_rnn_gradient_choices",
+      "source_index": 13,
+      "mode": "default_on",
+      "observed_failure": "Hakimi completed the item but the merged output JSON was empty; stdout contained a prose answer rather than a parseable JSON object.",
+      "primary_category": "model_behavior",
+      "secondary_categories": [
+        "answer_accuracy",
+        "data_source"
+      ],
+      "root_cause_hypothesis": "The model violated the benchmark output contract under default experimental flags. The prose answer appears to choose b, but because no JSON object was emitted this cannot be credited by the verifier. The underlying gold row is also source-risky.",
+      "confidence": "high",
+      "evidence": [
+        {
+          "kind": "file",
+          "path": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-202807__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p1_runner_fix_smoke4\\outputs\\cmt-hard-research-8.default_on.json",
+          "value": {}
+        },
+        {
+          "kind": "metric",
+          "value": {
+            "runtime_seconds": 80.043,
+            "stdout_bytes": 260,
+            "stderr_bytes": 5777,
+            "json_emitted": false
+          }
+        },
+        {
+          "kind": "score",
+          "path": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-202807__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p1_runner_fix_smoke4\\scores\\cmt-hard-research-8.default_on.full-score.json",
+          "value": {
+            "expected": [
+              "d",
+              "e"
+            ],
+            "actual_parsed": []
+          }
+        }
+      ],
+      "actual": "prose answer b; no parseable JSON",
+      "expected": [
+        "d",
+        "e"
+      ],
+      "passed": false,
+      "json_emitted": false,
+      "runtime_seconds": 80.043,
+      "stdout_bytes": 260,
+      "stderr_bytes": 5777,
+      "recommended_action": "Strengthen the final output contract and rerun after adjudicating source index 13.",
+      "retest_plan": "Rerun p1 default ON with the fixed runner and stricter final-JSON wording; separately review the source/gold row before scoring capability."
+    },
+    {
+      "item_id": "p1_flags_off",
+      "field": "cmt_vmc_rnn_gradient_choices",
+      "source_index": 13,
+      "mode": "all_default_on_flags_off",
+      "observed_failure": "Hakimi emitted parseable JSON with answer b, but the gold expects d;e.",
+      "primary_category": "data_source",
+      "secondary_categories": [
+        "answer_accuracy"
+      ],
+      "root_cause_hypothesis": "The item is not a clean capability failure because the prompt includes option b for the missing-baseline issue, a plausible standard criticism of the displayed VMC gradient estimator, while the source/gold row marks d;e.",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "kind": "file",
+          "path": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-202807__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p1_runner_fix_smoke4\\outputs\\cmt-hard-research-8.all_default_on_flags_off.json",
+          "value": {
+            "cmt_vmc_rnn_gradient_choices": "b"
+          }
+        },
+        {
+          "kind": "source",
+          "path": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\source-cmt_data.jsonl",
+          "value": {
+            "source_index": 13,
+            "solution": "$\\boxed{d;e}$",
+            "noted_prompt_option": "b. The gradient estimator is biased because it misses a baseline involving the average energy."
+          }
+        },
+        {
+          "kind": "metric",
+          "value": {
+            "runtime_seconds": 80.051,
+            "stdout_bytes": 327,
+            "stderr_bytes": 9685,
+            "json_emitted": true
+          }
+        }
+      ],
+      "actual": [
+        "b"
+      ],
+      "expected": [
+        "d",
+        "e"
+      ],
+      "passed": false,
+      "json_emitted": true,
+      "runtime_seconds": 80.051,
+      "stdout_bytes": 327,
+      "stderr_bytes": 9685,
+      "recommended_action": "Quarantine or manually adjudicate source index 13 before using this item in an A/B capability score.",
+      "retest_plan": "After adjudication, rerun p1 in both modes; if the gold changes or the item is dropped, update the benchmark manifest and attribution."
+    },
+    {
+      "item_id": "p7_default_on",
+      "field": "cmt_long_range_dqmc_sign_free",
+      "source_index": 27,
+      "mode": "default_on",
+      "observed_failure": "Hakimi emitted parseable JSON with answer g, missing expected choice d.",
+      "primary_category": "answer_accuracy",
+      "secondary_categories": [],
+      "root_cause_hypothesis": "The model found one sign-free parameter set but failed to include the second gold-valid set. The much longer runtime and large stderr indicate extended deliberation, not a reliable correctness gain.",
+      "confidence": "high",
+      "evidence": [
+        {
+          "kind": "file",
+          "path": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-203143__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p7_runner_fix_smoke\\outputs\\cmt-hard-research-8.default_on.json",
+          "value": {
+            "cmt_long_range_dqmc_sign_free": "g"
+          }
+        },
+        {
+          "kind": "score",
+          "path": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-203143__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p7_runner_fix_smoke\\scores\\cmt-hard-research-8.default_on.full-score.json",
+          "value": {
+            "expected": [
+              "d",
+              "g"
+            ],
+            "actual_parsed": [
+              "g"
+            ]
+          }
+        },
+        {
+          "kind": "metric",
+          "value": {
+            "runtime_seconds": 620.406,
+            "stdout_bytes": 144,
+            "stderr_bytes": 85231,
+            "json_emitted": true
+          }
+        }
+      ],
+      "actual": [
+        "g"
+      ],
+      "expected": [
+        "d",
+        "g"
+      ],
+      "passed": false,
+      "json_emitted": true,
+      "runtime_seconds": 620.406,
+      "stdout_bytes": 144,
+      "stderr_bytes": 85231,
+      "recommended_action": "Use this as a focused DQMC sign-free reasoning failure and inspect whether the model mishandles h<0 at half filling.",
+      "retest_plan": "Rerun p7 default ON with a probe prompt that asks for the sign-free criterion for each option before final JSON."
+    },
+    {
+      "item_id": "p7_flags_off",
+      "field": "cmt_long_range_dqmc_sign_free",
+      "source_index": 27,
+      "mode": "all_default_on_flags_off",
+      "observed_failure": "Hakimi emitted parseable JSON with answer a;b;f;g, over-selecting against expected d;g.",
+      "primary_category": "answer_accuracy",
+      "secondary_categories": [],
+      "root_cause_hypothesis": "The model over-generalized a sign-free condition based on h=0 and real hopping/filling, selecting too many parameter sets.",
+      "confidence": "high",
+      "evidence": [
+        {
+          "kind": "file",
+          "path": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-203143__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p7_runner_fix_smoke\\outputs\\cmt-hard-research-8.all_default_on_flags_off.json",
+          "value": {
+            "cmt_long_range_dqmc_sign_free": "a;b;f;g"
+          }
+        },
+        {
+          "kind": "score",
+          "path": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-203143__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p7_runner_fix_smoke\\scores\\cmt-hard-research-8.all_default_on_flags_off.full-score.json",
+          "value": {
+            "expected": [
+              "d",
+              "g"
+            ],
+            "actual_parsed": [
+              "a",
+              "b",
+              "f",
+              "g"
+            ]
+          }
+        },
+        {
+          "kind": "metric",
+          "value": {
+            "runtime_seconds": 240.144,
+            "stdout_bytes": 1604,
+            "stderr_bytes": 36908,
+            "json_emitted": true
+          }
+        }
+      ],
+      "actual": [
+        "a",
+        "b",
+        "f",
+        "g"
+      ],
+      "expected": [
+        "d",
+        "g"
+      ],
+      "passed": false,
+      "json_emitted": true,
+      "runtime_seconds": 240.144,
+      "stdout_bytes": 1604,
+      "stderr_bytes": 36908,
+      "recommended_action": "Use this as a focused over-selection failure in DQMC sign-problem reasoning.",
+      "retest_plan": "Rerun p7 flags OFF with per-option justification and compare whether the same over-selection recurs."
+    },
+    {
+      "item_id": "runner_summary_serialization",
+      "field": "run-hakimi-experimental-ab.ps1",
+      "observed_failure": "Earlier A/B attempts reached summary-writing and then hung before producing final run-metadata.json.",
+      "primary_category": "harness",
+      "secondary_categories": [
+        "environment"
+      ],
+      "root_cause_hypothesis": "PowerShell pipeline expansion into ConvertTo-Json interacted badly with string arrays from experimental flag log lines. Passing the object with -InputObject avoids that expansion and allowed clean completion.",
+      "confidence": "high",
+      "evidence": [
+        {
+          "kind": "file",
+          "path": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\run-hakimi-experimental-ab.ps1",
+          "value": "Write-JsonFile uses ConvertTo-Json -InputObject $Value -Depth $Depth."
+        },
+        {
+          "kind": "file",
+          "path": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-202807__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p1_runner_fix_smoke4\\run-metadata.json",
+          "value": "Complete metadata exists after the fix."
+        }
+      ],
+      "actual": "summary-writing hang before fix",
+      "expected": "complete run-metadata.json",
+      "passed": true,
+      "json_emitted": true,
+      "recommended_action": "Keep the -InputObject fix and preserve run-metadata.partial.json/live-stage.json for future debugging.",
+      "retest_plan": "Run a multi-item A/B slice and confirm both run-metadata.partial.json and final run-metadata.json are written."
+    },
+    {
+      "item_id": "runner_json_extractor_greedy_brace",
+      "field": "run-hakimi-experimental-ab.ps1",
+      "observed_failure": "During the first full-8 expansion attempt, default ON problem 2 contained a final fenced JSON object, but the runner marked captured_json=false.",
+      "primary_category": "harness",
+      "secondary_categories": [
+        "verifier"
+      ],
+      "root_cause_hypothesis": "The extractor used a greedy brace regex and consumed physics text such as O(e^{-N}) before the actual JSON object. It therefore tried to parse an invalid span instead of the final fenced JSON.",
+      "confidence": "high",
+      "evidence": [
+        {
+          "kind": "file",
+          "path": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-205624__hakimi013_deepseek_flags_ab__cmt_hard_research_8__full8_flags_ab_20260605b\\logs\\default_on.item-02-cmt_lll_quarter_spectrum_scaling.stdout.txt",
+          "value": "stdout contains fenced JSON for cmt_lll_quarter_spectrum_scaling"
+        },
+        {
+          "kind": "file",
+          "path": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\run-hakimi-experimental-ab.ps1",
+          "value": "Extractor now prefers fenced JSON and scans balanced parseable JSON objects."
+        }
+      ],
+      "actual": "captured_json=false before extractor fix",
+      "expected": "captured_json=true when stdout contains a valid final JSON object",
+      "passed": true,
+      "json_emitted": true,
+      "recommended_action": "Keep the balanced JSON extractor and include stdout fixtures with braces in prose.",
+      "retest_plan": "Rerun p2 or any item containing O(e^{-N}) style text and require captured_json=true."
+    },
+    {
+      "item_id": "expansion_default_on_p5_capability_supported",
+      "field": "cmt_dimer_chain_density_vector",
+      "source_index": 23,
+      "mode": "default_on",
+      "observed_failure": "No failure in the expansion attempt; this item is a capability-supported success candidate.",
+      "primary_category": "answer_accuracy",
+      "secondary_categories": [],
+      "root_cause_hypothesis": "The answer matched the gold numeric vector and the logs contain a substantial numerical/physics derivation, so this is more likely genuine capability than a lucky choice hit.",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "kind": "file",
+          "path": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-213933__hakimi013_deepseek_flags_ab__cmt_hard_research_8__full8_flags_ab_maxruntime_20260605\\logs\\default_on.item-05-cmt_dimer_chain_density_vector.stdout.txt",
+          "value": {
+            "cmt_dimer_chain_density_vector": [
+              0.2,
+              0.003,
+              0.017,
+              0.027,
+              0.038
+            ]
+          }
+        },
+        {
+          "kind": "metric",
+          "value": {
+            "runtime_seconds": 220.116,
+            "captured_json": true
+          }
+        }
+      ],
+      "actual": [
+        0.2,
+        0.003,
+        0.017,
+        0.027,
+        0.038
+      ],
+      "expected": [
+        0.2,
+        0.003,
+        0.017,
+        0.027,
+        0.038
+      ],
+      "passed": true,
+      "json_emitted": true,
+      "runtime_seconds": 220.116,
+      "recommended_action": "Keep as a capability-supported pass candidate, but rerun once with a paraphrased prompt before using it as strong evidence.",
+      "retest_plan": "Rerun p5 in both modes after the process launcher is stabilized and compare numeric tolerance plus derivation quality."
+    },
+    {
+      "item_id": "expansion_default_on_p6_max_runtime_timeout",
+      "field": "cmt_two_band_dqmc_sign_free",
+      "source_index": 24,
+      "mode": "default_on",
+      "observed_failure": "The model produced long DQMC sign-problem reasoning but did not emit parseable final JSON before the runtime cap.",
+      "primary_category": "model_behavior",
+      "secondary_categories": [
+        "harness"
+      ],
+      "root_cause_hypothesis": "The item stresses answer-finalization and bounded reasoning. The runner correctly recorded max_runtime_timeout in the p6-p8 slice, but the item still needs a stricter finalization policy or shorter reasoning budget.",
+      "confidence": "high",
+      "evidence": [
+        {
+          "kind": "file",
+          "path": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-220247__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p6to8_flags_ab_treekill_20260605\\run-metadata.partial.json",
+          "value": {
+            "status": "max_runtime_timeout",
+            "runtime_seconds": 362.551,
+            "captured_json": false
+          }
+        },
+        {
+          "kind": "file",
+          "path": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-220247__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p6to8_flags_ab_treekill_20260605\\logs\\default_on.item-06-cmt_two_band_dqmc_sign_free.stderr.txt",
+          "value": "Long reasoning continued until the runtime cap."
+        }
+      ],
+      "actual": "no parseable JSON before max runtime",
+      "expected": [
+        "c",
+        "d",
+        "e"
+      ],
+      "passed": false,
+      "json_emitted": false,
+      "runtime_seconds": 362.551,
+      "recommended_action": "Add a stricter final-answer forcing policy or lower per-item reasoning budget before rerunning this item.",
+      "retest_plan": "Rerun p6 with per-option scratch reasoning constrained and require a final JSON object before the cap."
+    },
+    {
+      "item_id": "runner_process_boundary_partial_blocker",
+      "field": "run-hakimi-experimental-ab.ps1",
+      "observed_failure": "Larger A/B attempts did not produce a complete full-8 default ON/OFF run even after extractor and runtime-cap fixes.",
+      "primary_category": "harness",
+      "secondary_categories": [
+        "environment"
+      ],
+      "root_cause_hypothesis": "On Windows, invoking hakimi.CMD through Start-Process adds cmd.exe and node.exe process-boundary behavior. The runner can record partial progress, but complete full-batch orchestration is still not reliable enough to count as the first full A/B benchmark result.",
+      "confidence": "medium",
+      "evidence": [
+        {
+          "kind": "file",
+          "path": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-213933__hakimi013_deepseek_flags_ab__cmt_hard_research_8__full8_flags_ab_maxruntime_20260605\\run-metadata.partial.json",
+          "value": "default ON p1-p7 partial metadata exists; no final run-metadata.json"
+        },
+        {
+          "kind": "file",
+          "path": "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-220247__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p6to8_flags_ab_treekill_20260605\\run-metadata.partial.json",
+          "value": "p6-p8 partial metadata exists; process was manually stopped before a complete two-mode result"
+        }
+      ],
+      "actual": "partial expansion evidence only",
+      "expected": "complete default_on and all_default_on_flags_off outputs plus final run-metadata.json",
+      "passed": false,
+      "json_emitted": false,
+      "recommended_action": "Replace the PowerShell Start-Process item launcher with a direct Node/Python watchdog or invoke Hakimi's node entrypoint directly.",
+      "retest_plan": "Run p6-p8 in both modes and verify no orphan Hakimi node process remains after timeout or completion."
+    }
+  ],
+  "recommended_iterations": [
+    {
+      "target": "harness",
+      "action": "Keep the fixed runner and require complete run-metadata.json for every A/B slice.",
+      "why": "A/B comparison is only meaningful if failures can be separated from runner serialization or invocation errors.",
+      "retest": "Run another multi-item slice and inspect live-stage.json, run-metadata.partial.json, and run-metadata.json."
+    },
+    {
+      "target": "model_behavior",
+      "action": "Make the final answer contract stricter so stdout must contain exactly one final JSON object.",
+      "why": "Default ON p1 completed but produced no parseable JSON, which blocks scoring independently of physics ability.",
+      "retest": "Rerun p1 default ON and require captured_json=true."
+    },
+    {
+      "target": "data_source",
+      "action": "Manually adjudicate source index 13 or quarantine it from clean capability scoring.",
+      "why": "The gold d;e conflicts with a plausible missing-baseline interpretation represented by option b.",
+      "retest": "After adjudication, rerun p1 or drop it from the A/B ability slice."
+    },
+    {
+      "target": "answer_accuracy",
+      "action": "Create a focused DQMC sign-free probe for source index 27.",
+      "why": "Both modes emitted JSON and failed p7, making it a cleaner model-reasoning probe than p1.",
+      "retest": "Rerun p7 in both modes with per-option justification and compare exact sets."
+    },
+    {
+      "target": "answer_accuracy",
+      "action": "Expand to all eight cmt-hard-research-8 fields only after replacing the item launcher/watchdog.",
+      "why": "The current n=2 slice is enough to verify the method, but full-batch orchestration is still harness-blocked on Windows process-boundary behavior.",
+      "retest": "First run p6-p8 in both modes with the new watchdog and verify final run-metadata.json plus no orphan Hakimi node process; then run all eight fields."
+    },
+    {
+      "target": "harness",
+      "action": "Replace PowerShell Start-Process item execution with a direct Node/Python watchdog or invoke Hakimi's node entrypoint directly.",
+      "why": "The runner can now extract JSON and record max_runtime_timeout, but complete full-batch A/B is not reliable enough while hakimi.CMD spawns cmd.exe and node.exe under redirected stdio.",
+      "retest": "Run p6-p8 in both modes and confirm timeout/completion writes item_runs, advances modes, and leaves no node.exe running."
+    }
+  ]
+}

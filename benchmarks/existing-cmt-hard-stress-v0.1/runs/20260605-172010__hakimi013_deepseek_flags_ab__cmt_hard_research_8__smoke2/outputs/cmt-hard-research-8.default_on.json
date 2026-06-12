@@ -1,0 +1,4 @@
+﻿{
+    "cmt_vmc_rnn_gradient_choices":  "b",
+    "cmt_long_range_dqmc_sign_free":  "a;b;f;g"
+}

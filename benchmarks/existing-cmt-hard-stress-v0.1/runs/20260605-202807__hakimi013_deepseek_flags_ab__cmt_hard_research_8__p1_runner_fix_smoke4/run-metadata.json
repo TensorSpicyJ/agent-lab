@@ -1,0 +1,50 @@
+﻿{
+    "benchmark_id":  "existing-cmt-hard-stress-v0.1",
+    "task_id":  "cmt-hard-research-8",
+    "run_id":  "20260605-202807__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p1_runner_fix_smoke4",
+    "agent":  "hakimi013_deepseek_flags_ab",
+    "model_alias":  "deepseek/deepseek-v4-pro",
+    "hakimi_command":  "D:\\DevCache\\TaiS\\pnpm\\hakimi.CMD",
+    "command":  "hakimi -m deepseek/deepseek-v4-pro -p \u003csingle problem prompt\u003e --output-format text",
+    "started_at":  "2026-06-05T20:28:07.1876007+08:00",
+    "finished_at":  "2026-06-05T20:30:56.1802696+08:00",
+    "runtime_seconds":  168.993,
+    "idle_timeout_minutes":  8,
+    "poll_seconds":  20,
+    "problem_numbers":  [
+                            1
+                        ],
+    "source_config":  "~/.hakimi/config.toml copied into isolated temp homes; API keys are not stored in this run directory.",
+    "temp_home_root":  "C:\\Users\\TaiS\\AppData\\Local\\Temp\\agent-lab-20260605-202807__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p1_runner_fix_smoke4",
+    "local_leakage_boundary":  "Each item temp cwd contains only prompt.md. Gold, verifier, source rows, and prior run outputs are not mounted in cwd.",
+    "modes":  [
+                  {
+                      "mode":  "default_on",
+                      "passed":  0,
+                      "total":  1,
+                      "hard_score":  0,
+                      "output":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-202807__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p1_runner_fix_smoke4\\outputs\\cmt-hard-research-8.default_on.json",
+                      "full_score":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-202807__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p1_runner_fix_smoke4\\scores\\cmt-hard-research-8.default_on.full-score.json",
+                      "summary":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-202807__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p1_runner_fix_smoke4\\scores\\cmt-hard-research-8.default_on.summary.json",
+                      "item_run_count":  1,
+                      "experimental_flag_log_lines":  [
+                                                          "2026-06-05T12:28:08.409Z INFO  experimental flags enabled  flags=\"[\\\"physics-memory\\\",\\\"research-ledger\\\",\\\"research-action\\\",\\\"domain-profile\\\",\\\"workflow-recipe\\\",\\\"research-harness\\\",\\\"goal-command\\\"]\"",
+                                                          "2026-06-05T12:28:12.347Z INFO  experimental flags enabled  flags=\"[\\\"physics-memory\\\",\\\"research-ledger\\\",\\\"research-action\\\",\\\"domain-profile\\\",\\\"workflow-recipe\\\",\\\"research-harness\\\",\\\"goal-command\\\"]\""
+                                                      ]
+                  },
+                  {
+                      "mode":  "all_default_on_flags_off",
+                      "passed":  0,
+                      "total":  1,
+                      "hard_score":  0,
+                      "output":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-202807__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p1_runner_fix_smoke4\\outputs\\cmt-hard-research-8.all_default_on_flags_off.json",
+                      "full_score":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-202807__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p1_runner_fix_smoke4\\scores\\cmt-hard-research-8.all_default_on_flags_off.full-score.json",
+                      "summary":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260605-202807__hakimi013_deepseek_flags_ab__cmt_hard_research_8__p1_runner_fix_smoke4\\scores\\cmt-hard-research-8.all_default_on_flags_off.summary.json",
+                      "item_run_count":  1,
+                      "experimental_flag_log_lines":  [
+                                                          "2026-06-05T12:29:32.688Z INFO  experimental flags enabled  flags=[]",
+                                                          "2026-06-05T12:29:37.008Z INFO  experimental flags enabled  flags=[]"
+                                                      ]
+                  }
+              ]
+}

@@ -1,0 +1,104 @@
+﻿{
+    "benchmark_id":  "existing-cmt-hard-stress-v0.1",
+    "task_id":  "cmt-hard-research-8",
+    "run_id":  "20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8",
+    "agent":  "kimi26_code_allowed_itemwise",
+    "model_alias":  "kimi-code/kimi-for-coding",
+    "model_display_name_note":  "Local config displays kimi-code/kimi-for-coding as Kimi-k2.6.",
+    "command":  "itemwise kimi -m kimi-code/kimi-for-coding -p \u003csingle problem prompt\u003e --output-format text",
+    "started_at":  "2026-06-03T20:08:08.3773952+08:00",
+    "finished_at":  "2026-06-03T20:08:12.2713206+08:00",
+    "runtime_seconds":  3.894,
+    "per_item_timeout_seconds":  90,
+    "scorer_exit_code":  1,
+    "kimi_executable":  "C:\\Users\\TaiS\\.kimi-code\\bin\\kimi.exe",
+    "kimi_version":  "0.8.0",
+    "python_executable":  "C:\\Users\\TaiS\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "output":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\outputs\\cmt-hard-research-8.itemwise.json",
+    "score":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\scores\\cmt-hard-research-8.itemwise.score.json",
+    "item_runs":  [
+                      {
+                          "field":  "cmt_vmc_rnn_gradient_choices",
+                          "problem_number":  1,
+                          "status":  "completed",
+                          "exit_code":  null,
+                          "runtime_seconds":  0.426,
+                          "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-01-cmt_vmc_rnn_gradient_choices.prompt.md",
+                          "stdout":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-01-cmt_vmc_rnn_gradient_choices.stdout.txt",
+                          "stderr":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-01-cmt_vmc_rnn_gradient_choices.stderr.txt"
+                      },
+                      {
+                          "field":  "cmt_lll_quarter_spectrum_scaling",
+                          "problem_number":  2,
+                          "status":  "completed",
+                          "exit_code":  null,
+                          "runtime_seconds":  0.459,
+                          "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-02-cmt_lll_quarter_spectrum_scaling.prompt.md",
+                          "stdout":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-02-cmt_lll_quarter_spectrum_scaling.stdout.txt",
+                          "stderr":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-02-cmt_lll_quarter_spectrum_scaling.stderr.txt"
+                      },
+                      {
+                          "field":  "cmt_four_site_hubbard_adiabatic",
+                          "problem_number":  3,
+                          "status":  "completed",
+                          "exit_code":  null,
+                          "runtime_seconds":  0.429,
+                          "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-03-cmt_four_site_hubbard_adiabatic.prompt.md",
+                          "stdout":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-03-cmt_four_site_hubbard_adiabatic.stdout.txt",
+                          "stderr":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-03-cmt_four_site_hubbard_adiabatic.stderr.txt"
+                      },
+                      {
+                          "field":  "cmt_particle_hole_transformed_terms",
+                          "problem_number":  4,
+                          "status":  "completed",
+                          "exit_code":  null,
+                          "runtime_seconds":  0.412,
+                          "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-04-cmt_particle_hole_transformed_terms.prompt.md",
+                          "stdout":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-04-cmt_particle_hole_transformed_terms.stdout.txt",
+                          "stderr":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-04-cmt_particle_hole_transformed_terms.stderr.txt"
+                      },
+                      {
+                          "field":  "cmt_dimer_chain_density_vector",
+                          "problem_number":  5,
+                          "status":  "completed",
+                          "exit_code":  null,
+                          "runtime_seconds":  0.428,
+                          "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-05-cmt_dimer_chain_density_vector.prompt.md",
+                          "stdout":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-05-cmt_dimer_chain_density_vector.stdout.txt",
+                          "stderr":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-05-cmt_dimer_chain_density_vector.stderr.txt"
+                      },
+                      {
+                          "field":  "cmt_two_band_dqmc_sign_free",
+                          "problem_number":  6,
+                          "status":  "completed",
+                          "exit_code":  null,
+                          "runtime_seconds":  0.447,
+                          "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-06-cmt_two_band_dqmc_sign_free.prompt.md",
+                          "stdout":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-06-cmt_two_band_dqmc_sign_free.stdout.txt",
+                          "stderr":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-06-cmt_two_band_dqmc_sign_free.stderr.txt"
+                      },
+                      {
+                          "field":  "cmt_long_range_dqmc_sign_free",
+                          "problem_number":  7,
+                          "status":  "completed",
+                          "exit_code":  null,
+                          "runtime_seconds":  0.473,
+                          "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-07-cmt_long_range_dqmc_sign_free.prompt.md",
+                          "stdout":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-07-cmt_long_range_dqmc_sign_free.stdout.txt",
+                          "stderr":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-07-cmt_long_range_dqmc_sign_free.stderr.txt"
+                      },
+                      {
+                          "field":  "cmt_triangular_boson_transport",
+                          "problem_number":  8,
+                          "status":  "completed",
+                          "exit_code":  null,
+                          "runtime_seconds":  0.574,
+                          "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-08-cmt_triangular_boson_transport.prompt.md",
+                          "stdout":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-08-cmt_triangular_boson_transport.stdout.txt",
+                          "stderr":  "D:\\Playground\\agent-lab\\benchmarks\\existing-cmt-hard-stress-v0.1\\runs\\20260603-200808__kimi26_code_allowed_itemwise__cmt_hard_research_8\\logs\\item-08-cmt_triangular_boson_transport.stderr.txt"
+                      }
+                  ],
+    "network_allowed":  false,
+    "network_enforced":  false,
+    "local_leakage_boundary":  "Each item temp cwd contains only prompt.md. Gold and verifier are not mounted in cwd."
+}

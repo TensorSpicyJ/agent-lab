@@ -1,0 +1,571 @@
+version: 0.1
+updated_at: 2026-06-03
+sources:
+  scibench:
+    source_dataset: xw27/scibench
+    local_status: included
+    benchmark_role: breadth_numeric_baseline
+    benchmark_type: open_ended_science_problem_benchmark
+    answer_formats:
+      - numeric_scalar
+    grading_modes:
+      - result_only_numeric
+    dominant_question_styles:
+      - textbook_word_problem
+      - free_response_numeric
+    dominant_domains:
+      - classical_mechanics
+      - modern_physics
+      - atomic_physics
+      - quantum_mechanics
+      - statistical_mechanics
+    capability_emphasis:
+      - formula_selection
+      - multi_step_calculation
+      - unit_handling
+      - textbook_modeling
+    frontier_relevance: low
+    multimodal_dependency: none
+    provenance_boundary: original_public_dataset_pages_used_for_local_subset
+  tpbench_public:
+    source_dataset: ZhiqiGao/TPBench
+    local_status: included
+    benchmark_role: frontier_theory_public_demo
+    benchmark_type: theoretical_physics_problem_benchmark
+    answer_formats:
+      - executable_python_function
+      - scalar_in_function_form
+    grading_modes:
+      - executable_hidden_checks
+    dominant_question_styles:
+      - analytic_theory_problem
+      - relationship_derivation
+      - functional_answer
+    dominant_domains:
+      - statistical_mechanics
+      - classical_mechanics
+      - quantum_mechanics
+    capability_emphasis:
+      - analytic_relationship_derivation
+      - symbolic_to_executable_translation
+      - theoretical_model_identification
+    frontier_relevance: medium
+    multimodal_dependency: none
+    provenance_boundary: public_tpbench_problem_subset_only
+  open_physics_diverse:
+    source_dataset: ThermoQA plus CMPhysBench plus CMT-Benchmark
+    local_status: included
+    benchmark_role: diverse_open_physics_gap_filler
+    benchmark_type: mixed_public_physics_benchmark_sample
+    answer_formats:
+      - numeric_scalar
+      - symbolic_expression
+      - choice_set
+    grading_modes:
+      - result_only_numeric_with_tolerance
+      - symbolic_normalization
+      - exact_choice_set_match
+    dominant_question_styles:
+      - engineering_property_lookup
+      - graduate_symbolic_calculation
+      - condensed_matter_theory_method_question
+    dominant_domains:
+      - engineering_thermodynamics
+      - quantum_mechanics_theoretical_foundations
+      - condensed_matter_theory
+      - statistical_mechanics_methods
+    capability_emphasis:
+      - numerical_property_reasoning
+      - symbolic_physics_answer_precision
+      - research_level_method_discrimination
+      - cross_source_robustness
+    frontier_relevance: medium_to_high
+    multimodal_dependency: none_for_current_local_subset
+    provenance_boundary: small_public_open_data_subset_materialized_with_source_ids
+  cmt_hard_stress:
+    source_dataset: JVRoggeveen/cmt_benchmark
+    local_status: included
+    benchmark_role: hard_failure_rich_cmt_stress_lane
+    benchmark_type: expert_research_level_condensed_matter_theory_stress_benchmark
+    answer_formats:
+      - choice_set
+      - numeric_vector
+      - symbolic_expression
+    grading_modes:
+      - exact_choice_set_match
+      - numeric_vector_tolerance
+      - symbolic_normalization
+      - no_parseable_json_output_as_failure
+    dominant_question_styles:
+      - research_level_method_question
+      - exact_diagonalization_interpretation
+      - determinant_quantum_monte_carlo_sign_problem
+      - correlated_model_analytic_transformation
+    dominant_domains:
+      - variational_monte_carlo
+      - fractional_quantum_hall_exact_diagonalization
+      - hubbard_model
+      - determinant_quantum_monte_carlo
+      - strongly_correlated_bosons
+      - condensed_matter_theory
+    capability_emphasis:
+      - research_level_cmt_reasoning
+      - long_reasoning_termination
+      - method_specific_domain_knowledge
+      - robust_final_answer_emission
+    frontier_relevance: high
+    multimodal_dependency: none_for_current_local_subset
+    provenance_boundary: full_public_50_row_cmt_benchmark_materialized_with_local_answer_key
+  olympiadbench_physics:
+    source_dataset: Hothan/OlympiadBench
+    local_status: registered_pending_download
+    benchmark_role: competition_reasoning_layer
+    benchmark_type: olympiad_style_physics_benchmark
+    answer_formats:
+      - final_numeric_answer
+      - expression_or_choice_depending_on_item
+    grading_modes:
+      - pending_extraction
+    dominant_question_styles:
+      - multi_step_competition_problem
+      - olympiad_modeling
+    dominant_domains:
+      - classical_mechanics
+      - electromagnetism
+      - thermodynamics
+      - optics
+      - modern_physics
+    capability_emphasis:
+      - multi_step_modeling
+      - non_template_reasoning
+      - contest_style_problem_solving
+    frontier_relevance: low_to_medium
+    multimodal_dependency: mixed_text_and_possible_figure_entries
+    provenance_boundary: not_locally_materialized_yet
+  leanphysbench_physlib:
+    source_dataset: LeanPhysBench plus PhysLib
+    local_status: formal_smoke_runnable_heavy_physics_prebuild_required
+    benchmark_role: formal_physics_verification_lane
+    benchmark_type: formal_theorem_proving_physics_benchmark
+    answer_formats:
+      - lean4_proof
+      - lean4_statement_completion
+      - json_object_of_lean_proof_bodies
+    grading_modes:
+      - machine_checked_formal_verification
+    dominant_question_styles:
+      - formal_smoke_proof_completion
+      - formalized_physics_statement
+      - proof_completion
+      - theorem_verification
+    dominant_domains:
+      - formal_physics_infrastructure
+      - electromagnetism
+      - thermodynamics
+      - modern_physics
+      - mechanics
+      - waves
+      - optics
+      - relativity
+      - quantum_mechanics
+    capability_emphasis:
+      - formal_reasoning
+      - proof_construction
+      - verifier_aligned_physics_representation
+      - lean_harness_validation
+    frontier_relevance: medium_to_high
+    multimodal_dependency: none
+    provenance_boundary: runnable_formal_smoke_materialized_heavy_physics_tasks_prebuild_pending
+  gpqa_physics:
+    source_dataset: GPQA
+    local_status: registered_policy_sensitive
+    benchmark_role: expert_conceptual_qa_layer
+    benchmark_type: graduate_level_expert_qa_benchmark
+    answer_formats:
+      - multiple_choice
+    grading_modes:
+      - exact_option_match
+    dominant_question_styles:
+      - expert_conceptual_question
+      - google_proof_qa
+    dominant_domains:
+      - mixed_graduate_physics
+    capability_emphasis:
+      - expert_domain_knowledge
+      - conceptual_discrimination
+      - hard_qa
+    frontier_relevance: medium
+    multimodal_dependency: none
+    provenance_boundary: access_and_redistribution_constraints_not_yet_resolved
+  ugphysics:
+    source_dataset: UGPhysics/ugphysics
+    local_status: registered_candidate_pending_download
+    benchmark_role: undergraduate_scaling_layer
+    benchmark_type: undergraduate_physics_problem_solving_benchmark
+    answer_formats:
+      - boxed_final_answer
+      - mixed_symbolic_numeric
+    grading_modes:
+      - source_eval_script_pending_local_wrap
+      - final_answer_extraction_pending
+    dominant_question_styles:
+      - undergraduate_word_problem
+      - open_ended_calculation
+    dominant_domains:
+      - undergraduate_physics_mixed
+    capability_emphasis:
+      - domain_topic_coverage
+      - multi_step_calculation
+      - undergraduate_formula_reasoning
+    frontier_relevance: medium
+    multimodal_dependency: pending_dataset_inspection
+    provenance_boundary: public_repo_and_huggingface_dataset_not_locally_materialized_yet
+  hipho:
+    source_dataset: SciYu/HiPhO
+    local_status: registered_candidate_pending_multimodal_filter
+    benchmark_role: current_olympiad_reasoning_layer
+    benchmark_type: physics_olympiad_benchmark
+    answer_formats:
+      - expression
+      - numerical_value
+      - multiple_choice
+      - equation
+      - open_ended
+      - inequality
+    grading_modes:
+      - official_marking_scheme
+      - answer_level_scoring
+      - step_level_scoring
+    dominant_question_styles:
+      - olympiad_exam_problem
+      - multi_step_physical_modeling
+      - figure_dependent_reasoning
+    dominant_domains:
+      - mechanics
+      - electromagnetism
+      - thermodynamics
+      - optics
+      - modern_physics
+    capability_emphasis:
+      - competition_reasoning
+      - stepwise_solution_quality
+      - multimodal_physics_reasoning
+    frontier_relevance: medium
+    multimodal_dependency: mixed_text_only_and_figure_dependent
+    provenance_boundary: public_repo_and_huggingface_dataset_not_locally_materialized_yet
+  physics_dataset:
+    source_dataset: desimfj/PHYSICS
+    local_status: registered_candidate_pending_download
+    benchmark_role: large_general_physics_scaling_layer
+    benchmark_type: open_ended_physics_reasoning_dataset
+    answer_formats:
+      - interval
+      - expression
+      - equation
+      - true_false
+      - multiple_choice
+      - numerical
+      - open_ended
+    grading_modes:
+      - rule_plus_model_assessment
+      - final_answer_extraction_pending_local_wrap
+    dominant_question_styles:
+      - textbook_problem
+      - competition_problem
+      - undergraduate_problem
+    dominant_domains:
+      - mechanics
+      - electromagnetism
+      - thermodynamics
+      - optics
+      - modern_physics
+    capability_emphasis:
+      - difficulty_stratified_reasoning
+      - answer_type_robustness
+      - broad_domain_scaling
+    frontier_relevance: medium
+    multimodal_dependency: none_reported_in_readme_snapshot
+    provenance_boundary: use_test_split_only_for_benchmarking
+  phybench:
+    source_dataset: Eureka-Lab/PHYBench
+    local_status: registered_candidate_pending_data_field_inspection
+    benchmark_role: symbolic_expression_reasoning_layer
+    benchmark_type: physical_perception_and_reasoning_benchmark
+    answer_formats:
+      - symbolic_expression
+    grading_modes:
+      - expression_edit_distance
+      - exact_or_equivalent_expression_match
+    dominant_question_styles:
+      - original_symbolic_physics_problem
+      - text_only_physical_scenario
+    dominant_domains:
+      - mechanics
+      - electromagnetism
+      - thermodynamics
+      - optics
+      - modern_physics
+      - advanced_physics
+    capability_emphasis:
+      - symbolic_precision
+      - robust_reasoning
+      - physical_perception
+      - partial_credit_expression_scoring
+    frontier_relevance: medium
+    multimodal_dependency: none_for_released_text_only_design
+    provenance_boundary: public_repo_and_huggingface_dataset_not_locally_materialized_yet
+  cmphysbench:
+    source_dataset: weidawang/CMPhysBench
+    local_status: registered_candidate_high_priority_frontier
+    benchmark_role: condensed_matter_frontier_layer
+    benchmark_type: graduate_condensed_matter_calculation_benchmark
+    answer_formats:
+      - symbolic_expression
+      - numeric_or_structured_calculation_answer
+    grading_modes:
+      - scalable_expression_edit_distance
+      - final_answer_scoring
+    dominant_question_styles:
+      - graduate_calculation_problem
+      - condensed_matter_theory_problem
+    dominant_domains:
+      - magnetism
+      - superconductivity
+      - strongly_correlated_systems
+      - semiconductors
+      - theoretical_foundations
+    capability_emphasis:
+      - advanced_physics_reasoning
+      - condensed_matter_domain_knowledge
+      - symbolic_answer_quality
+    frontier_relevance: high
+    multimodal_dependency: none_reported_in_readme_snapshot
+    provenance_boundary: public_repo_and_huggingface_dataset_not_locally_materialized_yet
+  cmt_benchmark:
+    source_dataset: JVRoggeveen/cmt_benchmark
+    local_status: included_full_cmt50_hard_stress
+    benchmark_role: condensed_matter_research_agent_layer
+    benchmark_type: expert_research_level_condensed_matter_theory_benchmark
+    answer_formats:
+      - structured_research_answer
+      - analytic_or_computational_answer
+    grading_modes:
+      - exact_choice_set_match
+      - numeric_vector_tolerance
+      - symbolic_normalization
+    dominant_question_styles:
+      - bespoke_expert_problem
+      - research_assistant_style_problem
+    dominant_domains:
+      - exact_diagonalization
+      - statistical_mechanics
+      - quantum_monte_carlo
+      - hartree_fock
+      - dmrg
+      - peps
+      - variational_monte_carlo
+      - condensed_matter_theory
+    capability_emphasis:
+      - research_level_reasoning
+      - computational_method_selection
+      - theoretical_synthesis
+    frontier_relevance: high
+    multimodal_dependency: none_reported_in_hf_readme_snapshot
+    provenance_boundary: full_public_50_row_cmt_benchmark_materialized_locally_not_official_leaderboard
+  critpt:
+    source_dataset: CritPt-Benchmark/CritPt
+    local_status: registered_candidate_remote_grading
+    benchmark_role: frontier_research_challenge_layer
+    benchmark_type: unpublished_frontier_physics_research_benchmark
+    answer_formats:
+      - multi_checkpoint_research_response
+    grading_modes:
+      - official_remote_grading_server
+      - challenge_accuracy
+    dominant_question_styles:
+      - frontier_research_challenge
+      - multi_turn_reasoning_task
+    dominant_domains:
+      - condensed_matter
+      - quantum_physics
+      - atomic_molecular_optical_physics
+      - astrophysics
+      - statistical_physics
+      - nuclear_physics
+      - high_energy_physics
+      - mathematical_physics
+      - fluid_dynamics
+      - nonlinear_dynamics
+      - biophysics
+    capability_emphasis:
+      - research_agent_reasoning
+      - tool_augmented_problem_solving
+      - checkpoint_level_progress
+    frontier_relevance: very_high
+    multimodal_dependency: pending_task_inspection
+    provenance_boundary: public_challenges_available_but_official_scoring_is_server_mediated
+  openxrd:
+    source_dataset: OpenXRD
+    local_status: registered_candidate_experimental_xrd
+    benchmark_role: experimental_materials_characterization_layer
+    benchmark_type: xrd_question_answering_benchmark
+    answer_formats:
+      - multiple_choice_or_short_answer_pending_inspection
+    grading_modes:
+      - source_evaluation_package_pending_local_wrap
+    dominant_question_styles:
+      - crystallography_question_answering
+      - xrd_interpretation
+    dominant_domains:
+      - crystallography
+      - xrd
+      - materials_characterization
+    capability_emphasis:
+      - experimental_reasoning
+      - materials_science_qa
+      - closedbook_openbook_comparison
+    frontier_relevance: high_for_user_experimental_lane
+    multimodal_dependency: llm_and_mllm_modes_reported
+    provenance_boundary: evaluation_only_noncommercial_dataset_boundary
+  thermoqa:
+    source_dataset: olivenet/thermoqa
+    local_status: registered_candidate_applied_thermo
+    benchmark_role: applied_thermodynamics_layer
+    benchmark_type: engineering_thermodynamics_reasoning_benchmark
+    answer_formats:
+      - numeric_with_units
+      - multi_property_numeric_answer
+    grading_modes:
+      - numeric_tolerance
+      - weighted_step_level_scoring
+    dominant_question_styles:
+      - property_lookup
+      - component_analysis
+      - cycle_analysis
+      - exergy_analysis
+    dominant_domains:
+      - engineering_thermodynamics
+      - real_fluid_properties
+      - rankine_cycles
+      - brayton_cycles
+      - vapor_compression_refrigeration
+      - combined_cycle_gas_turbine
+    capability_emphasis:
+      - numeric_property_reasoning
+      - tool_use_gap_detection
+      - multi_step_state_tracking
+    frontier_relevance: medium
+    multimodal_dependency: none_reported_in_hf_readme_snapshot
+    provenance_boundary: community_dataset_verify_code_and_license_before_canonical_use
+  physunibench:
+    source_dataset: PrismaX-Team/PhysUniBenchmark
+    local_status: registered_candidate_multimodal_undergrad
+    benchmark_role: undergraduate_multimodal_physics_layer
+    benchmark_type: multimodal_physics_reasoning_benchmark
+    answer_formats:
+      - qa
+      - multiple_choice
+    grading_modes:
+      - pending_extraction
+    dominant_question_styles:
+      - diagram_paired_question
+      - undergraduate_physics_mcq
+    dominant_domains:
+      - undergraduate_physics_mixed
+    capability_emphasis:
+      - visual_physics_reasoning
+      - symbolic_visual_integration
+    frontier_relevance: medium
+    multimodal_dependency: required
+    provenance_boundary: repo_confirmed_but_dataset_size_and_schema_pending
+  mmlu_physics:
+    source_dataset: hendrycks/test
+    local_status: registered_candidate_baseline_mcq
+    benchmark_role: common_reference_mcq_layer
+    benchmark_type: general_multitask_benchmark_physics_subset
+    answer_formats:
+      - multiple_choice
+    grading_modes:
+      - exact_option_match
+    dominant_question_styles:
+      - exam_mcq
+    dominant_domains:
+      - high_school_physics
+      - college_physics
+    capability_emphasis:
+      - comparability_with_literature
+      - fast_sanity_check
+    frontier_relevance: low
+    multimodal_dependency: none
+    provenance_boundary: public_official_repository_not_locally_materialized_yet
+  ceval_physics:
+    source_dataset: ceval/ceval-exam
+    local_status: registered_candidate_chinese_mcq
+    benchmark_role: chinese_exam_reference_layer
+    benchmark_type: chinese_multidiscipline_benchmark_physics_subset
+    answer_formats:
+      - multiple_choice
+    grading_modes:
+      - exact_option_match
+      - validation_split_local
+      - test_split_submission
+    dominant_question_styles:
+      - chinese_exam_mcq
+      - latex_heavy_reasoning_mcq
+    dominant_domains:
+      - high_school_physics
+      - college_physics
+    capability_emphasis:
+      - chinese_physics_reasoning
+      - benchmark_comparability
+      - option_discrimination
+    frontier_relevance: low_to_medium
+    multimodal_dependency: none_reported_for_mcq_text
+    provenance_boundary: cc_by_nc_sa_dataset_preserve_split_boundaries
+  agieval_gaokao_physics:
+    source_dataset: ruixiangcui/AGIEval
+    local_status: registered_candidate_exam_mcq
+    benchmark_role: public_exam_physics_reference_layer
+    benchmark_type: human_centric_exam_benchmark_physics_subset
+    answer_formats:
+      - multiple_choice
+    grading_modes:
+      - exact_option_match
+    dominant_question_styles:
+      - gaokao_physics_mcq
+      - official_exam_problem
+    dominant_domains:
+      - high_school_physics
+      - chinese_exam_physics
+    capability_emphasis:
+      - exam_reasoning
+      - chinese_physics_option_selection
+    frontier_relevance: low_to_medium
+    multimodal_dependency: none_reported_in_readme_snapshot
+    provenance_boundary: follow_original_exam_dataset_licenses
+  theoremqa_physics:
+    source_dataset: TIGER-Lab/TheoremQA
+    local_status: registered_candidate_theorem_qa
+    benchmark_role: theorem_application_reference_layer
+    benchmark_type: theorem_driven_stem_qa_benchmark_physics_subset
+    answer_formats:
+      - short_answer
+      - symbolic_or_numeric_answer
+    grading_modes:
+      - wolframalpha_assisted_original_pipeline
+      - local_short_answer_scoring_pending
+    dominant_question_styles:
+      - theorem_application_problem
+      - university_level_qa
+    dominant_domains:
+      - physics_subset_pending_filter
+      - math
+      - ee_cs
+      - finance
+    capability_emphasis:
+      - theorem_selection
+      - formal_relation_application
+      - symbolic_reasoning
+    frontier_relevance: medium
+    multimodal_dependency: none
+    provenance_boundary: public_repo_and_huggingface_dataset_filter_physics_subset_before_use

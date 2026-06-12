@@ -1,0 +1,6 @@
+{
+  "benchmark_id": "existing-physlib-formal-lane-v0.1",
+  "task_id": "visviva-speedcircular-sq-proof",
+  "repo_default": "C:/Users/TaiS/AppData/Local/Temp/physlean-inspect",
+  "timeout_seconds": 240
+}

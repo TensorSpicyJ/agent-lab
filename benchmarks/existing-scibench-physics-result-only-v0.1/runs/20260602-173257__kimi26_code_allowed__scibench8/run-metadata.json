@@ -1,0 +1,32 @@
+﻿{
+    "benchmark_id":  "existing-scibench-physics-result-only-v0.1",
+    "task_id":  "scibench-physics-mixed-8",
+    "run_id":  "20260602-173257__kimi26_code_allowed__scibench8",
+    "agent":  "kimi26_code_allowed",
+    "model_alias":  "kimi-code/kimi-for-coding",
+    "model_display_name_note":  "Local config displays kimi-code/kimi-for-coding as Kimi-k2.6.",
+    "command":  "kimi -m kimi-code/kimi-for-coding -p \u003cread prompt.md and output JSON\u003e --output-format text",
+    "no_code_requested":  false,
+    "started_at":  "2026-06-02T17:32:57.6468596+08:00",
+    "finished_at":  "2026-06-02T17:43:40.7599143+08:00",
+    "runtime_seconds":  643.113,
+    "kimi_exit_code":  0,
+    "scorer_exit_code":  1,
+    "kimi_executable":  "C:\\Users\\TaiS\\.kimi-code\\bin\\kimi.exe",
+    "kimi_version":  "0.5.0",
+    "temp_cwd":  "C:\\Users\\TaiS\\AppData\\Local\\Temp\\agent-lab-kimi-scibench-20260602-173257",
+    "cwd_listing":  [
+                        "prompt.md"
+                    ],
+    "agent_created_files":  [
+
+                            ],
+    "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\existing-scibench-physics-result-only-v0.1\\tasks\\scibench-physics-mixed-8\\prompt.md",
+    "prompt_sha256":  "6EE45FFF7CD13E4C85BB52A014C71A9C5D49278E89A896533A033CD86CA7505F",
+    "output":  "D:\\Playground\\agent-lab\\benchmarks\\existing-scibench-physics-result-only-v0.1\\runs\\20260602-173257__kimi26_code_allowed__scibench8\\outputs\\scibench-physics-mixed-8.md",
+    "output_sha256":  "89FC7DD76BAEF6D7D2646BBD4233D876A4A1F5056038AA2AF7BFD884365E7866",
+    "score":  "D:\\Playground\\agent-lab\\benchmarks\\existing-scibench-physics-result-only-v0.1\\runs\\20260602-173257__kimi26_code_allowed__scibench8\\scores\\scibench-physics-mixed-8.score.json",
+    "network_allowed":  false,
+    "network_enforced":  false,
+    "local_leakage_boundary":  "Initial temp cwd contains only prompt.md. Agent-created scratch files may appear during the run; gold, verifier, run history, and source metadata are not mounted in cwd."
+}

@@ -1,0 +1,31 @@
+﻿{
+    "benchmark_id":  "existing-tpbench-public-code-v0.1",
+    "task_id":  "tpbench-public-mini-3",
+    "run_id":  "20260602-205044__kimi26_code_allowed__tpbench3",
+    "agent":  "kimi26_code_allowed",
+    "model_alias":  "kimi-code/kimi-for-coding",
+    "model_display_name_note":  "Local config displays kimi-code/kimi-for-coding as Kimi-k2.6.",
+    "command":  "kimi -m kimi-code/kimi-for-coding -p \u003cread prompt.md and output code\u003e --output-format text",
+    "started_at":  "2026-06-02T20:50:44.4765747+08:00",
+    "finished_at":  "2026-06-02T20:53:39.9780988+08:00",
+    "runtime_seconds":  175.502,
+    "kimi_exit_code":  0,
+    "scorer_exit_code":  1,
+    "kimi_executable":  "C:\\Users\\TaiS\\.kimi-code\\bin\\kimi.exe",
+    "kimi_version":  "0.5.0",
+    "temp_cwd":  "C:\\Users\\TaiS\\AppData\\Local\\Temp\\agent-lab-kimi-tpbench-20260602-205044",
+    "cwd_listing":  [
+                        "prompt.md"
+                    ],
+    "agent_created_files":  [
+
+                            ],
+    "prompt":  "D:\\Playground\\agent-lab\\benchmarks\\existing-tpbench-public-code-v0.1\\tasks\\tpbench-public-mini-3\\prompt.md",
+    "prompt_sha256":  "F775BF822BD888E8CF1D057239775209F22DC4194D942FCAD3DF42652D532637",
+    "output":  "D:\\Playground\\agent-lab\\benchmarks\\existing-tpbench-public-code-v0.1\\runs\\20260602-205044__kimi26_code_allowed__tpbench3\\outputs\\tpbench-public-mini-3.md",
+    "output_sha256":  "DCF2942E1DAAFCE67D834F0E3EEC1E5826B2ECDF716821A3BECC9D15CE744BD6",
+    "score":  "D:\\Playground\\agent-lab\\benchmarks\\existing-tpbench-public-code-v0.1\\runs\\20260602-205044__kimi26_code_allowed__tpbench3\\scores\\tpbench-public-mini-3.score.json",
+    "network_allowed":  false,
+    "network_enforced":  false,
+    "local_leakage_boundary":  "Initial temp cwd contains only prompt.md. Gold, verifier, run history, and source metadata are not mounted in cwd."
+}

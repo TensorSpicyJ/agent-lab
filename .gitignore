@@ -28,3 +28,8 @@ __pycache__/
 
 # Benchmark run logs can contain verbose local session traces.
 benchmarks/**/runs/**/logs/
+benchmarks/**/*.log
+benchmarks/**/live-status.json
+benchmarks/**/live-stage.json
+benchmarks/**/*.partial.json
+benchmarks/**/INVALID.md
